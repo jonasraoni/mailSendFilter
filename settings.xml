@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin_settings SYSTEM "../../../lib/pkp/dtd/pluginSettings.dtd">
+
+<!--
+  * plugins/viewableFiles/lensGalley/settings.xml
+  *
+  * Copyright (c) 2014-2021 Simon Fraser University
+  * Copyright (c) 2003-2021 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * Default plugin settings.
+  *
+  -->
+
+<plugin_settings>
+	<setting type="bool">
+		<name>enabled</name>
+		<value>true</value>
+	</setting>
+	<setting type="string">
+		<name>passthroughKeys</name>
+		<value>["PASSWORD_RESET_CONFIRM"]</value>
+	</setting>
+	<setting type="int">
+		<name>inactivityThresholdDays</name>
+		<value>7</value>
+	</setting>
+	<setting type="bool">
+		<name>checkInactivity</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>checkMxRecord</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>checkDisposable</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>checkNeverLoggedIn</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>checkNotValidated</name>
+		<value>true</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleSiteAdmin</name>
+		<value>0</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleManager</name>
+		<value>0</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleSubscriptionManager</name>
+		<value>0</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleSubEditor</name>
+		<value>0</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleAssistant</name>
+		<value>0</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleNone</name>
+		<value>180</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleReader</name>
+		<value>180</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleAuthor</name>
+		<value>180</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserWithSubmission</name>
+		<value>360</value>
+	</setting>
+	<setting type="string">
+		<name>thresholdUserRoleReviewer</name>
+		<value>360</value>
+	</setting>
+	<setting type="string">
+		<name>disposableDomainsUrl</name>
+		<value>https://raw.githubusercontent.com/disposable-email-domains/disposable-email-domains/refs/heads/main/disposable_email_blocklist.conf</value>
+	</setting>
+	<setting type="string">
+		<name>disposableDomainsExpiration</name>
+		<value>30</value>
+	</setting>
+</plugin_settings>

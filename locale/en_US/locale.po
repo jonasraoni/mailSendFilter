@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2024-11-25 05:51+0000\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: English (United States) <http://translate.pkp.sfu.ca/projects/"
+"plugins/mailSendFilter/en_US/>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Mail Send Filter Plugin"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "The plugin allows you to avoid sending emails to certain user accounts based on a couple of settings and rules, which is useful to reduce bounced emails and avoid your mail server from being added to a block list by other mail servers."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Download blocked emails"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "General settings"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Skips user accounts which have been inactive based on the the last time the user logged in, according to the threshold rules below."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Skips email domains without a proper MX record."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Skips emails which belong to disposable email services."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Skips user accounts which have never logged in."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Skips user accounts which have never validated their email address."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Setups the URL from where the list of disposable domains should be downloaded from. <b>The items must be separated by a line break</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Setups the expiration date of the disposable domains in days."
+
+msgid "plugins.generic.mailSendFilter.passthroughKeys"
+msgstr "Setups the email keys which should skip all validations."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Accounts older than the given number of days will be checked for inactivity (mostly useful for the option \"accounts that never logged in\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Inactivity threshold rules in days."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "Roles that haven't logged in for the given number of days will be considered as inactive."
+"<ul>"
+"<li>Leave the field empty to not do any kind of checks over the given role.</li>"
+"<li>Setting the field with 0 means the given role will never be considered as inactive.</li>"
+"<li>In case a user matches with multiple rules, the most lenient one will be used to decide if the account is inactive.</li>"
+"</ul>"
+
+msgid "user.role.none"
+msgstr "User accounts without any role assigned"
+
+msgid "user.with.submission"
+msgstr "User accounts with at least one submission"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Disposable email service"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Invalid email exchange"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Email not validated"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "User never logged in"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Inactive account"
