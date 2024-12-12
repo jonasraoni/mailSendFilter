@@ -170,7 +170,7 @@ class MailFilter
 		$groupedInactivityThresholdDays = $this->getGroupedInactivityThresholdDays();
 		$roleRulesQuery = [];
 		foreach ($groupedInactivityThresholdDays as $threshold => $roleIds) {
-			$customThresholds = array_intersect(array_keys($this->plugin->customThresholds));
+			$customThresholds = array_intersect($roleIds, array_keys($this->plugin->customThresholds));
 			$roleIds = array_diff($roleIds, array_keys($this->plugin->customThresholds));
 
 			$conditions = [];
@@ -179,7 +179,7 @@ class MailFilter
 					EXISTS (
 						SELECT 0
 						FROM user_user_groups AS uug
-						LEFT JOIN user_groups AS ug
+						INNER JOIN user_groups AS ug
 							ON uug.user_group_id = ug.user_group_id
 							AND ug.role_id IN (' . implode(', ', $roleIds) . ')
 						WHERE
@@ -192,7 +192,7 @@ class MailFilter
 					NOT EXISTS (
 						SELECT 0
 						FROM user_user_groups AS uug
-						LEFT JOIN user_groups AS ug
+						INNER JOIN user_groups AS ug
 							ON uug.user_group_id = ug.user_group_id
 						WHERE u.user_id = uug.user_id
 					)';
@@ -206,9 +206,8 @@ class MailFilter
 						INNER JOIN stage_assignments sa
 							ON sa.submission_id = s.submission_id
 						WHERE
-							s.user_id = u.user_id
-					)
-				';
+							sa.user_id = u.user_id
+					)';
 			}
 
 			$conditions = count($conditions) ? implode(' OR ', $conditions) : '0 = 1';
