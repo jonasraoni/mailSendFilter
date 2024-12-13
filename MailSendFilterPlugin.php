@@ -96,12 +96,12 @@ class MailSendFilterPlugin extends GenericPlugin
 	private function setupMailOverride(): void
 	{
 		$filter = new MailFilter($this);
-		HookRegistry::register('Mail::send', function (string $hookName, array $args) use ($filter): bool {
+		Hook::add('Mail::send', function (string $hookName, array $args) use ($filter): bool {
 			[$mail] = $args;
 
 			// Skips user defined email types
 			if ($mail instanceof MailTemplate && in_array($mail->emailKey, $this->passthroughMailKeys)) {
-				return false;
+				return Hook::CONTINUE;
 			}
 
 			/** @var Mail $mail */
@@ -117,14 +117,14 @@ class MailSendFilterPlugin extends GenericPlugin
 			$recipients = $this->filterAddresses($mail->getRecipients(), $emails);
 			// If there are no recipients, quit sending the email
 			if (!count($recipients)) {
-				return true;
+				return Hook::ABORT;
 			}
 
 			$mail->setRecipients($recipients);
 			$mail->setCcs($this->filterAddresses($mail->getCcs(), $emails));
 			$mail->setBccs($this->filterAddresses($mail->getBccs(), $emails));
 
-			return false;
+			return Hook::CONTINUE;
 		});
 	}
 
