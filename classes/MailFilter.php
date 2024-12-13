@@ -13,14 +13,15 @@
 
 namespace APP\plugins\generic\mailSendFilter\classes;
 
+use APP\core\Application;
+use APP\core\Services;
 use APP\plugins\generic\mailSendFilter\MailSendFilterPlugin;
-use Application;
 use CacheManager;
 use Exception;
-use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Facades\DB;
 
 class MailFilter
 {

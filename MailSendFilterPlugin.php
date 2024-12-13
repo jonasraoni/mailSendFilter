@@ -13,20 +13,21 @@
 
 namespace APP\plugins\generic\mailSendFilter;
 
-use AjaxModal;
+use APP\core\Application;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
-use Application;
-use HookRegistry;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
-use JSONMessage;
-use LinkAction;
-use GenericPlugin;
-use Mail;
-use MailTemplate;
-use NotificationManager;
-use RedirectAction;
+use Illuminate\Support\Facades\DB;
+use PKP\core\JSONMessage;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RedirectAction;
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
+use PKP\security\Role;
 use SplFileObject;
 
 class MailSendFilterPlugin extends GenericPlugin
