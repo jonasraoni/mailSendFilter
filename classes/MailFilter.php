@@ -263,11 +263,11 @@ class MailFilter
 			$path = "{$this->plugin->getDirName()}/" . static::DISPOSABLE_DOMAINS_FILENAME;
 			$oneDay = 60 * 60 * 24;
 			$expiration = (int) $this->plugin->getSetting($this->plugin->getCurrentContextId(), 'disposableDomainsExpiration') ?: 30;
-			if (!$fileService->fs->has($path) || time() - $fileService->fs->getTimestamp($path) > $oneDay * $expiration) {
+			if (!$fileService->fs->has($path) || time() - $fileService->fs->lastModified($path) > $oneDay * $expiration) {
 				try {
 					$disposableDomainsUrl = $this->plugin->getSetting($this->plugin->getCurrentContextId(), 'disposableDomainsUrl');
 					$data = $disposableDomainsUrl ? Application::get()->getHttpClient()->get($disposableDomainsUrl)->getBody()->getContents() : '';
-					$fileService->fs->put($path, mb_strtolower($data));
+					$fileService->fs->write($path, mb_strtolower($data));
 				} catch (Exception $e) {
 					error_log("Failed to retrieve the list of disposable domains.\n" . $e);
 				}
