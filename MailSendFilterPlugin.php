@@ -196,7 +196,7 @@ class MailSendFilterPlugin extends GenericPlugin
 		//Add BOM (byte order mark) to fix UTF-8 in Excel
 		$output->fwrite("\xEF\xBB\xBF");
 		$output->fputcsv([__('user.email'), __('grid.user.disableReason')]);
-		Manager::table('users', 'u')
+		DB::table('users', 'u')
 			->when($context, function (Builder $q) {
 				$q->whereExists(function (Builder $q) {
 					$q->from('user_user_groups', 'uug')
