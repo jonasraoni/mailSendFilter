@@ -25,8 +25,7 @@ import('lib.pkp.classes.form.Form');
 
 class SettingsForm extends Form
 {
-	/** @var MailSendFilterPlugin */
-	public $plugin;
+	public MailSendFilterPlugin $plugin;
 
 	/**
 	 * @copydoc Form::__construct

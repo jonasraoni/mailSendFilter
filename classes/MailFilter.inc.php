@@ -28,26 +28,19 @@ class MailFilter
 	public const CACHE_KEY_MX_RECORDS = 'mx-records';
 	public const MX_RECORD_INVALID_EXPIRY_DAYS = 7;
 	public const MX_RECORD_VALID_EXPIRY_DAYS = 30;
-	/** @var MailSendFilterPlugin */
-	private $plugin;
-	/** @var int */
-	private $inactivityThresholdDays;
-	/** @var bool */
-	private $checkInactivity;
-	/** @var bool */
-	private $checkMxRecord;
-	/** @var bool */
-	private $checkDisposable;
-	/** @var bool */
-	private $checkNeverLoggedIn;
-	/** @var bool */
-	private $checkNotValidated;
+	private MailSendFilterPlugin $plugin;
+	private int $inactivityThresholdDays;
+	private bool $checkInactivity;
+	private bool $checkMxRecord;
+	private bool $checkDisposable;
+	private bool $checkNeverLoggedIn;
+	private bool $checkNotValidated;
 	/** @var ?array<int,int> */
-	private $groupedInactivityThresholdDays = null;
+	private ?array $groupedInactivityThresholdDays = null;
 	/** @var ?array<string,null> */
-	private $disposableDomains = null;
+	private ?array $disposableDomains = null;
 	/** @var array<string,array{'valid':bool,'expires':int}> */
-	private ?array $mxRecords = null;
+	private array $mxRecords = [];
 
 	/**
 	 * Constructor
