@@ -24,15 +24,12 @@ use PKP\form\validation\FormValidatorPost;
 
 class SettingsForm extends Form
 {
-	public MailSendFilterPlugin $plugin;
-
 	/**
 	 * @copydoc Form::__construct
 	 */
-	public function __construct($plugin)
+	public function __construct(public MailSendFilterPlugin $plugin)
 	{
 		parent::__construct($plugin->getTemplateResource('settings.tpl'));
-		$this->plugin = $plugin;
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
@@ -40,7 +37,7 @@ class SettingsForm extends Form
 	/**
 	 * @copydoc Form::initData
 	 */
-	public function initData()
+	public function initData(): void
 	{
 		$contextId = $this->plugin->getCurrentContextId();
 		foreach ($this->plugin->getRoles() as $roleName) {
@@ -64,7 +61,7 @@ class SettingsForm extends Form
 	/**
 	 * @copydoc Form::readInputData
 	 */
-	public function readInputData()
+	public function readInputData(): void
 	{
 		$vars = ['inactivityThresholdDays', 'checkInactivity', 'checkMxRecord', 'checkDisposable', 'checkNeverLoggedIn', 'checkNotValidated', 'disposableDomainsUrl', 'disposableDomainsExpiration'];
 		foreach ($this->plugin->getRoles() as $roleName) {
@@ -81,7 +78,7 @@ class SettingsForm extends Form
 	/**
 	 * @copydoc Form::fetch
 	 */
-	public function fetch($request, $template = null, $display = false)
+	public function fetch($request, $template = null, $display = false): string
 	{
 		$roles = [];
 		foreach ($this->plugin->getRoles() as $roleName) {
@@ -105,7 +102,7 @@ class SettingsForm extends Form
 	/**
 	 * @copydoc Form::execute
 	 */
-	public function execute(...$functionArgs)
+	public function execute(...$functionArgs): mixed
 	{
 		$contextId = $this->plugin->getCurrentContextId();
 		foreach ($this->plugin->getRoles() as $roleName) {
@@ -135,8 +132,6 @@ class SettingsForm extends Form
 
 	public static function formatRoleName(string $name): string
 	{
-		return preg_replace_callback('/\.\w/', function ($matches) {
-			return strtoupper(substr($matches[0], 1));
-		}, $name);
+		return preg_replace_callback('/\.\w/', fn (array $matches): string => strtoupper(substr($matches[0], 1)), $name);
 	}
 }
