@@ -12,16 +12,15 @@
 
 namespace APP\plugins\generic\mailSendFilter\classes;
 
+use APP\core\Application;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
 use APP\plugins\generic\mailSendFilter\MailSendFilterPlugin;
-use Application;
-use AppLocale;
-use Form;
-use FormValidatorCSRF;
-use FormValidatorPost;
-use NotificationManager;
-use TemplateManager;
-
-import('lib.pkp.classes.form.Form');
+use APP\template\TemplateManager;
+use PKP\facades\Locale;
+use PKP\form\Form;
+use PKP\form\validation\FormValidatorCSRF;
+use PKP\form\validation\FormValidatorPost;
 
 class SettingsForm extends Form
 {
@@ -125,11 +124,10 @@ class SettingsForm extends Form
 		$this->plugin->updateSetting($contextId, 'disposableDomainsUrl', $this->getData('disposableDomainsUrl'));
 		$this->plugin->updateSetting($contextId, 'disposableDomainsExpiration', (int) $this->getData('disposableDomainsExpiration') ?: 30);
 
-		import('classes.notification.NotificationManager');
 		$notificationMgr = new NotificationManager();
 		$notificationMgr->createTrivialNotification(
 			Application::get()->getRequest()->getUser()->getId(),
-			NOTIFICATION_TYPE_SUCCESS,
+			Notification::NOTIFICATION_TYPE_SUCCESS,
 			['contents' => __('common.changesSaved')]
 		);
 
