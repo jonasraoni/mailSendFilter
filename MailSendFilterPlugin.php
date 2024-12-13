@@ -56,32 +56,9 @@ class MailSendFilterPlugin extends GenericPlugin
 			return $success;
 		}
 
-		$this->useAutoLoader();
 		$this->setupMailOverride();
 		$this->passthroughMailKeys = json_decode($this->getSetting($this->getCurrentContextId(), 'passthroughMailKeys')) ?: [];
 		return $success;
-	}
-
-	/**
-	 * Registers a custom autoloader to handle the plugin namespace
-	 */
-	private function useAutoLoader(): void
-	{
-		spl_autoload_register(function ($className) {
-			// Removes the base namespace from the class name
-			$path = explode(__NAMESPACE__ . '\\', $className, 2);
-			if (!reset($path)) {
-				// Breaks the remaining class name by \ to retrieve the folder and class name
-				$path = explode('\\', end($path));
-				$class = array_pop($path);
-				$path = array_map(function ($name) {
-					return strtolower($name[0]) . substr($name, 1);
-				}, $path);
-				$path[] = $class;
-				// Uses the internal loader
-				$this->import(implode('.', $path));
-			}
-		});
 	}
 
 	/**
