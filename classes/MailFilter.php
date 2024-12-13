@@ -113,7 +113,7 @@ class MailFilter
 			return $emails;
 		}
 
-		$failedEmails = Manager::table('users', 'u')
+		$failedEmails = DB::table('users', 'u')
 			->whereIn('u.email', array_keys($emails))
 			// Ignore users which have been registered few time ago
 			->when($this->checkInactivity, function (Builder $q) {
@@ -296,13 +296,9 @@ class MailFilter
 	 */
 	private static function dateDiffClause(string $fieldA, string $fieldB): string
 	{
-		switch (get_class(Manager::connection())) {
-			case MySqlConnection::class:
-				return "DATEDIFF({$fieldA}, {$fieldB})";
-			case PostgresConnection::class:
-				return "DATE({$fieldA}) - DATE({$fieldB})";
-			default:
-				throw new Exception('Unknown database');
-		}
+		return match (DB::connection()::class) {
+			MySqlConnection::class => "DATEDIFF({$fieldA}, {$fieldB})",
+			PostgresConnection::class => "DATE({$fieldA}) - DATE({$fieldB})"
+		};
 	}
 }
