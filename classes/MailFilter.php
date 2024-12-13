@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/MailFilter.inc.php
+ * @file classes/MailFilter.php
  *
  * Copyright (c) 2024 Simon Fraser University
  * Copyright (c) 2024 John Willinsky
