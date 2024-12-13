@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file MailSendFilterPlugin.inc.php
+ * @file MailSendFilterPlugin.php
  *
  * Copyright (c) 2024 Simon Fraser University
  * Copyright (c) 2024 John Willinsky
