@@ -47,7 +47,7 @@ msgstr "Setups the URL from where the list of disposable domains should be downl
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Setups the expiration date of the disposable domains in days."
 
-msgid "plugins.generic.mailSendFilter.passthroughKeys"
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
 msgstr "Setups the email keys which should skip all validations."
 
 msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"

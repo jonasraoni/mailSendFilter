@@ -18,7 +18,7 @@
 		<value>true</value>
 	</setting>
 	<setting type="string">
-		<name>passthroughKeys</name>
+		<name>passthroughMailKeys</name>
 		<value>["PASSWORD_RESET_CONFIRM"]</value>
 	</setting>
 	<setting type="int">

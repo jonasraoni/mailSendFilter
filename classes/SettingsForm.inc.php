@@ -5,6 +5,7 @@
  *
  * Copyright (c) 2024 Simon Fraser University
  * Copyright (c) 2024 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SettingsForm
  */
@@ -56,7 +57,7 @@ class SettingsForm extends Form
 		$this->setData('checkDisposable', (bool) $this->plugin->getSetting($contextId, 'checkDisposable'));
 		$this->setData('checkNeverLoggedIn', (bool) $this->plugin->getSetting($contextId, 'checkNeverLoggedIn'));
 		$this->setData('checkNotValidated', (bool) $this->plugin->getSetting($contextId, 'checkNotValidated'));
-		$this->setData('passthroughKeys', [AppLocale::getLocale() => json_decode($this->plugin->getSetting($contextId, 'passthroughKeys')) ?: []]);
+		$this->setData('passthroughMailKeys', [AppLocale::getLocale() => json_decode($this->plugin->getSetting($contextId, 'passthroughMailKeys')) ?: []]);
 		$this->setData('disposableDomainsUrl', $this->plugin->getSetting($contextId, 'disposableDomainsUrl'));
 		$this->setData('disposableDomainsExpiration', (int) $this->plugin->getSetting($contextId, 'disposableDomainsExpiration'));
 
@@ -74,7 +75,7 @@ class SettingsForm extends Form
 		}
 
 		$request = Application::get()->getRequest();
-		$this->setData('passthroughKeys', $request->getUserVar('keywords')['passthroughKeys'] ?: []);
+		$this->setData('passthroughMailKeys', $request->getUserVar('keywords')['passthroughMailKeys'] ?: []);
 
 		$this->readUserVars($vars);
 		parent::readInputData();
@@ -121,7 +122,7 @@ class SettingsForm extends Form
 		$this->plugin->updateSetting($contextId, 'checkDisposable', (bool) $this->getData('checkDisposable'), 'bool');
 		$this->plugin->updateSetting($contextId, 'checkNeverLoggedIn', (bool) $this->getData('checkNeverLoggedIn'), 'bool');
 		$this->plugin->updateSetting($contextId, 'checkNotValidated', (bool) $this->getData('checkNotValidated'), 'bool');
-		$this->plugin->updateSetting($contextId, 'passthroughKeys', json_encode($this->getData('passthroughKeys')));
+		$this->plugin->updateSetting($contextId, 'passthroughMailKeys', json_encode($this->getData('passthroughMailKeys')));
 		$this->plugin->updateSetting($contextId, 'disposableDomainsUrl', $this->getData('disposableDomainsUrl'));
 		$this->plugin->updateSetting($contextId, 'disposableDomainsExpiration', (int) $this->getData('disposableDomainsExpiration') ?: 30);
 

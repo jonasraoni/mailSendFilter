@@ -5,8 +5,10 @@
  *
  * Copyright (c) 2024 Simon Fraser University
  * Copyright (c) 2024 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class MailSendFilterPlugin
+ * @brief Main plugin class, setups the email override and settings.
  */
 
 namespace APP\plugins\generic\mailSendFilter;
@@ -30,15 +32,17 @@ use SplFileObject;
 
 class MailSendFilterPlugin extends GenericPlugin
 {
+	// Fake ID for the threshold that deals with users with no roles
 	public const THRESHOLD_UNASSIGNED_ROLE = -1;
+	// Fake ID for the threshold that deals with users who are assigned to at least one submission
 	public const THRESHOLD_ASSIGNED_SUBMISSION = -2;
-	/** @var array<string,string> */
+	/** @var array<string,string> Description map of custom thresholds */
 	public $customThresholds = [
 		self::THRESHOLD_UNASSIGNED_ROLE => 'user.role.none',
 		self::THRESHOLD_ASSIGNED_SUBMISSION => 'user.with.submission'
 	];
-	/** @var string[] */
-	private $passthroughKeys;
+	/** @var string[] List of email keys which won't be filtered by the plugin */
+	private $passthroughMailKeys;
 
 	/**
 	 * @copydoc Plugin::register
@@ -54,7 +58,7 @@ class MailSendFilterPlugin extends GenericPlugin
 
 		$this->useAutoLoader();
 		$this->setupMailOverride();
-		$this->passthroughKeys = json_decode($this->getSetting($this->getCurrentContextId(), 'passthroughKeys')) ?: [];
+		$this->passthroughMailKeys = json_decode($this->getSetting($this->getCurrentContextId(), 'passthroughMailKeys')) ?: [];
 		return $success;
 	}
 
@@ -81,7 +85,7 @@ class MailSendFilterPlugin extends GenericPlugin
 	}
 
 	/**
-	 * Retrieves the roles
+	 * Retrieves the application roles mixed up with the custom thresholds
 	 *
 	 * @return array<int,string>
 	 */
@@ -91,7 +95,7 @@ class MailSendFilterPlugin extends GenericPlugin
 	}
 
 	/**
-	 * Filters out an address list from the mail object based on the list of available emails
+	 * Filters out an address list from the Mail class using a list of available emails
 	 *
 	 * @param array<string,array{'email':string,'name':string}> $addresses
 	 * @param array<string,null> $availableEmails
@@ -118,7 +122,8 @@ class MailSendFilterPlugin extends GenericPlugin
 		HookRegistry::register('Mail::send', function (string $hookName, array $args) use ($filter): bool {
 			[$mail] = $args;
 
-			if ($mail instanceof MailTemplate && in_array($mail->emailKey, $this->passthroughKeys)) {
+			// Skips user defined email types
+			if ($mail instanceof MailTemplate && in_array($mail->emailKey, $this->passthroughMailKeys)) {
 				return false;
 			}
 
@@ -145,26 +150,6 @@ class MailSendFilterPlugin extends GenericPlugin
 			return false;
 		});
 	}
-
-    /**
-     * Setup the hook to download the changes
-     */
-    public function setupDownloadChangesEndpoint(): void
-    {
-        Hook::add('LoadHandler', function (string $hookName, array $args): bool {
-            $request = $this->getRequest();
-            // Get url path components by reference
-            [&$page, &$op] = $args;
-            $tail = implode('/', $request->getRequestedArgs());
-
-            if ([$page, $op, $tail] === ['management', 'settings', 'printCustomLocaleChanges']) {
-                $op = 'printCustomLocaleChanges';
-                define('HANDLER_CLASS', CustomLocaleHandler::class);
-            }
-
-            return false;
-        });
-    }
 
 	/**
 	 * @copydoc Plugin::getActions()
@@ -196,57 +181,73 @@ class MailSendFilterPlugin extends GenericPlugin
 	}
 
 	/**
+	 * Outputs a CSV file to the browser as an attached file
+	 */
+	private function downloadBlockedEmails(): void
+	{
+		$filter = new MailFilter($this);
+		$context = Application::get()->getRequest()->getContext() ?? null;
+		$extractEmail = function (object $row) {
+			return [$row->email => null];
+		};
+
+		header('content-type: text/plain');
+		header('content-disposition: attachment; filename=blocked-emails-' . date('Ymd') . '.csv');
+		$output = new SplFileObject('php://output', 'wt');
+		//Add BOM (byte order mark) to fix UTF-8 in Excel
+		$output->fwrite("\xEF\xBB\xBF");
+		$output->fputcsv([__('user.email'), __('grid.user.disableReason')]);
+		Manager::table('users', 'u')
+			->when($context, function (Builder $q) {
+				$q->whereExists(function (Builder $q) {
+					$q->from('user_user_groups', 'uug')
+						->join('user_groups AS ug', 'ug.user_group_id', '=', 'uug.user_group_id')
+						->whereColumn('uug.user_id', '=', 'u.user_id');
+				});
+			})
+			->select('u.email')
+			->orderBy('u.user_id')
+			->chunk(1000, function (Collection $rows) use ($extractEmail, $filter, $output) {
+				$emails = $rows->mapWithKeys($extractEmail);
+				$filteredEmails = [];
+				$filter->filterEmails($emails->all(), $filteredEmails);
+				foreach($filteredEmails as $email => $reason) {
+					$output->fputcsv([$email, __("plugins.generic.mailSendFilter.reason.{$reason}")]);
+				}
+			});
+	}
+
+	/**
+	 * Generate a JSONMessage response to display the settings
+	 */
+	private function displaySettings(): JSONMessage
+	{
+		$form = new SettingsForm($this);
+		$request = Application::get()->getRequest();
+		if ($request->getUserVar('save')) {
+			$form->readInputData();
+			if ($form->validate()) {
+				$form->execute();
+				$notificationManager = new NotificationManager();
+				$notificationManager->createTrivialNotification($request->getUser()->getId());
+				return new JSONMessage(true);
+			}
+		} else {
+			$form->initData();
+		}
+		return new JSONMessage(true, $form->fetch($request));
+	}
+
+	/**
 	 * @copydoc Plugin::manage()
 	 */
 	public function manage($args, $request)
 	{
 		if ($request->getUserVar('verb') === 'settings') {
-			$form = new SettingsForm($this);
-
-			if ($request->getUserVar('save')) {
-				$form->readInputData();
-				if ($form->validate()) {
-					$form->execute();
-					$notificationManager = new NotificationManager();
-					$notificationManager->createTrivialNotification($request->getUser()->getId());
-					return new JSONMessage(true);
-				}
-			} else {
-				$form->initData();
-			}
-			return new JSONMessage(true, $form->fetch($request));
+			return $this->displaySettings();
 		}
 		if ($request->getUserVar('verb') === 'download') {
-			$filter = new MailFilter($this);
-			$context = Application::get()->getRequest()->getContext() ?? null;
-			$extractEmail = function (object $row) {
-				return [$row->email => null];
-			};
-
-			header('content-type: text/comma-separated-values');
-			header('content-disposition: attachment; filename=blocked-emails-' . date('Ymd') . '.csv');
-			$output = new SplFileObject('php://output', 'wt');
-			//Add BOM (byte order mark) to fix UTF-8 in Excel
-			$output->fwrite("\xEF\xBB\xBF");
-			$output->fputcsv([__('user.email'), __('grid.user.disableReason')]);
-			Manager::table('users', 'u')
-				->when($context, function (Builder $q) {
-					$q->whereExists(function (Builder $q) {
-						$q->from('user_user_groups', 'uug')
-							->join('user_groups AS ug', 'ug.user_group_id', '=', 'uug.user_group_id')
-							->whereColumn('uug.user_id', '=', 'u.user_id');
-					});
-				})
-				->select('u.email')
-				->orderBy('u.user_id')
-				->chunk(1000, function (Collection $rows) use ($extractEmail, $filter, $output) {
-					$emails = $rows->mapWithKeys($extractEmail);
-					$filteredEmails = [];
-					$filter->filterEmails($emails->all(), $filteredEmails);
-					foreach($filteredEmails as $email => $reason) {
-						$output->fputcsv([$email, __("plugins.generic.mailSendFilter.reason.{$reason}")]);
-					}
-				});
+			$this->downloadBlockedEmails();
 			exit;
 		}
 		return parent::manage($args, $request);

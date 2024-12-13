@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class MailFilter
+ * @brief Receives a list of emails and outputs only the ones which passed through the rules, and optionally stores the blocked ones
  */
 
 namespace APP\plugins\generic\mailSendFilter\classes;

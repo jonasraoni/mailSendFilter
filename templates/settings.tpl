@@ -22,7 +22,7 @@
 			<p>
 				{fbvElement type="text" id="disposableDomainsUrl" value=$disposableDomainsUrl label="plugins.generic.mailSendFilter.disposableDomainsUrl"}
 				{fbvElement type="text" id="disposableDomainsExpiration" class="checkNumbers" value=$disposableDomainsExpiration label="plugins.generic.mailSendFilter.disposableDomainsExpiration"}
-				{fbvElement type="keyword" id="passthroughKeys" current=$passthroughKeys label="plugins.generic.mailSendFilter.passthroughKeys"}
+				{fbvElement type="keyword" id="passthroughMailKeys" current=$passthroughMailKeys label="plugins.generic.mailSendFilter.passthroughMailKeys"}
 			</p>
 		{/fbvFormSection}
 
