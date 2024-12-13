@@ -31,7 +31,6 @@ class SettingsForm extends Form
 	 */
 	public function __construct($plugin)
 	{
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
 		parent::__construct($plugin->getTemplateResource('settings.tpl'));
 		$this->plugin = $plugin;
 		$this->addCheck(new FormValidatorPost($this));
@@ -55,7 +54,7 @@ class SettingsForm extends Form
 		$this->setData('checkDisposable', (bool) $this->plugin->getSetting($contextId, 'checkDisposable'));
 		$this->setData('checkNeverLoggedIn', (bool) $this->plugin->getSetting($contextId, 'checkNeverLoggedIn'));
 		$this->setData('checkNotValidated', (bool) $this->plugin->getSetting($contextId, 'checkNotValidated'));
-		$this->setData('passthroughMailKeys', [AppLocale::getLocale() => json_decode($this->plugin->getSetting($contextId, 'passthroughMailKeys')) ?: []]);
+		$this->setData('passthroughMailKeys', [Locale::getLocale() => json_decode($this->plugin->getSetting($contextId, 'passthroughMailKeys')) ?: []]);
 		$this->setData('disposableDomainsUrl', $this->plugin->getSetting($contextId, 'disposableDomainsUrl'));
 		$this->setData('disposableDomainsExpiration', (int) $this->plugin->getSetting($contextId, 'disposableDomainsExpiration'));
 
