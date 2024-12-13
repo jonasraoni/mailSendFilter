@@ -25,26 +25,16 @@ use Services;
 class MailFilter
 {
 	const DISPOSABLE_DOMAINS_FILENAME = 'disposable-domains';
-	/** @var MailSendFilterPlugin */
-	private $plugin;
-	/** @var int */
-	private $inactivityThresholdDays;
-	/** @var bool */
-	private $checkInactivity;
-	/** @var bool */
-	private $checkMxRecord;
-	/** @var bool */
-	private $checkDisposable;
-	/** @var bool */
-	private $checkNeverLoggedIn;
-	/** @var bool */
-	private $checkNotValidated;
-	/** @var ?array<int,int> */
-	private $groupedInactivityThresholdDays = null;
-	/** @var ?array<string,null> */
-	private $disposableDomains = null;
-	/** @var array<string,bool> */
-	private $mxRecordByDomain = [];
+	private MailSendFilterPlugin $plugin;
+	private int $inactivityThresholdDays;
+	private bool $checkInactivity;
+	private bool $checkMxRecord;
+	private bool $checkDisposable;
+	private bool $checkNeverLoggedIn;
+	private bool $checkNotValidated;
+	private ?array $groupedInactivityThresholdDays = null;
+	private ?array $disposableDomains = null;
+	private array $mxRecordByDomain = [];
 
 	/**
 	 * Constructor

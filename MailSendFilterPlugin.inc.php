@@ -18,7 +18,6 @@ use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
 use Application;
 use HookRegistry;
-use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use JSONMessage;
@@ -37,12 +36,12 @@ class MailSendFilterPlugin extends GenericPlugin
 	// Fake ID for the threshold that deals with users who are assigned to at least one submission
 	public const THRESHOLD_ASSIGNED_SUBMISSION = -2;
 	/** @var array<string,string> Description map of custom thresholds */
-	public $customThresholds = [
+	public array $customThresholds = [
 		self::THRESHOLD_UNASSIGNED_ROLE => 'user.role.none',
 		self::THRESHOLD_ASSIGNED_SUBMISSION => 'user.with.submission'
 	];
 	/** @var string[] List of email keys which won't be filtered by the plugin */
-	private $passthroughMailKeys;
+	private array $passthroughMailKeys = [];
 
 	/**
 	 * @copydoc Plugin::register
@@ -162,7 +161,6 @@ class MailSendFilterPlugin extends GenericPlugin
 		}
 
 		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		array_unshift(
 			$actions,
 			new LinkAction(
