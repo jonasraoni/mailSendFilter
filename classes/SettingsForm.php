@@ -130,6 +130,9 @@ class SettingsForm extends Form
 		return parent::execute();
 	}
 
+	/**
+	 * Transforms "a.bc.de" into "aBcDe"
+	 */
 	public static function formatRoleName(string $name): string
 	{
 		return preg_replace_callback('/\.\w/', fn (array $matches): string => strtoupper(substr($matches[0], 1)), $name);
