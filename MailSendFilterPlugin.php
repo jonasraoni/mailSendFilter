@@ -19,14 +19,17 @@ use APP\notification\NotificationManager;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Mail\SentMessage;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;
+use PKP\mail\Mailable;
 use PKP\plugins\GenericPlugin;
-use PKP\plugins\Hook;
+use ReflectionClass;
 use PKP\security\Role;
 use SplFileObject;
 
@@ -72,17 +75,17 @@ class MailSendFilterPlugin extends GenericPlugin
 	}
 
 	/**
-	 * Filters out an address list from the Mail class using a list of available emails
+	 * Filters out an address list from the Illuminate\Mail\Mailable class using a list of available emails
 	 *
-	 * @param array<string,array{'email':string,'name':string}> $addresses
+	 * @param array<string,array{'address':string,'name':string}> $addresses
 	 * @param array<string,null> $availableEmails
-	 * @return array<string,array{'email':string,'name':string}>
+	 * @return array<string,array{'address':string,'name':string}>
 	 */
 	private function filterAddresses(array $addresses, array $availableEmails): array
 	{
 		$validEmails = [];
 		foreach ($addresses as $address) {
-			if (array_key_exists(mb_strtolower($address['email']), $availableEmails)) {
+			if (array_key_exists(mb_strtolower($address['address']), $availableEmails)) {
 				$validEmails[] = $address;
 			}
 		}
@@ -96,36 +99,43 @@ class MailSendFilterPlugin extends GenericPlugin
 	private function setupMailOverride(): void
 	{
 		$filter = new MailFilter($this);
-		Hook::add('Mail::send', function (string $hookName, array $args) use ($filter): bool {
-			[$mail] = $args;
+		/** @var \Illuminate\Mail\MailManager $mailManager */
+		$mailManager = Mail::getFacadeRoot();
+		// Overrides Mail::send()
+		Mail::partialMock()
+			->shouldReceive('send')
+			->withAnyArgs()
+			->andReturnUsing(function (array|\Illuminate\Contracts\Mail\Mailable|string $view, array $data = [], callable|string|null $callback = null) use ($mailManager, $filter) : ?SentMessage {
+				if (!($view instanceof Mailable)) {
+					return $mailManager->send($view, $data, $callback);
+				}
+				$property = (new ReflectionClass($view))->getProperty('emailTemplateKey');
+				$property->setAccessible(true);
+				if (in_array($property->getValue($view), $this->passthroughMailKeys)) {
+					return null;
+				}
 
-			// Skips user defined email types
-			if ($mail instanceof MailTemplate && in_array($mail->emailKey, $this->passthroughMailKeys)) {
-				return Hook::CONTINUE;
-			}
+				$emails = [];
+				// Collect all emails
+				foreach (array_merge($view->to, $view->cc, $view->bcc) as ['address' => $email]) {
+					$emails[mb_strtolower($email)] = null;
+				}
 
-			/** @var Mail $mail */
-			$emails = [];
-			// Collect all emails
-			foreach (array_merge($mail->getRecipients() ?? [], $mail->getCcs() ?? [], $mail->getBccs() ?? []) as ['email' => $email]) {
-				$emails[mb_strtolower($email)] = null;
-			}
+				// Filter out the suspicious ones
+				$emails = $filter->filterEmails($emails);
 
-			// Filter out the suspicious ones
-			$emails = $filter->filterEmails($emails);
+				$recipients = $this->filterAddresses($view->to, $emails);
+				// If there are no recipients, quit sending the email
+				if (!count($recipients)) {
+					return null;
+				}
 
-			$recipients = $this->filterAddresses($mail->getRecipients(), $emails);
-			// If there are no recipients, quit sending the email
-			if (!count($recipients)) {
-				return Hook::ABORT;
-			}
+				$view->to($recipients);
+				$view->cc($this->filterAddresses($view->cc, $emails));
+				$view->bcc($this->filterAddresses($view->bcc, $emails));
 
-			$mail->setRecipients($recipients);
-			$mail->setCcs($this->filterAddresses($mail->getCcs(), $emails));
-			$mail->setBccs($this->filterAddresses($mail->getBccs(), $emails));
-
-			return Hook::CONTINUE;
-		});
+				return $mailManager->send($view, $data, $callback);
+			});
 	}
 
 	/**
