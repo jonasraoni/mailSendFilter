@@ -119,6 +119,10 @@ class MailFilter
 	 */
 	private function filterInactiveEmails(array $emails, array &$filteredEmails = null): array
 	{
+		if (!$this->checkInactivity && !$this->checkNotValidated && !$this->checkNeverLoggedIn) {
+			return $emails;
+		}
+
 		$failedEmails = Manager::table('users', 'u')
 			->whereIn('u.email', array_keys($emails))
 			// Ignore users which have been registered few time ago
