@@ -124,7 +124,7 @@ class MailFilter
 		}
 
 		$failedEmails = Manager::table('users', 'u')
-			->whereIn('u.email', array_keys($emails))
+			->whereIn(Manager::raw('u.email'), array_keys($emails))
 			// Ignore users which have been registered few time ago
 			->when($this->checkInactivity, function (Builder $q) {
 				$q->whereRaw($this->dateDiffClause('CURRENT_TIMESTAMP', 'u.date_registered') .' >= ?', [$this->inactivityThresholdDays]);
