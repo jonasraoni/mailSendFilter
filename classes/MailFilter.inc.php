@@ -15,16 +15,19 @@ namespace APP\plugins\generic\mailSendFilter\classes;
 
 use APP\plugins\generic\mailSendFilter\MailSendFilterPlugin;
 use Application;
+use CacheManager;
 use Exception;
 use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder;
-use Services;
 
 class MailFilter
 {
-	const DISPOSABLE_DOMAINS_FILENAME = 'disposable-domains';
+	public const CACHE_KEY_DISPOSABLE_DOMAINS = 'disposable-domains';
+	public const CACHE_KEY_MX_RECORDS = 'mx-records';
+	public const MX_RECORD_INVALID_EXPIRY_DAYS = 7;
+	public const MX_RECORD_VALID_EXPIRY_DAYS = 30;
 	/** @var MailSendFilterPlugin */
 	private $plugin;
 	/** @var int */
@@ -43,8 +46,8 @@ class MailFilter
 	private $groupedInactivityThresholdDays = null;
 	/** @var ?array<string,null> */
 	private $disposableDomains = null;
-	/** @var array<string,bool> */
-	private $mxRecordByDomain = [];
+	/** @var array<string,array{'valid':bool,'expires':int}> */
+	private ?array $mxRecords = null;
 
 	/**
 	 * Constructor
@@ -238,9 +241,8 @@ class MailFilter
 
 		// Remove emails which have no MX setup at their domain
 		foreach (array_keys($emails) as $recipient) {
-			$domain = substr(strstr($recipient, '@'), 1);
-			$isValid = $this->mxRecordByDomain[$domain] = $this->mxRecordByDomain[$domain] ?? getmxrr($domain, $hosts);
-			if (!$isValid) {
+			$domain = explode('@', $recipient)[1];
+			if (!$this->hasMxRecord($domain)) {
 				unset($emails[$recipient]);
 				if ($filteredEmails !== null) {
 					$filteredEmails[$recipient] = 'invalidMailExchange';
@@ -249,6 +251,42 @@ class MailFilter
 		}
 
 		return $emails;
+	}
+
+	/**
+	 * Retrieves whether the domain has a MX record
+	 */
+	private function hasMxRecord(string $domain): bool
+	{
+		static $cache;
+		$cache = $cache ?? CacheManager::getManager()->getFileCache(
+			$this->plugin->getName(),
+			static::CACHE_KEY_MX_RECORDS,
+			function () {
+				return null;
+			}
+		);
+
+		if ($this->mxRecords === null) {
+			$this->mxRecords = $cache->getContents() ?: [];
+		}
+
+		// Check if we have a valid non-expired cached record
+		if (($this->mxRecords[$domain]['expires'] ?? 0) > now()->getTimestamp()) {
+			return $this->mxRecords[$domain]['valid'];
+		}
+
+		// Record doesn't exist or is expired, fetch new data
+		$isValid = getmxrr($domain, $hosts);
+		$this->mxRecords[$domain] = [
+			'valid' => $isValid,
+			'expires' => now()
+				->addDays($isValid ? static::MX_RECORD_VALID_EXPIRY_DAYS : static::MX_RECORD_INVALID_EXPIRY_DAYS)
+				->getTimestamp()
+		];
+		$cache->setEntireCache($this->mxRecords);
+
+		return $isValid;
 	}
 
 	/**
@@ -264,33 +302,10 @@ class MailFilter
 			return $emails;
 		}
 
-		/**
-		 * @var \PKP\Services\PKPFileService $fileService
-		 */
-		$fileService = Services::get('file');
-		if ($this->disposableDomains === null) {
-			$this->disposableDomains = [];
-			$path = "{$this->plugin->getDirName()}/" . static::DISPOSABLE_DOMAINS_FILENAME;
-			$oneDay = 60 * 60 * 24;
-			$expiration = (int) $this->plugin->getSetting($this->plugin->getCurrentContextId(), 'disposableDomainsExpiration') ?: 30;
-			if (!$fileService->fs->has($path) || time() - $fileService->fs->getTimestamp($path) > $oneDay * $expiration) {
-				try {
-					$disposableDomainsUrl = $this->plugin->getSetting($this->plugin->getCurrentContextId(), 'disposableDomainsUrl');
-					$data = $disposableDomainsUrl ? Application::get()->getHttpClient()->get($disposableDomainsUrl)->getBody()->getContents() : '';
-					$fileService->fs->put($path, mb_strtolower($data));
-				} catch (Exception $e) {
-					error_log("Failed to retrieve the list of disposable domains.\n" . $e);
-				}
-			}
-
-			foreach (preg_split('/\r\n|\n\r|\r|\n/', $fileService->fs->read($path)) as $domain) {
-				$this->disposableDomains[$domain] = null;
-			}
-		}
-
+		$disposableDomains = $this->getDisposableDomains();
 		foreach (array_keys($emails) as $recipient) {
 			$domain = substr(strstr($recipient, '@'), 1);
-			if (array_key_exists($domain, $this->disposableDomains)) {
+			if (array_key_exists($domain, $disposableDomains)) {
 				unset($emails[$recipient]);
 				if ($filteredEmails !== null) {
 					$filteredEmails[$recipient] = 'disposableService';
@@ -299,6 +314,52 @@ class MailFilter
 		}
 
 		return $emails;
+	}
+
+	/**
+	 * Get disposable domains from cache or remote source
+	 *
+	 * @return array<string,null>
+	 */
+	private function getDisposableDomains(): array
+	{
+		if ($this->disposableDomains !== null) {
+			return $this->disposableDomains;
+		}
+
+		$contextId = $this->plugin->getCurrentContextId();
+		$expiration = (int) $this->plugin->getSetting($contextId, 'disposableDomainsExpiration') ?: 30;
+		$disposableDomainsUrl = $this->plugin->getSetting($contextId, 'disposableDomainsUrl');
+
+		$cache = CacheManager::getManager()->getFileCache(
+			$this->plugin->getName(),
+			static::CACHE_KEY_DISPOSABLE_DOMAINS,
+			function () {
+				return null;
+			}
+		);
+		$cacheTime = $cache->getCacheTime() ?: 0;
+		$domains = $cache->getContents();
+		if ($domains && $cacheTime > now()->subDays($expiration)->getTimestamp()) {
+			return $this->disposableDomains = $domains;
+		}
+
+		try {
+			$client = Application::get()->getHttpClient();
+			$data = $client->get($disposableDomainsUrl)->getBody()->getContents();
+			$domains = [];
+			foreach (preg_split('/\s+/', mb_strtolower($data)) as $domain) {
+				if ($domain) {
+					$domains[$domain] = null;
+				}
+			}
+
+			$cache->setEntireCache($domains);
+			return $this->disposableDomains = $domains;
+		} catch (Exception $e) {
+			error_log("Failed to retrieve the list of disposable domains.\n" . $e);
+			return $this->disposableDomains = [];
+		}
 	}
 
 	/**
