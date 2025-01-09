@@ -73,8 +73,8 @@ class MailFilter
 	 */
 	public function filterEmails(array $emails, array &$filteredEmails = null): array
 	{
-		return $this->filterInvalidMailExchanges(
-			$this->filterInactiveEmails(
+		return $this->filterInactiveEmails(
+            $this->filterInvalidMailExchanges(
 				$this->filterDisposableDomains($emails, $filteredEmails),
 				$filteredEmails
 			),
