@@ -289,13 +289,20 @@ class MailSendFilterPlugin extends GenericPlugin
 	}
 
 	/**
-	 * Avoid disabling the plugin
+	 * Only the site admin has permission to enable/disable the plugin
 	 *
 	 * @copydoc Plugin::setEnabled()
 	 */
 	public function setEnabled($enabled): void
 	{
-		parent::setEnabled(true);
+		$user = Application::get()->getRequest()->getUser();
+		if (!$user->hasRole(ROLE_ID_SITE_ADMIN, CONTEXT_SITE)) {
+			import('classes.notification.NotificationManager');
+			(new NotificationManager())
+				->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_WARNING, ['contents' => __('plugins.generic.mailSendFilter.limitedActivation')]);
+			return;
+		}
+		parent::setEnabled($enabled);
 	}
 
 	/**
