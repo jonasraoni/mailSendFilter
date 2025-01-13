@@ -84,3 +84,6 @@ msgstr "User never logged in"
 
 msgid "plugins.generic.mailSendFilter.reason.inactive"
 msgstr "Inactive account"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Only the site administrator can enable or disable this plugin."
