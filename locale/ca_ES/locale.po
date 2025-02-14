@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/ca/>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Complement de filtratge d'enviament de correu"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Aquest complement permet evitar l'enviament de correus electrònics a determinats comptes d'usuari basant-se en configuracions i regles específiques, útil per reduir els correus retornats i evitar que el vostre servidor de correu s'afegeixi a una llista de bloqueig."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Descarrega els correus bloquejats"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Configuració general"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Omet els comptes d'usuari inactius basant-se en l'últim inici de sessió, d'acord amb les regles de llindar següents."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Omet els dominis de correu electrònic sense un registre MX vàlid."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Omet els correus electrònics que pertanyen a serveis de correu desechables."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Omet els comptes d'usuari que mai han iniciat sessió."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Omet els comptes d'usuari que no han validat el seu correu electrònic."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Configura la URL d'on s'ha de descarregar la llista de dominis desechables. <b>Els elements han d'estar separats per un salt de línia</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Configura la data de caducitat dels dominis desechables en dies."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Configura les claus de correu electrònic que han d'ignorar totes les validacions."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Els comptes més antics que el nombre de dies especificat es comprovaran per inactivitat (principalment útil per a l'opció \"comptes que mai han iniciat sessió\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Regles de llindar d'inactivitat en dies."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Deixeu el camp buit per no fer cap comprovació per al rol especificat</li><li>Establir el camp a 0 significa que el rol especificat mai es considerarà inactiu</li><li>En cas que un usuari coincideixi amb múltiples regles, s'utilitzarà la més permisiva per decidir si el compte és inactiu</li></ul>"
+
+msgid "user.role.none"
+msgstr "Comptes d'usuari sense cap rol assignat"
+
+msgid "user.with.submission"
+msgstr "Comptes d'usuari amb almenys una tramesa"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Servei de correu desechable"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Intercanvi de correu electrònic invàlid"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Correu electrònic no validat"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "L'usuari mai ha iniciat sessió"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Compte inactiu"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Només l'administrador del lloc pot activar o desactivar aquest complement"

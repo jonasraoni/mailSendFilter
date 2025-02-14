@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/sl/>\n"
+"Language: sl_SI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Vtičnik za filtriranje pošiljanja e-pošte"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Vtičnik omogoča izogibanje pošiljanju e-pošte določenim uporabniškim računom na podlagi določenih nastavitev in pravil, kar je koristno za zmanjšanje zavrnjene pošte in preprečevanje dodajanja vašega poštnega strežnika na seznam blokiranih."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Prenesi blokirano e-pošto"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Splošne nastavitve"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Preskoči neaktivne uporabniške račune na podlagi zadnje prijave v skladu s spodnjimi pravili praga."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Preskoči e-poštne domene brez veljavnega MX zapisa."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Preskoči e-pošto, ki pripada začasnim e-poštnim storitvam."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Preskoči uporabniške račune, ki se nikoli niso prijavili."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Preskoči uporabniške račune, ki nikoli niso potrdili svojega e-poštnega naslova."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Nastavi URL, s katerega naj se prenese seznam začasnih domen. <b>Elementi morajo biti ločeni s prelomom vrstice</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Nastavi obdobje veljavnosti začasnih domen v dnevih."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Nastavi e-poštne ključe, ki naj preskočijo vsa preverjanja."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Računi, starejši od navedenega števila dni, bodo preverjeni za neaktivnost (predvsem uporabno za možnost \"računi, ki se nikoli niso prijavili\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Pravila praga neaktivnosti v dnevih."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Vloge, ki se niso prijavile za navedeno število dni, bodo obravnavane kot neaktivne.<ul><li>Pustite polje prazno, da ne izvajate nobenih preverjanj za določeno vlogo.</li><li>Nastavitev polja na 0 pomeni, da vloga nikoli ne bo obravnavana kot "
+"neaktivna.</li><li>Če uporabnik ustreza več pravilom, bo za določanje neaktivnosti računa uporabljena najbolj prizanesljiva pravila.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Uporabniški računi brez dodeljene vloge"
+
+msgid "user.with.submission"
+msgstr "Uporabniški računi z vsaj eno oddajo"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Začasna e-poštna storitev"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Neveljaven poštni strežnik"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-pošta ni potrjena"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Uporabnik se ni nikoli prijavil"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Neaktiven račun"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Samo skrbnik spletnega mesta lahko omogoči ali onemogoči ta vtičnik."

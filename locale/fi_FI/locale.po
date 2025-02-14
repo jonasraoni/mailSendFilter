@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/fi/>\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Sähköpostin lähetyssuodatin -lisäosa"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Tämä lisäosa mahdollistaa sähköpostien lähetyksen välttämisen tietyille käyttäjätileille tiettyjen asetusten ja sääntöjen perusteella, mikä on hyödyllistä palautuvien sähköpostien vähentämiseksi ja sähköpostipalvelimesi estoluetteloon lisäämisen estämiseksi."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Lataa estetyt sähköpostit"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Yleiset asetukset"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Ohittaa käyttäjätilit, jotka ovat olleet epäaktiivisia viimeisimmän kirjautumisajan perusteella alla määritettyjen kynnysarvojen mukaisesti."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Ohittaa sähköpostiverkkotunnukset, joilla ei ole kelvollista MX-tietuetta."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Ohittaa kertakäyttöisiin sähköpostipalveluihin kuuluvat sähköpostit."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Ohittaa käyttäjätilit, joilla ei ole koskaan kirjauduttu sisään."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Ohittaa käyttäjätilit, jotka eivät ole vahvistaneet sähköpostiaan."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Aseta URL-osoite, josta kertakäyttöisten verkkotunnusten lista ladataan. <b>Kohteiden tulee olla erotettuina rivinvaihdoilla</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Aseta kertakäyttöisten verkkotunnusten vanhentumisaika päivinä."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Aseta sähköpostiavaimet, jotka ohittavat kaikki validoinnit."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Tarkistaa käyttäjätilit, jotka ovat olleet epäaktiivisia määritettyä päivämäärää vanhempia (pääasiassa hyödyllinen 'ei koskaan kirjautuneet' -vaihtoehdolle)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Epäaktiivisuuden kynnysarvot päivinä."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Jätä kenttä tyhjäksi olla tekemättä tarkistuksia määritetylle roolille</li><li>Aseta kenttä arvoon 0, jos roolia ei koskaan pidä pitää epäaktiivisena</li><li>Jos käyttäjä täsmää useisiin sääntöihin, käytetään sallivinta sääntöä epäaktiivisuuden määrittämiseen</li></ul>"
+
+msgid "user.role.none"
+msgstr "Käyttäjätilit ilman minkäänlaista roolia"
+
+msgid "user.with.submission"
+msgstr "Käyttäjätilit, joilla on vähintään yksi lähetys"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Kertakäyttöinen sähköpostipalvelu"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Virheellinen sähköpostivaihto"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Sähköpostia ei vahvistettu"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Käyttäjä ei ole koskaan kirjautunut sisään"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Epäaktiivinen tili"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Vain sivuston ylläpitäjä voi aktivoida tai deaktivoida tämän lisäosan"

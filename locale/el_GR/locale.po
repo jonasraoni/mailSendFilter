@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/el/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Πρόσθετο Φίλτρου Αποστολής Email"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Αυτό το πρόσθετο επιτρέπει την αποφυγή αποστολής email σε συγκεκριμένους λογαριασμούς χρηστών βάσει συγκεκριμένων ρυθμίσεων και κανόνων, χρήσιμο για τη μείωση των επιστρεφόμενων email και την πρόληψη της προσθήκης του διακομιστή email σας σε μαύρη λίστα."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Λήψη αποκλεισμένων email"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Γενικές ρυθμίσεις"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Παραλείπει ανενεργούς λογαριασμούς χρηστών βάσει τελευταίας σύνδεσης, σύμφωνα με τους παρακάτω κανόνες κατωφλίου."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Παραλείπει domains email χωρίς έγκυρη εγγραφή MX."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Παραλείπει email που ανήκουν σε μίας χρήσης υπηρεσίες email."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Παραλείπει λογαριασμούς που δεν έχουν συνδεθεί ποτέ."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Παραλείπει μη επαληθευμένους λογαριασμούς χρηστών."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Ορίζει URL λήψης λίστας domains μίας χρήσης. <b>Τα στοιχεία πρέπει να διαχωρίζονται με νέες γραμμές</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Ορίζει λήξη domains μίας χρήσης σε ημέρες."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Ορίζει κλειδιά email που παρακάμπτουν όλους τους ελέγχους."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Ελέγχει λογαριασμούς παλαιότερους από καθορισμένες ημέρες αδράνειας (ιδιαίτερα χρήσιμο για επιλογή 'ποτέ συνδεδεμένοι')."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Κανόνες κατωφλίου αδράνειας (σε ημέρες)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Αφήστε το πεδίο κενό για να μην γίνει έλεγχος για συγκεκριμένο ρόλο</li><li>Η τιμή 0 σημαίνει ότι ο ρόλος δεν θα θεωρείται ποτέ ανενεργός</li><li>Αν ο χρήστης ταιριάζει με πολλούς κανόνες, θα εφαρμοστεί ο πιο επιεικής κανόνας</li></ul>"
+
+msgid "user.role.none"
+msgstr "Λογαριασμοί χρηστών χωρίς ρόλο"
+
+msgid "user.with.submission"
+msgstr "Λογαριασμοί χρηστών με τουλάχιστον μία υποβολή"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Υπηρεσία email μίας χρήσης"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Μη έγκυρη εγγραφή MX"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Μη επαληθευμένο email"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Ο χρήστης δεν συνδέθηκε ποτέ"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Ανενεργός λογαριασμός"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Μόνο ο διαχειριστής ιστότοπου μπορεί να ενεργοποιήσει/απενεργοποιήσει αυτό το πρόσθετο"

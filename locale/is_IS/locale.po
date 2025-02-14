@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/is/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Tölvupóstsendingarsía viðbót"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Þessi viðbót gerir kleift að forðast að senda tölvupóst á ákveðna notendareikninga byggt á sérstökum stillingum og reglum, gagnlegt til að draga úr endursendum tölvupósti og koma í veg fyrir að póstþjónninn þinn sé settur á bannlista."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Sækja lokaða tölvupósta"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Almennar stillingar"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Sleppur notendareikningum sem hafa verið óvirkir byggt á síðasta innskráningartíma notanda, í samræmi við skilyrðin hér að neðan."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Sleppur tölvupóstlénum án gilds MX skráningar."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Sleppur tölvupóstum sem tilheyra einnota tölvupóstþjónustum."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Sleppur notendareikningum sem aldrei hafa skráð sig inn."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Sleppur notendareikningum sem aldrei hafa staðfest netfangið sitt."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Stillir slóðina þar sem listi yfir einnota lén ætti að vera sóttur. <b>Atriðin verða að vera aðskilin með línubilum</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Stillir gildistíma einnota lénanna í dögum."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Stillir tölvupóstlyklana sem ættu að sleppa öllum prófunum."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Reikningar eldri en gefinn fjöldi daga verða athugaðir fyrir óvirkni (nýtilegt fyrir valkostinn \"reikningar sem aldrei hafa skráð sig inn\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Óvirkni skilyrði í dögum."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Hlutverk sem hafa ekki skráð sig inn í gefinn fjölda daga verða talin óvirk.<ul><li>Láttu reitinn vera auðan til að framkvæma engar athuganir á því hlutverki.</li><li>Að setja reitinn á 0 þýðir að það hlutverk verður aldrei talið óvirkt.</li><li>Ef notandi passar við mörg skilyrði, verður mjúkasta skilyrðið notað til að ákveða hvort reikningurinn sé óvirkur.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Notendareikningar án hlutverks"
+
+msgid "user.with.submission"
+msgstr "Notendareikningar með að minnsta kosti einni umsókn"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Einnota tölvupóstþjónusta"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Ógild tölvupóstskipti"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Netfang ekki staðfest"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Notandi hefur aldrei skráð sig inn"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Óvirkur reikningur"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Aðeins stjórnandi vefsvæðis getur virkjað eða gert þessa viðbót óvirka."

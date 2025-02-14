@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/ro/>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Plugin de filtrare a trimiterii e-mailurilor"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Acest plugin permite evitarea trimiterii de e-mailuri către anumite conturi de utilizator pe baza unor setări și reguli specifice, util pentru reducerea e-mailurilor returnate și prevenirea adăugării serverului dvs. de e-mail la o listă de blocare."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Descarcă e-mailurile blocate"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Setări generale"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Ocolește conturile de utilizator inactive bazate pe ultima autentificare, conform regulilor de prag de mai jos."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Ocolește domeniile de e-mail fără înregistrare MX validă."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Ocolește adresele de e-mail aparținând serviciilor de e-mail descărcabile."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Ocolește conturile de utilizator care nu s-au autentificat niciodată."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Ocolește conturile de utilizator nevalidate."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Setează URL-ul pentru descărcarea listei de domenii descărcabile. <b>Elementele trebuie separate prin linie nouă</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Setează expirarea domeniilor descărcabile în zile."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Setează cheile de e-mail care ocolesc toate validările."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Verifică conturile mai vechi decât numărul de zile specificat pentru inactivitate (util în special pentru opțiunea 'conturi care nu s-au autentificat niciodată')."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Reguli de prag de inactivitate (în zile)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Lăsați câmpul gol pentru a nu efectua verificări pentru rolul specificat</li><li>Setarea câmpului la 0 înseamnă că rolul specificat nu va fi considerat niciodată inactiv</li><li>Dacă un utilizator se potrivește cu multiple reguli, se va folosi cea mai permisivă regulă pentru a decide dacă contul este inactiv</li></ul>"
+
+msgid "user.role.none"
+msgstr "Conturi de utilizator fără rol atribuit"
+
+msgid "user.with.submission"
+msgstr "Conturi de utilizator cu cel puțin o trimitere"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Serviciu de e-mail descărcabil"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Schimb de e-mail invalid"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-mail nevalidat"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Utilizatorul nu s-a autentificat niciodată"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Cont inactiv"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Doar administratorul site-ului poate activa sau dezactiva acest plugin"

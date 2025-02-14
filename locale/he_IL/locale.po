@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/he/>\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : 3);\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "תוסף סינון שליחת דוא״ל"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "תוסף זה מאפשר הימנעות משליחת דוא״ל לחשבונות משתמש מסוימים על פי הגדרות וחוקים ספציפיים, שימושי להפחתת דוא״ל חוזר ומניעת הוספת שרת הדוא״ל שלך לרשימת חסימות."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "הורד דוא״ל חסום"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "הגדרות כלליות"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "מדלג על חשבונות משתמש לא פעילים לפי זמן ההתחברות האחרון, בהתאם לחוקי הסף למטה."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "מדלג על דומיינים ללא רשומת MX תקפה."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "מדלג על כתובות דוא״ל משירותים חד-פעמיים."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "מדלג על חשבונות שמעולם לא התחברו."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "מדלג על חשבונות שלא אומתו."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "מגדיר את כתובת האתר להורדת רשימת דומיינים חד-פעמיים. <b>יש להפריד פריטים בשורה חדשה</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "מגדיר תוקף לדומיינים חד-פעמיים בימים."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "מגדיר מפתחות דוא״ל שיעקפו את כל הבדיקות."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "בודק חשבונות ישנים ממספר הימים שצוין לאי-פעילות (שימושי בעיקר לאפשרות 'חשבונות שמעולם לא התחברו')."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "חוקי סף אי-פעילות בימים."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>השאר שדה ריק כדי לא לבצע בדיקות עבור התפקיד</li><li>הגדרת 0 משמעת שהתפקיד לא ייחשב לא פעיל</li><li>בהתאמה למספר חוקים, החוק המתירני ביותר יקבע אם החשבון לא פעיל</li></ul>"
+
+msgid "user.role.none"
+msgstr "חשבונות ללא שום הרשאה"
+
+msgid "user.with.submission"
+msgstr "חשבונות עם לפחות הגשה אחת"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "שירות דוא״ל חד-פעמי"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "רשומת MX לא תקפה"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "דוא״ל לא מאומת"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "המשתמש מעולם לא התחבר"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "חשבון לא פעיל"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "רק מנהל האתר יכול להפעיל או לכבות תוסף זה"

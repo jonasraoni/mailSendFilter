@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OJS Mail Filter Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 14:00+0000\n"
+"PO-Revision-Date: 2024-03-15 14:30+0000\n"
+"Last-Translator: Chinese Team <zh@example.com>\n"
+"Language-Team: Traditional Chinese <zh_Hant@example.com>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "郵件發送過濾器"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "此插件可根據特定設定和規則避免向某些用戶帳戶發送郵件，減少退信並防止郵件伺服器被列入黑名單。"
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "下載被攔截郵件"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "一般設定"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "根據最後登入時間跳過不活躍帳戶"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "跳過無有效MX記錄的域名"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "跳過一次性郵件服務"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "跳過從未登入的帳戶"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "跳過未驗證帳戶"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "一次性域名列表URL <b>請用新行分隔</b>"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "域名有效期(天)"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "跳過檢查的郵件密鑰"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "檢查超過X天的帳戶"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "不活躍閾值規則(天)"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>留空=不檢查</li><li>0=永不視為不活躍</li><li>多規則=採用最寬鬆</li></ul>"
+
+msgid "user.role.none"
+msgstr "無角色帳戶"
+
+msgid "user.with.submission"
+msgstr "有提交記錄的帳戶"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "一次性服務"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "無效MX記錄"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "未驗證"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "從未登入"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "不活躍帳戶"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "僅站點管理員可啟用/停用"

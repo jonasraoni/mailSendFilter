@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Filtre d'envoi de courriels"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Ce plugin permet d'éviter d'envoyer des courriels à des comptes utilisateurs spécifiques selon des règles configurables, réduisant les rebonds et protégeant votre serveur des listes noires."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Télécharger les courriels bloqués"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Paramètres généraux"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Ignorer les comptes inactifs basés sur la dernière connexion."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Ignorer les domaines sans enregistrement MX valide."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Ignorer les services de courriel jetables."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Ignorer les comptes jamais connectés."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Ignorer les comptes non validés."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "URL pour la liste des domaines jetables. <b>Séparer les éléments par des nouvelles lignes</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Expiration des domaines jetables (en jours)."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Clés de courriel contournant les vérifications."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Vérifier les comptes plus anciens que X jours."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Règles d'inactivité (en jours)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Vide = pas de vérification</li><li>0 = jamais inactif</li><li>Règles multiples = la plus permissive s'applique</li></ul>"
+
+msgid "user.role.none"
+msgstr "Comptes sans rôle"
+
+msgid "user.with.submission"
+msgstr "Comptes avec soumission"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Service jetable"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Enregistrement MX invalide"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Non validé"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Jamais connecté"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Compte inactif"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Seuls les administrateurs peuvent gérer ce plugin"

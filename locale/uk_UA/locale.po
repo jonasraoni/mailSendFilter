@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/uk/>\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Плагін фільтрації надсилання пошти"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Плагін дозволяє уникнути надсилання електронних листів певним обліковим записам користувачів на основі конкретних налаштувань і правил, що корисно для зменшення кількості повернених листів і запобігання додаванню вашого поштового сервера до чорного списку."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Завантажити заблоковані листи"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Загальні налаштування"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Пропускає неактивні облікові записи користувачів на основі останнього входу в систему згідно з правилами порогів нижче."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Пропускає поштові домени без дійсного MX-запису."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Пропускає листи, що належать тимчасовим поштовим службам."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Пропускає облікові записи користувачів, які ніколи не входили в систему."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Пропускає облікові записи користувачів, які ніколи не підтверджували свою електронну адресу."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Встановлює URL, з якого має бути завантажений список тимчасових доменів. <b>Елементи мають бути розділені перенесенням рядка</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Встановлює термін дії тимчасових доменів у днях."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Встановлює поштові ключі, які мають пропускати всі перевірки."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Облікові записи старші вказаної кількості днів будуть перевірятися на неактивність (в основному корисно для опції \"облікові записи, які ніколи не входили в систему\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Правила порогу неактивності в днях."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Ролі, які не входили в систему протягом вказаної кількості днів, вважатимуться неактивними.<ul><li>Залиште поле порожнім, щоб не виконувати жодних перевірок для вказаної ролі.</li><li>Встановлення поля в 0 означає, що роль ніколи не вважатиметься неактивною.</"
+"li><li>Якщо користувач відповідає кільком правилам, для визначення неактивності облікового запису використовуватиметься найбільш м'яке правило.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Облікові записи користувачів без призначеної ролі"
+
+msgid "user.with.submission"
+msgstr "Облікові записи користувачів з принаймні однією подачею"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Тимчасова поштова служба"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Недійсний поштовий сервер"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Електронна пошта не підтверджена"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Користувач ніколи не входив у систему"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Неактивний обліковий запис"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Тільки адміністратор сайту може вмикати або вимикати цей плагін."

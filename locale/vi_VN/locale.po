@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/vi/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Plugin Lọc Gửi Thư"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Plugin cho phép tránh gửi email đến các tài khoản người dùng nhất định dựa trên các cài đặt và quy tắc cụ thể, hữu ích để giảm email bị trả lại và ngăn máy chủ email của bạn bị thêm vào danh sách chặn."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Tải xuống email bị chặn"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Cài đặt chung"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Bỏ qua các tài khoản người dùng không hoạt động dựa trên lần đăng nhập cuối cùng theo các quy tắc ngưỡng bên dưới."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Bỏ qua các tên miền email không có bản ghi MX hợp lệ."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Bỏ qua email thuộc các dịch vụ email tạm thời."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Bỏ qua các tài khoản người dùng chưa bao giờ đăng nhập."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Bỏ qua các tài khoản người dùng chưa bao giờ xác thực địa chỉ email của họ."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Đặt URL từ đó danh sách tên miền tạm thời sẽ được tải xuống. <b>Các mục phải được phân tách bằng dấu xuống dòng</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Đặt thời hạn hiệu lực của tên miền tạm thời theo ngày."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Đặt các khóa email sẽ bỏ qua tất cả các xác thực."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Các tài khoản cũ hơn số ngày được chỉ định sẽ được kiểm tra tình trạng không hoạt động (chủ yếu hữu ích cho tùy chọn \"tài khoản chưa bao giờ đăng nhập\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Quy tắc ngưỡng không hoạt động tính bằng ngày."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Các vai trò không đăng nhập trong số ngày được chỉ định sẽ được coi là không hoạt động.<ul><li>Để trống trường để không thực hiện kiểm tra nào cho vai trò được chỉ định.</li><li>Đặt trường thành 0 có nghĩa "
+"là vai trò sẽ không bao giờ được coi là không hoạt động.</li><li>Nếu người dùng khớp với nhiều quy tắc, quy tắc linh hoạt nhất sẽ được sử dụng để quyết định xem tài khoản có không hoạt động hay không.</li></"
+"ul>"
+
+msgid "user.role.none"
+msgstr "Tài khoản người dùng không có vai trò được gán"
+
+msgid "user.with.submission"
+msgstr "Tài khoản người dùng có ít nhất một bài nộp"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Dịch vụ email tạm thời"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Máy chủ email không hợp lệ"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Email chưa được xác thực"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Người dùng chưa bao giờ đăng nhập"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Tài khoản không hoạt động"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Chỉ quản trị viên trang web mới có thể kích hoạt hoặc vô hiệu hóa plugin này."

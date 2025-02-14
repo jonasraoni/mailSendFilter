@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/tr/>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "E-posta Gönderim Filtresi Eklentisi"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Eklenti, belirli ayarlar ve kurallara göre belirli kullanıcı hesaplarına e-posta gönderimini önlemeyi sağlar, bu da geri dönen e-postaları azaltmak ve posta sunucunuzun engelleme listesine eklenmesini önlemek için faydalıdır."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Engellenen e-postaları indir"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Genel ayarlar"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Aşağıdaki eşik kurallarına göre son giriş temelinde etkin olmayan kullanıcı hesaplarını atlar."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Geçerli MX kaydı olmayan e-posta alan adlarını atlar."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Geçici e-posta hizmetlerine ait e-postaları atlar."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Hiç giriş yapmamış kullanıcı hesaplarını atlar."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "E-posta adreslerini hiç doğrulamamış kullanıcı hesaplarını atlar."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Geçici alan adları listesinin indirileceği URL'yi ayarlar. <b>Öğeler satır sonu ile ayrılmalıdır</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Geçici alan adlarının geçerlilik süresini gün cinsinden ayarlar."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Tüm doğrulamaları atlayacak e-posta anahtarlarını ayarlar."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Belirtilen gün sayısından daha eski hesaplar etkinlik kontrolünden geçirilecektir (özellikle \"hiç giriş yapmamış hesaplar\" seçeneği için faydalıdır)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Etkinlik eşiği kuralları (gün cinsinden)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Belirtilen gün sayısı boyunca giriş yapmamış roller etkin olmayan olarak kabul edilecektir.<ul><li>Belirtilen rol için herhangi bir kontrol yapmamak için alanı boş bırakın.</li><li>Alanı 0 olarak ayarlamak, rolün asla etkin olmayan "
+"olarak kabul edilmeyeceği anlamına gelir.</li><li>Bir kullanıcı birden fazla kurala uyuyorsa, hesabın etkin olmayan olup olmadığına karar vermek için en esnek kural kullanılacaktır.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Atanmış rolü olmayan kullanıcı hesapları"
+
+msgid "user.with.submission"
+msgstr "En az bir gönderisi olan kullanıcı hesapları"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Geçici e-posta hizmeti"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Geçersiz posta sunucusu"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-posta doğrulanmadı"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Kullanıcı hiç giriş yapmadı"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Etkin olmayan hesap"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Bu eklentiyi yalnızca site yöneticisi etkinleştirebilir veya devre dışı bırakabilir."

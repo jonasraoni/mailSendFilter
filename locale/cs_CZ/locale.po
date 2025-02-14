@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:10+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/cs/>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Plugin pro filtrování odesílání e-mailů"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Plugin umožňuje zabránit odesílání e-mailů určitým uživatelským účtům na základě specifických nastavení a pravidel, což je užitečné pro snížení počtu odmítnutých e-mailů a zabránění přidání vašeho poštovního serveru na seznam blokovaných."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Stáhnout blokované e-maily"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Obecná nastavení"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Přeskakuje neaktivní uživatelské účty na základě posledního přihlášení podle níže uvedených prahových pravidel."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Přeskakuje e-mailové domény bez platného MX záznamu."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Přeskakuje e-maily patřící dočasným e-mailovým službám."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Přeskakuje uživatelské účty, které se nikdy nepřihlásily."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Přeskakuje uživatelské účty, které nikdy neověřily svou e-mailovou adresu."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Nastavuje URL, ze které se má stáhnout seznam dočasných domén. <b>Položky musí být odděleny novým řádkem</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Nastavuje dobu platnosti dočasných domén ve dnech."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Nastavuje e-mailové klíče, které mají přeskočit všechny validace."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Účty starší než zadaný počet dní budou kontrolovány na neaktivitu (užitečné hlavně pro volbu \"účty, které se nikdy nepřihlásily\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Pravidla prahové hodnoty neaktivity ve dnech."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Role, které se nepřihlásily po zadaný počet dní, budou považovány za neaktivní.<ul><li>Ponechte pole prázdné, pokud nechcete provádět žádné kontroly pro danou roli.</li><li>Nastavení pole na 0 znamená, že role nebude nikdy považována za "
+"neaktivní.</li><li>Pokud uživatel odpovídá více pravidlům, použije se nejbenevolentnější pravidlo pro rozhodnutí, zda je účet neaktivní.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Uživatelské účty bez přiřazené role"
+
+msgid "user.with.submission"
+msgstr "Uživatelské účty s alespoň jedním příspěvkem"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Dočasná e-mailová služba"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Neplatný e-mailový server"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-mail není ověřen"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Uživatel se nikdy nepřihlásil"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Neaktivní účet"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Pouze správce webu může tento plugin povolit nebo zakázat."

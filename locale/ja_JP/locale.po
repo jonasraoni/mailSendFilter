@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/ja/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "メール送信フィルタープラグイン"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr ""
+"このプラグインは、特定の設定とルールに基づいて特定のユーザーアカウントへのメール送信を避けることができ、"
+"バウンスメールを減らし、メールサーバーがブロックリストに追加されるのを防ぐのに役立ちます。"
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "ブロックされたメールをダウンロード"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "一般設定"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr ""
+"以下のしきい値ルールに従って、最終ログインに基づいて非アクティブなユーザーアカウントをスキップします。"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "有効なMXレコードのないメールドメインをスキップします。"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "使い捨てメールサービスに属するメールをスキップします。"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "一度もログインしていないユーザーアカウントをスキップします。"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "メールアドレスを検証していないユーザーアカウントをスキップします。"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr ""
+"使い捨てドメインのリストをダウンロードするURLを設定します。<b>項目は改行で区切る必要があります</b>。"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "使い捨てドメインの有効期間を日数で設定します。"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "すべての検証をスキップするメールキーを設定します。"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr ""
+"指定した日数より古いアカウントは非アクティブ状態がチェックされます（主に「一度もログインしていないアカウ"
+"ント」オプションに有用）。"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "非アクティブ状態のしきい値ルール（日数）。"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"指定した日数ログインしていないロールは非アクティブとみなされます。<ul><li>指定したロールに対してチェック"
+"を行わない場合は、フィールドを空のままにします。</li><li>フィールドを0に設定すると、そのロールは決して非"
+"アクティブとみなされません。</li><li>ユーザーが複数のルールに一致する場合、アカウントが非アクティブかど"
+"うかを判断するために最も寛容なルールが使用されます。</li></ul>"
+
+msgid "user.role.none"
+msgstr "ロールが割り当てられていないユーザーアカウント"
+
+msgid "user.with.submission"
+msgstr "少なくとも1つの投稿があるユーザーアカウント"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "使い捨てメールサービス"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "無効なメールサーバー"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "メールが検証されていません"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "ユーザーが一度もログインしていません"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "非アクティブなアカウント"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "サイト管理者のみがこのプラグインを有効または無効にできます。"

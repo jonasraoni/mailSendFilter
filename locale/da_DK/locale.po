@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:10+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/da/>\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "E-mail-afsendelsesfilter Plugin"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Plugin'et gør det muligt at undgå at sende e-mails til bestemte brugerkonti baseret på specifikke indstillinger og regler, hvilket er nyttigt for at reducere afviste e-mails og undgå at din mailserver bliver tilføjet til en blokeringsliste."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Download blokerede e-mails"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Generelle indstillinger"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Springer inaktive brugerkonti over baseret på seneste login i henhold til tærskelreglerne nedenfor."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Springer e-maildomæner over uden gyldig MX-post."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Springer e-mails over, der tilhører midlertidige e-mailtjenester."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Springer brugerkonti over, der aldrig har logget ind."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Springer brugerkonti over, der aldrig har valideret deres e-mailadresse."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Angiver URL'en, hvorfra listen over midlertidige domæner skal downloades. <b>Elementerne skal være adskilt af linjeskift</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Angiver gyldighedsperioden for midlertidige domæner i dage."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Angiver e-mailnøgler, der skal springe alle valideringer over."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Konti ældre end det angivne antal dage vil blive kontrolleret for inaktivitet (primært nyttigt for indstillingen \"konti, der aldrig har logget ind\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Inaktivitetstærskelregler i dage."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Roller, der ikke har logget ind i det angivne antal dage, vil blive betragtet som inaktive.<ul><li>Lad feltet være tomt for ikke at udføre nogen kontrol på den angivne rolle.</li><li>Indstilling af feltet til 0 betyder, at rollen aldrig vil blive "
+"betragtet som inaktiv.</li><li>Hvis en bruger matcher flere regler, vil den mest lempelige regel blive brugt til at afgøre, om kontoen er inaktiv.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Brugerkonti uden tildelt rolle"
+
+msgid "user.with.submission"
+msgstr "Brugerkonti med mindst én indsendelse"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Midlertidig e-mailtjeneste"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Ugyldig mailserver"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-mail ikke valideret"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Bruger har aldrig logget ind"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Inaktiv konto"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Kun webstedsadministratoren kan aktivere eller deaktivere dette plugin."

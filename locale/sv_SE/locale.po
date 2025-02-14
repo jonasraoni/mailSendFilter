@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/sv/>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "E-postfilter för utskick"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Detta plugin gör det möjligt att undvika att skicka e-post till vissa användarkonton baserat på specifika inställningar och regler, vilket är användbart för att minska antalet returnerade e-postmeddelanden och förhindra att din e-postserver läggs till i en blockeringslista."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Ladda ner blockerade e-postmeddelanden"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Allmänna inställningar"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Hoppar över inaktiva användarkonton baserat på senaste inloggning enligt tröskelvärdesreglerna nedan."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Hoppar över e-postdomäner utan giltig MX-post."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Hoppar över e-postadresser som tillhör tillfälliga e-posttjänster."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Hoppar över användarkonton som aldrig har loggat in."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Hoppar över användarkonton som aldrig har validerat sin e-postadress."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Anger URL:en varifrån listan över tillfälliga domäner ska laddas ner. <b>Objekten måste separeras med radbrytning</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Anger giltighetstiden för tillfälliga domäner i dagar."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Anger e-postnycklar som ska hoppa över alla valideringar."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Konton äldre än det angivna antalet dagar kommer att kontrolleras för inaktivitet (främst användbart för alternativet \"konton som aldrig har loggat in\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Tröskelvärdesregler för inaktivitet i dagar."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Roller som inte har loggat in under det angivna antalet dagar kommer att betraktas som inaktiva.<ul><li>Lämna fältet tomt för att inte utföra några kontroller för den angivna rollen.</li><li>Att sätta fältet till 0 betyder att rollen aldrig kommer att betraktas som inaktiv.</"
+"li><li>Om en användare matchar flera regler kommer den mest tillåtande regeln att användas för att avgöra om kontot är inaktivt.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Användarkonton utan tilldelad roll"
+
+msgid "user.with.submission"
+msgstr "Användarkonton med minst en inskickning"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Tillfällig e-posttjänst"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Ogiltig e-postserver"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-post ej validerad"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Användaren har aldrig loggat in"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Inaktivt konto"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Endast webbplatsadministratören kan aktivera eller inaktivera detta plugin."

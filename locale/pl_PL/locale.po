@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/pl/>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Wtyczka filtrowania wysyłania poczty"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Ta wtyczka umożliwia unikanie wysyłania wiadomości e-mail do określonych kont użytkowników na podstawie określonych ustawień i reguł, przydatne do zmniejszenia liczby zwróconych wiadomości e-mail i zapobiegania dodawaniu serwera pocztowego do listy blokowanych."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Pobierz zablokowane wiadomości e-mail"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Ustawienia ogólne"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Pomija nieaktywne konta użytkowników na podstawie ostatniego logowania zgodnie z poniższymi regułami progowymi."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Pomija domeny e-mail bez prawidłowego rekordu MX."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Pomija wiadomości e-mail należące do tymczasowych usług pocztowych."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Pomija konta użytkowników, którzy nigdy się nie zalogowali."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Pomija konta użytkowników, którzy nigdy nie zweryfikowali swojego adresu e-mail."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Ustawia URL, z którego ma być pobrana lista domen tymczasowych. <b>Elementy muszą być oddzielone znakiem nowej linii</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Ustawia okres ważności domen tymczasowych w dniach."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Ustawia klucze pocztowe, które mają pomijać wszystkie walidacje."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Konta starsze niż podana liczba dni będą sprawdzane pod kątem nieaktywności (głównie przydatne dla opcji \"konta, które nigdy się nie logowały\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Reguły progu nieaktywności w dniach."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Role, które nie logowały się przez podaną liczbę dni, będą uznawane za nieaktywne.<ul><li>Pozostaw pole puste, aby nie wykonywać żadnych sprawdzeń dla określonej roli.</li><li>Ustawienie pola na 0 oznacza, że rola nigdy nie będzie uznawana za nieaktywną.</"
+"li><li>Jeśli użytkownik pasuje do wielu reguł, do określenia nieaktywności konta zostanie użyta najbardziej liberalna reguła.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Konta użytkowników bez przypisanej roli"
+
+msgid "user.with.submission"
+msgstr "Konta użytkowników z co najmniej jednym zgłoszeniem"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Tymczasowa usługa pocztowa"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Nieprawidłowy serwer pocztowy"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-mail nie zweryfikowany"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Użytkownik nigdy się nie zalogował"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Nieaktywne konto"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Tylko administrator witryny może włączać lub wyłączać tę wtyczkę."

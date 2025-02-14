@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/ru/>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Плагин фильтрации отправки почты"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Плагин позволяет избежать отправки электронных писем определенным учетным записям пользователей на основе конкретных настроек и правил, что полезно для уменьшения количества возвращенных писем и предотвращения добавления вашего почтового сервера в черный список."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Скачать заблокированные письма"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Общие настройки"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Пропускает неактивные учетные записи пользователей на основе последнего входа в систему согласно правилам порогов ниже."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Пропускает почтовые домены без действительной MX-записи."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Пропускает письма, принадлежащие временным почтовым службам."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Пропускает учетные записи пользователей, которые никогда не входили в систему."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Пропускает учетные записи пользователей, которые никогда не подтверждали свой адрес электронной почты."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Устанавливает URL, с которого должен быть загружен список временных доменов. <b>Элементы должны быть разделены переносом строки</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Устанавливает срок действия временных доменов в днях."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Устанавливает почтовые ключи, которые должны пропускать все проверки."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Учетные записи старше указанного количества дней будут проверяться на неактивность (в основном полезно для опции \"учетные записи, которые никогда не входили в систему\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Правила порога неактивности в днях."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Роли, которые не входили в систему в течение указанного количества дней, будут считаться неактивными.<ul><li>Оставьте поле пустым, чтобы не выполнять никаких проверок для указанной роли.</li><li>Установка поля в 0 означает, что роль никогда не будет считаться "
+"неактивной.</li><li>Если пользователь соответствует нескольким правилам, для определения неактивности учетной записи будет использоваться наиболее мягкое правило.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Учетные записи пользователей без назначенной роли"
+
+msgid "user.with.submission"
+msgstr "Учетные записи пользователей с как минимум одной подачей"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Временная почтовая служба"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Недействительный почтовый сервер"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Электронная почта не подтверждена"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Пользователь никогда не входил в систему"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Неактивная учетная запись"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Только администратор сайта может включать или отключать этот плагин."
