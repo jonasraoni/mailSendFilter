@@ -40,8 +40,8 @@ class MailSendFilterPlugin extends GenericPlugin
         self::THRESHOLD_UNASSIGNED_ROLE => 'user.role.none',
         self::THRESHOLD_ASSIGNED_SUBMISSION => 'user.with.submission'
     ];
-    /** @var string[] List of email keys which won't be filtered by the plugin */
-    private array $passthroughMailKeys = [];
+    /** @var string[]|null List of email keys which won't be filtered by the plugin */
+    private ?array $passthroughMailKeys = null;
 
     /**
      * @copydoc Plugin::register

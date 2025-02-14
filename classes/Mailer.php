@@ -38,7 +38,7 @@ class Mailer extends \PKP\mail\Mailer
         $property = (new ReflectionClass($view))->getProperty('emailTemplateKey');
         $property->setAccessible(true);
         if (in_array($property->getValue($view), $this->passthroughMailKeys)) {
-            return null;
+            return parent::send($view, $data, $callback);
         }
 
         $emails = [];
