@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Электрондук каттарды чыгаруу фильтринин плагини"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Бул плагин белгилүү орнотуулар жана эрежелер боюнча айрым колдонуучу эсептерине электрондук каттарды жөнөтүүдөн алыс болууга мүмкүндүк берет, кайтып келген электрондук каттарды азайтууга жана электрондук почта сервериңиздин бөгөттөлүү тизмесине кошулуусун алдын алууга жардам берет."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Тосмолонгон каттарды жүктөө"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Негизги орнотуулар"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Активдүү эмес колдонуучу эсептерин акыркы кирүү убактысынын негизинде өткөрүп жиберет."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Жараксыз MX жазуусу бар электрондук почта домендерин өткөрүп жиберет."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Бир жолу колдонулуучу электрондук почта кызматтарына таандык каттарды өткөрүп жиберет."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Эч качан кирбеген колдонуучу эсептерин өткөрүп жиберет."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Текшерилбеген колдонуучу эсептерин өткөрүп жиберет."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Бир жолу колдонулуучу домендердин тизмесин жүктөө үчүн URL дарекин коюңуз. <b>Элементтер жаңы саптар менен бөлүнүшү керек</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Бир жолу колдонулуучу домендердин жарактуулук мөөнөтүн күндөр менен коюңуз."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Бардык текшерүүлөрдү өткөрүп жиберүүчү электрондук почта ачкычтарын коюңуз."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Белгиленген күндөрдөн мурунку активдүү эмес эсептерди текшерет ('эч качан кирбеген' опциясы үчүн пайдалуу)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Активдүү эместик босого эрежелери (күндөр менен)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Ролго текшерүү жүргүзбөө үчүн талааны бош калтырыңыз</li><li>0 деп коюу ролду эч качан активдүү эмес деп эсептөөгө мүмкүндүк берет</li><li>Колдонуучу бир нече эрежеге туура келсе, эсептик активдүү эместикти аныктоо үчүн эң жөлөкөй эреже колдонулат</li></ul>"
+
+msgid "user.role.none"
+msgstr "Эч кандай ролу жок колдонуучу эсептери"
+
+msgid "user.with.submission"
+msgstr "Жок дегенде бир жолдонмосу бар колдонуучу эсептери"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Бир жолу колдонулуучу кызмат"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Жараксыз MX жазуусу"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Текшерилбеген"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Колдонуучу эч качан кирген эмес"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Активдүү эмес эсеп"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Сайттын администратору гана бул плагинди активдештире алат же өчүрө алат"

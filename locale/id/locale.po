@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Plugin Filter Pengiriman Email"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Plugin ini memungkinkan untuk menghindari pengiriman email ke akun pengguna tertentu berdasarkan pengaturan dan aturan tertentu, berguna untuk mengurangi email yang dikembalikan dan mencegah server email Anda ditambahkan ke daftar blokir."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Unduh email yang diblokir"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Pengaturan umum"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Melewati akun pengguna yang tidak aktif berdasarkan waktu terakhir pengguna masuk, sesuai dengan aturan batas waktu di bawah ini."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Melewati domain email yang tidak memiliki catatan MX yang valid."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Melewati email yang termasuk dalam layanan email sekali pakai."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Melewati akun pengguna yang belum pernah masuk."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Melewati akun pengguna yang belum memvalidasi alamat email mereka."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Mengatur URL dari mana daftar domain sekali pakai harus diunduh. <b>Item harus dipisahkan oleh jeda baris</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Mengatur tanggal kedaluwarsa domain sekali pakai dalam hari."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Mengatur kunci email yang harus melewati semua validasi."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Akun yang lebih lama dari jumlah hari tertentu akan diperiksa untuk ketidakaktifan (berguna terutama untuk opsi \"akun yang belum pernah masuk\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Aturan batas waktu ketidakaktifan dalam hari."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Peran yang belum masuk selama jumlah hari tertentu akan dianggap tidak aktif.<ul><li>Biarkan bidang kosong untuk tidak melakukan pemeriksaan apa pun terhadap peran tersebut.</li><li>Mengatur bidang dengan 0 berarti peran tersebut tidak akan pernah dianggap tidak aktif.</li><li>Jika pengguna cocok dengan beberapa aturan, aturan yang paling longgar akan digunakan untuk menentukan apakah akun tidak aktif.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Akun pengguna tanpa peran yang ditetapkan"
+
+msgid "user.with.submission"
+msgstr "Akun pengguna dengan setidaknya satu kiriman"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Layanan email sekali pakai"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Pertukaran email tidak valid"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Email belum divalidasi"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Pengguna belum pernah masuk"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Akun tidak aktif"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Hanya administrator situs yang dapat mengaktifkan atau menonaktifkan plugin ini."

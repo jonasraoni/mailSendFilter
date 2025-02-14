@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/mk/>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Приклучок за филтрирање на испраќање е-пошта"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Овој приклучок овозможува избегнување на испраќање е-пошта до одредени кориснички сметки врз основа на специфични поставки и правила, корисен за намалување на вратени е-пошти и спречување на додавање на вашиот е-поштен сервер на листа на блокирани."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Преземи блокирани е-пошти"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Општи поставки"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Прескокнува неактивни кориснички сметки според последното најавување, согласно правилата за праг подолу."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Прескокнува е-поштени домени без валиден MX запис."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Прескокнува е-пошти кои припаѓаат на еднократни е-поштени услуги."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Прескокнува кориснички сметки што никогаш не се најавени."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Прескокнува непотврдени кориснички сметки."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Поставува URL за преземање на листата на еднократни домени. <b>Ставките мора да бидат одделени со нов ред</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Поставува рок на траење за еднократните домени во денови."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Поставува клучеви за е-пошта што ги заобиколуваат сите проверки."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Проверува сметки постари од наведениот број на денови за неактивност (особено корисно за опцијата 'сметки што никогаш не се најавени')."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Правила за праг на неактивност (во денови)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Оставете го полето празно за да нема проверка за наведената улога</li><li>Поставување на 0 значи улогата никогаш нема да се смета за неактивна</li><li>Ако корисникот одговара на повеќе правила, ќе се користи најпопустливото правило за одлучување за неактивност</li></ul>"
+
+msgid "user.role.none"
+msgstr "Кориснички сметки без доделена улога"
+
+msgid "user.with.submission"
+msgstr "Кориснички сметки со најмалку едно поднесено дело"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Еднократна е-поштена услуга"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Невалиден MX запис"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Е-поштата не е потврдена"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Корисникот никогаш не се најавил"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Неактивна сметка"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Само администраторот на страницата може да го активира или деактивира овој приклучок"

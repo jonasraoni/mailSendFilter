@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Scottish Gaelic <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/gd/>\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : (n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Plugan sgathaidh post-d"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Thèid an plugan seo a chleachdadh gus post-d a chuir gu cunntasan cleachdaiche àraidhean a sheachnadh, stèidhichte air roghainnean is riaghailtean sònraichte. Feumail airson post-d a thilleas a lughdachadh 's casg a chuir air an t-sàrbhair agad a bhith air a chur air liosta dubh."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Luchdaich sìos post-d bacadh"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Roghainnean coitcheann"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Seachain cunntasan neo-ghnìomhach stèidhichte air an uair mu dheireadh a chaidh clàradh a-steach."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Seachain àrainnean-d post-d gun chlàr MX dligheach."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Seachain seirbheisean puist-d a ghabhas cur air falbh aon uair."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Seachain cunntasan nach deach a-steach idir."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Seachain cunntasan gun deach an dearbhadh."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Suidhich URL airson liosta àrainnean a ghabhas cur air falbh aon uair. <b>Feumaidh nithean a bhith air an sgaradh le sreathan ùra</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Suidhich ceann-là nan àrainnean a ghabhas cur air falbh aon uair ann an lathaichean."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Suidhich iuchraichean post-d a leigeas seachad a h-uile sgrùdadh."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Dèan sgrùdadh air cunntasan nas sine na àireamh shònraichte de lathaichean airson neo-ghnìomhachd (feumail gu sònraichte airson roghainn 'gun deach a-steach idir')."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Riaghailtean ùine neo-ghnìomhachd (ann an lathaichean)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Fàg an raon falamh airson sgrùdadh air dreuchd shònraichte a sheachnadh</li><li>Ma shuidhicheas tu 0, cha tèid an dreuchd a mheas mar neo-ghnìomhach idir</li><li>Ma bhuineas cleachdaiche ri iomadh riaghailt, thèid an riaghailt as socraiche a chleachdadh</li></ul>"
+
+msgid "user.role.none"
+msgstr "Cunntasan cleachdaiche gun dreuchd sam bith"
+
+msgid "user.with.submission"
+msgstr "Cunntasan cleachdaiche le co-dhiù aon chur a-steach"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Seirbheis puist-d aon uair"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Clàr MX mì-dhligheach"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Cha deach dearbhadh"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Cha deach a-steach idir"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Cunntas neo-ghnìomhach"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Chan fhaod ach rianadair na làraich an plugan seo atharrachadh"

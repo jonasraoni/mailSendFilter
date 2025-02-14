@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/kk/>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Пошта жіберу сүзгісі плагині"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Бұл плагин белгілі бір параметрлер мен ережелерге негізделген белгілі бір пайдаланушы тіркелгілеріне электрондық пошта жіберуден аулақ болуға мүмкіндік береді, қайтарылған электрондық хаттарды азайту және пошта серверіңіздің бұғатталған тізімге қосылуын болдырмау үшін пайдалы."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Бұғатталған электрондық хаттарды жүктеу"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Жалпы параметрлер"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Пайдаланушы соңғы рет кірген уақытқа байланысты белгілі бір ережелер бойынша белсенді емес пайдаланушы тіркелгілеріне электрондық пошта жіберуден бас тартады."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Дұрыс MX жазбасы жоқ электрондық пошта домендеріне электрондық пошта жіберуден бас тартады."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Бір реттік электрондық пошта қызметтеріне жататын электрондық пошталарға электрондық пошта жіберуден бас тартады."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Ешқашан кірмеген пайдаланушы тіркелгілеріне электрондық пошта жіберуден бас тартады."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Электрондық пошта мекенжайын растамаған пайдаланушы тіркелгілеріне электрондық пошта жіберуден бас тартады."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Бір реттік домендер тізімін жүктеу керек URL мекенжайын орнатады. <b>Элементтер жол үзілімі арқылы бөлінуі керек</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Бір реттік домендердің мерзімінің аяқталуын күндермен орнатады."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Барлық тексерулерден өтуі керек электрондық пошта кілттерін орнатады."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Белгілі бір күндер санынан ескі тіркелгілер белсенді емес болғандықтан тексеріледі (негізінен «ешқашан кірмеген тіркелгілер» опциясы үшін пайдалы)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Белсенді емес болу шекті ережелері күндермен."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Белгілі бір күндер санына кірмеген рөлдер белсенді емес деп саналады.<ul><li>Белгілі бір рөлге ешқандай тексеру жүргізбеу үшін өрісті бос қалдырыңыз.</li><li>Өрісті 0-ге орнату белгілі бір рөл ешқашан белсенді емес деп саналмайтынын білдіреді.</li><li>Егер пайдаланушы бірнеше ережеге сәйкес келсе, ең жұмсақ ереже пайдаланушы тіркелгісінің белсенді емес екенін анықтау үшін қолданылады.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Ешқандай рөлсіз пайдаланушы тіркелгілері"
+
+msgid "user.with.submission"
+msgstr "Кем дегенде бір жіберілімі бар пайдаланушы тіркелгілері"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Бір реттік электрондық пошта қызметі"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Жарамсыз электрондық пошта алмасуы"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Электрондық пошта расталмаған"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Пайдаланушы ешқашан кірмеген"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Белсенді емес тіркелгі"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Бұл плагинді тек сайт әкімшісі қосуға немесе өшіруге болады."

@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OJS Mail Filter Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 14:00+0000\n"
+"PO-Revision-Date: 2024-03-15 14:30+0000\n"
+"Last-Translator: Urdu Team <ur@example.com>\n"
+"Language-Team: Urdu <ur@example.com>\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Direction: rtl\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "ای میل فلٹر پلگ ان"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "یہ پلگ ان مخصوص صارف اکاؤنٹس کو ای میلز بھیجنے سے گریز کرتا ہے، واپس آنے والی ای میلز کو کم کرتا ہے اور سرور کو بلیک لسٹ ہونے سے بچاتا ہے۔"
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "بلاک شدہ ای میلز ڈاؤن لوڈ کریں"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "عام ترتیبات"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "آخری لاگ ان کی بنیاد پر غیر فعال اکاؤنٹس کو چھوڑیں"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "درست MX ریکارڈ کے بغیر ڈومینز کو چھوڑیں"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "ایک بار استعمال ہونے والی ای میل سروسز کو چھوڑیں"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "کبھی لاگ ان نہ کرنے والے اکاؤنٹس کو چھوڑیں"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "غیر تصدیق شدہ اکاؤنٹس کو چھوڑیں"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "ایک بار استعمال ہونے والے ڈومینز کی فہرست کا یو آر ایل <b>نئی لائن سے علیحدہ کریں</b>"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "ڈومینز کی میعاد ختم ہونے کی تاریخ (دنوں میں)"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "چیکس کو چھوڑنے والی چابیاں"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "X دن سے پرانے اکاؤنٹس چیک کریں"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "غیر فعالیت کے اصول (دن)"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>خالی = چیک نہ کریں</li><li>0 = کبھی غیر فعال نہیں</li><li>متعدد اصول = نرم ترین لاگو ہوگا</li></ul>"
+
+msgid "user.role.none"
+msgstr "بغیر کردار کے اکاؤنٹس"
+
+msgid "user.with.submission"
+msgstr "جمع کروانے والے اکاؤنٹس"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "ایک بار استعمال ہونے والی سروس"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "غلط MX ریکارڈ"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "تصدیق شدہ نہیں"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "کبھی لاگ ان نہیں کیا"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "غیر فعال اکاؤنٹ"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "صرف منتظمین ہی اسے چالو/غیر چالو کر سکتے ہیں"

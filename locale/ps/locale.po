@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "د برېښنالیک لیږل فیلتر پلگین"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "دا پلگین د برېښنالیکونو لیږل ځانګړي کارن حسابونو ته د ځانګړو تنظیماتو او قوانینو پر بنسټ منع کوي، چې د راستنیدونکو برېښنالیکونو د کمولو او د خپل برېښنالیک سرور د بندیز لیست کې د شاملیدو مخنیوي لپاره ګټور دی."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "بند شوي برېښنالیکونه ښکته کړئ"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "عمومي تنظیمات"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "د وروستي ننوتنې وخت پر بنسټ غیرفعال کارن حسابونه له پامه غورځوي."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "د MX ریکارډ پرته برېښنالیک ډومینونه له پامه غورځوي."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "د یو وار استعمالیدونکو برېښنالیک خدماتو برېښنالیکونه له پامه غورځوي."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "هیڅکله ننه نه دی شوي کارن حسابونه له پامه غورځوي."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "تایید شوي نه دي کارن حسابونه له پامه غورځوي."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "د یو وار استعمالیدونکو ډومینونو د لیست د ښکته کولو لپاره URL ټاکئ. <b>توکي باید په نوي کرښو سره جلا شي</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "د یو وار استعمالیدونکو ډومینونو د مهالیه په ورځو کې ټاکئ."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "د ټولو چکونو څخه تیریدونکی برېښنالیک کیلي تنظیم کړئ."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "د غیرفعالیت لپاره ټاکل شوي ورځو څخه زوړ کارن حسابونه چک کوي (د 'هیڅکله ننه نه دي شوي' اختیار لپاره ګټور)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "د غیرفعالیت د حد قوانین (په ورځو کې)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>د ځانګړي رول لپاره چک نه کولو لپاره فیلد خالي پریږدئ</li><li>فیلد 0 ته تنظیم کول په دې معنی دي چې رول به هیڅکله غیرفعال نه ګڼل شي</li><li>که یو کارن په څو قوانینو سره مطابقت ولري، د غیرفعالیت ټاکلو لپاره ترټولو اسانه قانون کارول کیږي</li></ul>"
+
+msgid "user.role.none"
+msgstr "هیڅ رول نه لري کارن حسابونه"
+
+msgid "user.with.submission"
+msgstr "لږترلږه یو سپارښت لري کارن حسابونه"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "د یو وار استعمالیدونکی خدمت"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "ناسم MX ریکارډ"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "تایید شوی نه دی"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "کارن هیڅکله ننه نه دی شوی"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "غیرفعال حساب"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "یوازې د سایټ مدیر کولی شي دا پلگین فعال یا غیرفعال کړي"

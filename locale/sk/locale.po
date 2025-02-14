@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/sk/>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Filter pre odosielanie e-mailov"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Tento plugin umožňuje vyhnúť sa odosielaniu e-mailov na vybrané účty podľa pravidiel, čo znižuje odrazené e-maily a chráni server pred čiernou listinou."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Stiahnuť blokované e-maily"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Všeobecné nastavenia"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Preskakuje neaktívne účty podľa posledného prihlásenia."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Preskakuje domény bez platného MX záznamu."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Preskakuje jednorazové e-mailové služby."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Preskakuje nikdy neprihlásené účty."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Preskakuje neoverené účty."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "URL pre jednorazové domény. <b>Oddeľte novými riadkami</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Expirácia domén (dni)."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Kľúče pre obchádzanie kontrol."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Kontroluje účty staršie ako X dní."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Prah neaktivity (dni)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Prázdne = žiadna kontrola</li><li>0 = vždy aktívne</li><li>Viac pravidiel = najmiernejšie</li></ul>"
+
+msgid "user.role.none"
+msgstr "Účty bez role"
+
+msgid "user.with.submission"
+msgstr "Účty s odoslaním"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Jednorazová služba"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Neplatný MX"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Neoverené"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Nikdy prihlásené"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Neaktívny účet"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Iba administrátori môžu spravovať tento plugin"

@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:05+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/az/>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "E-poçt Göndərmə Filtri Əlavəsi"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Bu əlavə xüsusi parametrlər və qaydalara əsasən müəyyən istifadəçi hesablarına e-poçt göndərməkdən qaçınmağa imkan verir, bu da qaytarılan e-poçtları azaltmaq və e-poçt serverinizin qara siyahıya əlavə edilməsinin qarşısını almaq üçün faydalıdır."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Bloklanmış e-poçtları yüklə"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Ümumi parametrlər"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Aşağıdakı hədd qaydalarına uyğun olaraq son giriş əsasında qeyri-aktiv istifadəçi hesablarını atlayır."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Etibarlı MX qeydi olmayan e-poçt domenlərini atlayır."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Müvəqqəti e-poçt xidmətlərinə aid olan e-poçtları atlayır."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Heç vaxt daxil olmamış istifadəçi hesablarını atlayır."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "E-poçt ünvanlarını heç vaxt təsdiqləməmiş istifadəçi hesablarını atlayır."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Müvəqqəti domenlər siyahısının yüklənəcəyi URL-ni təyin edir. <b>Elementlər sətir sonu ilə ayrılmalıdır</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Müvəqqəti domenlərin etibarlılıq müddətini günlərlə təyin edir."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Bütün doğrulamaları atlayacaq e-poçt açarlarını təyin edir."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Göstərilən gün sayından daha köhnə hesablar qeyri-aktivlik üçün yoxlanılacaq (əsasən \"heç vaxt daxil olmamış hesablar\" seçimi üçün faydalıdır)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Qeyri-aktivlik hədd qaydaları (günlərlə)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Göstərilən gün sayı ərzində daxil olmayan rollar qeyri-aktiv hesab ediləcək.<ul><li>Göstərilən rol üçün heç bir yoxlama aparmamaq üçün sahəni boş buraxın.</li><li>Sahəni 0-a təyin etmək rolun heç vaxt qeyri-aktiv hesab edilməyəcəyi deməkdir.</"
+"li><li>İstifadəçi bir neçə qaydaya uyğun gəlirsə, hesabın qeyri-aktiv olub-olmadığına qərar vermək üçün ən yumşaq qayda istifadə ediləcək.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Təyin edilmiş rolu olmayan istifadəçi hesabları"
+
+msgid "user.with.submission"
+msgstr "Ən azı bir təqdimatı olan istifadəçi hesabları"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Müvəqqəti e-poçt xidməti"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Etibarsız e-poçt serveri"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-poçt təsdiqlənməyib"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "İstifadəçi heç vaxt daxil olmayıb"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Qeyri-aktiv hesab"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Bu əlavəni yalnız sayt administratoru aktivləşdirə və ya deaktiv edə bilər."

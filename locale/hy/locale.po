@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/hy/>\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Էլ. փոստի ուղարկման ֆիլտրի փլագին"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Այս փլագինը թույլ է տալիս խուսափել էլ. փոստի ուղարկումից որոշակի օգտատերերի հաշիվներին՝ հիմնված հատուկ կարգավորումների և կանոնների վրա, օգտակար է վերադարձված էլ. նամակները նվազեցնելու և ձեր փոստային սերվերը արգելափակման ցուցակում ավելացնելուց խուսափելու համար։"
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Ներբեռնել արգելափակված էլ. նամակները"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Ընդհանուր կարգավորումներ"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Չի ուղարկում էլ. նամակներ այն օգտատերերի հաշիվներին, որոնք անգործունակ են՝ հիմնվելով օգտատիրոջ վերջին մուտքի ժամանակի վրա, համաձայն ստորև նշված շեմերի կանոնների։"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Չի ուղարկում էլ. նամակներ այն էլ. փոստի դոմեններին, որոնք չունեն պատշաճ MX գրառում։"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Չի ուղարկում էլ. նամակներ այն էլ. փոստի հասցեներին, որոնք պատկանում են միանգամյա օգտագործման էլ. փոստի ծառայություններին։"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Չի ուղարկում էլ. նամակներ այն օգտատերերի հաշիվներին, որոնք երբեք չեն մուտք գործել։"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Չի ուղարկում էլ. նամակներ այն օգտատերերի հաշիվներին, որոնք երբեք չեն հաստատել իրենց էլ. փոստի հասցեն։"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Սահմանում է URL-ը, որտեղից պետք է ներբեռնվի միանգամյա օգտագործման դոմենների ցանկը։ <b>Տարրերը պետք է բաժանված լինեն տողի ընդմիջումով</b>։"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Սահմանում է միանգամյա օգտագործման դոմենների ժամկետի ավարտը օրերով։"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Սահմանում է էլ. փոստի բանալիները, որոնք պետք է բաց թողնեն բոլոր ստուգումները։"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Տվյալ օրերի քանակից ավելի հին հաշիվները կստուգվեն անգործունակության համար (հիմնականում օգտակար է «հաշիվներ, որոնք երբեք չեն մուտք գործել» տարբերակի համար)։"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Անգործունակության շեմի կանոններ օրերով։"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Դերերը, որոնք չեն մուտք գործել տվյալ օրերի քանակի համար, կհամարվեն անգործունակ։<ul><li>Թողեք դաշտը դատարկ՝ տվյալ դերի համար որևէ ստուգում չկատարելու համար։</li><li>Դաշտը 0-ով սահմանելը նշանակում է, որ տվյալ դերը երբեք չի համարվի անգործունակ։</li><li>Եթե օգտատերը համապատասխանում է մի քանի կանոնների, ապա ամենափափուկ կանոնը կօգտագործվի՝ որոշելու համար, թե արդյոք հաշիվը անգործունակ է։</li></ul>"
+
+msgid "user.role.none"
+msgstr "Օգտատերերի հաշիվներ առանց որևէ դերի"
+
+msgid "user.with.submission"
+msgstr "Օգտատերերի հաշիվներ առնվազն մեկ ներկայացմամբ"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Միանգամյա օգտագործման էլ. փոստի ծառայություն"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Անվավեր էլ. փոստի փոխանակում"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Էլ. փոստը հաստատված չէ"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Օգտատերը երբեք չի մուտք գործել"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Անգործունակ հաշիվ"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Միայն կայքի ադմինիստրատորը կարող է միացնել կամ անջատել այս փլագինը։"

@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:10+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Plugin de Filtro de Envio de E-mail"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "O plugin permite evitar o envio de e-mails para determinadas contas de usuário com base em configurações e regras específicas, útil para reduzir e-mails devolvidos e evitar que seu servidor de e-mail seja adicionado a uma lista de bloqueio por outros servidores."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Baixar e-mails bloqueados"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Configurações gerais"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Ignora contas de usuário inativas com base no último acesso, de acordo com as regras de limite abaixo."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Ignora domínios de e-mail sem registro MX válido."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Ignora e-mails pertencentes a serviços de e-mail temporários."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Ignora contas de usuário que nunca fizeram login."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Ignora contas de usuário que nunca validaram seu endereço de e-mail."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Define a URL de onde a lista de domínios temporários deve ser baixada. <b>Os itens devem ser separados por quebra de linha</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Define o prazo de validade dos domínios temporários em dias."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Define as chaves de e-mail que devem ignorar todas as validações."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Contas mais antigas que o número de dias informado serão verificadas quanto à inatividade (útil principalmente para a opção \"contas que nunca fizeram login\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Regras de limite de inatividade em dias."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Perfis que não fizeram login pelo número de dias informado serão considerados inativos.<ul><li>Deixe o campo vazio para não fazer nenhum tipo de verificação sobre o perfil informado.</li><li>Definir o campo com 0 significa que o perfil nunca será considerado inativo.</"
+"li><li>Caso um usuário corresponda a várias regras, a mais flexível será usada para decidir se a conta está inativa.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Contas de usuário sem nenhum perfil atribuído"
+
+msgid "user.with.submission"
+msgstr "Contas de usuário com pelo menos uma submissão"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Serviço de e-mail temporário"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Servidor de e-mail inválido"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-mail não validado"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Usuário nunca fez login"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Conta inativa"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Apenas o administrador do site pode habilitar ou desabilitar este plugin."

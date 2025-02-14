@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/hi/>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "ईमेल भेजने का फ़िल्टर प्लगइन"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "यह प्लगइन विशिष्ट सेटिंग्स और नियमों के आधार पर कुछ उपयोगकर्ता खातों को ईमेल भेजने से बचने की सुविधा देता है, वापस आने वाले ईमेल को कम करने और आपके मेल सर्वर को ब्लैकलिस्ट में जोड़े जाने से रोकने के लिए उपयोगी।"
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "ब्लॉक किए गए ईमेल डाउनलोड करें"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "सामान्य सेटिंग्स"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "अंतिम लॉगिन समय के आधार पर निष्क्रिय उपयोगकर्ता खातों को छोड़ें।"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "मान्य MX रिकॉर्ड के बिना ईमेल डोमेन छोड़ें।"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "डिस्पोजेबल ईमेल सेवाओं से संबंधित ईमेल छोड़ें।"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "कभी लॉग इन नहीं किए गए खातों को छोड़ें।"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "असत्यापित खातों को छोड़ें।"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "डिस्पोजेबल डोमेन की सूची डाउनलोड करने के लिए URL सेट करें। <b>आइटम नई लाइनों से अलग होने चाहिए</b>।"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "डिस्पोजेबल डोमेन की समाप्ति तिथि दिनों में सेट करें।"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "सभी जांचों को बायपास करने वाले ईमेल कुंजियाँ सेट करें।"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "निष्क्रियता के लिए निर्दिष्ट दिनों से पुराने खातों की जाँच करें ('कभी लॉग इन नहीं' विकल्प के लिए विशेष रूप से उपयोगी)।"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "निष्क्रियता सीमा नियम (दिनों में)।"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>निर्दिष्ट भूमिका के लिए जाँच न करने हेतु फ़ील्ड खाली छोड़ें</li><li>0 सेट करने पर भूमिका को कभी निष्क्रिय नहीं माना जाएगा</li><li>यदि उपयोगकर्ता कई नियमों से मेल खाता है, तो निष्क्रियता निर्धारित करने हेतु सबसे उदार नियम प्रयोग किया जाएगा</li></ul>"
+
+msgid "user.role.none"
+msgstr "बिना किसी भूमिका वाले उपयोगकर्ता खाते"
+
+msgid "user.with.submission"
+msgstr "कम से कम एक सबमिशन वाले उपयोगकर्ता खाते"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "डिस्पोजेबल सेवा"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "अमान्य MX रिकॉर्ड"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "ईमेल सत्यापित नहीं"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "उपयोगकर्ता कभी लॉग इन नहीं हुआ"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "निष्क्रिय खाता"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "केवल साइट व्यवस्थापक ही इस प्लगइन को सक्रिय/निष्क्रिय कर सकता है"
