@@ -15,23 +15,18 @@
 namespace APP\plugins\generic\mailSendFilter;
 
 use APP\core\Application;
-use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
+use APP\plugins\generic\mailSendFilter\classes\MailManager;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
 use Illuminate\Database\Query\Builder;
-use Illuminate\Mail\SentMessage;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Mail;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;
-use PKP\mail\Mailable;
 use PKP\plugins\GenericPlugin;
-use ReflectionClass;
-use PKP\security\Role;
 use SplFileObject;
 
 class MailSendFilterPlugin extends GenericPlugin
@@ -61,7 +56,6 @@ class MailSendFilterPlugin extends GenericPlugin
         }
 
         $this->setupMailOverride();
-        $this->passthroughMailKeys = json_decode($this->getSetting($this->getCurrentContextId(), 'passthroughMailKeys')) ?: [];
         return $success;
     }
 
@@ -76,23 +70,13 @@ class MailSendFilterPlugin extends GenericPlugin
     }
 
     /**
-     * Filters out an address list from the Illuminate\Mail\Mailable class using a list of available emails
+     * Retrieve the passthrough email keys
      *
-     * @param array<string,array{'address':string,'name':string}> $addresses
-     * @param array<string,null> $availableEmails
-     *
-     * @return array<string,array{'address':string,'name':string}>
+     * @return string[]
      */
-    private function filterAddresses(array $addresses, array $availableEmails): array
+    public function getPassthroughMailKeys(): array
     {
-        $validEmails = [];
-        foreach ($addresses as $address) {
-            if (array_key_exists(mb_strtolower($address['address']), $availableEmails)) {
-                $validEmails[] = $address;
-            }
-        }
-
-        return $validEmails;
+        return $this->passthroughMailKeys ??= json_decode((string) $this->getSetting($this->getCurrentContextId(), 'passthroughMailKeys')) ?: [];
     }
 
     /**
@@ -100,44 +84,7 @@ class MailSendFilterPlugin extends GenericPlugin
      */
     private function setupMailOverride(): void
     {
-        $filter = new MailFilter($this);
-        /** @var \Illuminate\Mail\MailManager $mailManager */
-        $mailManager = Mail::getFacadeRoot();
-        // Overrides Mail::send()
-        Mail::partialMock()
-            ->shouldReceive('send')
-            ->withAnyArgs()
-            ->andReturnUsing(function (array|\Illuminate\Contracts\Mail\Mailable|string $view, array $data = [], callable|string|null $callback = null) use ($mailManager, $filter): ?SentMessage {
-                if (!($view instanceof Mailable)) {
-                    return $mailManager->send($view, $data, $callback);
-                }
-                $property = (new ReflectionClass($view))->getProperty('emailTemplateKey');
-                $property->setAccessible(true);
-                if (in_array($property->getValue($view), $this->passthroughMailKeys)) {
-                    return null;
-                }
-
-                $emails = [];
-                // Collect all emails
-                foreach (array_merge($view->to, $view->cc, $view->bcc) as ['address' => $email]) {
-                    $emails[mb_strtolower($email)] = null;
-                }
-
-                // Filter out the suspicious ones
-                $emails = $filter->filterEmails($emails);
-
-                $recipients = $this->filterAddresses($view->to, $emails);
-                // If there are no recipients, quit sending the email
-                if (!count($recipients)) {
-                    return null;
-                }
-
-                $view->to($recipients);
-                $view->cc($this->filterAddresses($view->cc, $emails));
-                $view->bcc($this->filterAddresses($view->bcc, $emails));
-
-                return $mailManager->send($view, $data, $callback);
-            });
+        (new MailManager(app(), $this))->register();
     }
 
     /**
