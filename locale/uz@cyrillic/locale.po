@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OJS Mail Filter Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 14:00+0000\n"
+"PO-Revision-Date: 2024-03-15 14:30+0000\n"
+"Last-Translator: Uzbek Team <uz@example.com>\n"
+"Language-Team: Uzbek Cyrillic <uz@example.com>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Электрон Почта Фильтри"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Ушбу плагин электрон почта юборишнинг айрим фойдаланувчиларга этишмаслигини таъминлайди, қайтарилган хатларни камайтиради ва сервернинг қора рўйхатга киришининг олдини олади."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Блокланган хатларни юклаб олиш"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Умумий созламалар"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Сўнги киришга асосан нофаол хисобларни ўтказиб юбориш"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Яроқли MX ёзуви бўлмаган доменларни ўтказиб юбориш"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Бир марталик почта хизматларини ўтказиб юбориш"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Хеч қачон кирмаган хисобларни ўтказиб юбориш"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Тасдиқланмаган хисобларни ўтказиб юбориш"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Бир марталик доменлар рўйхати URL манзили. <b>Янги сатр билан ажратинг</b>"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Доменларнинг амал қилиш муддати (кун)"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Текширишларни ўтказиб юборадиган калитлар"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "X кундан эскирок хисобларни текшириш"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Нофаоллик қоидалари (кун)"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Бўш = текширмаслик</li><li>0 = хеч қачон нофаол эмас</li><li>Кўп қоида = энг юмшоқ қоида қўлланилади</li></ul>"
+
+msgid "user.role.none"
+msgstr "Ролсиз хисоблар"
+
+msgid "user.with.submission"
+msgstr "Юбориш билан хисоблар"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Бир марталик хизмат"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Нотўғри MX ёзуви"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Тасдиқланмаган"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Хеч қачон кирмаган"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Нофаол хисоб"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Фақат администраторлар бошқариши мумкин"

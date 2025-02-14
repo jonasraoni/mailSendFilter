@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Pemalam Penapis Penghantaran Mel"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Pemalam ini membolehkan pengelakan penghantaran e-mel kepada akaun pengguna tertentu berdasarkan tetapan dan peraturan tertentu, berguna untuk mengurangkan e-mel yang dikembalikan dan mencegah pelayan mel anda ditambahkan ke senarai sekatan."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Muat turun e-mel yang disekat"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Tetapan umum"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Mengabaikan akaun pengguna yang tidak aktif berdasarkan masa terakhir pengguna log masuk, mengikut peraturan ambang di bawah."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Mengabaikan domain e-mel tanpa rekod MX yang betul."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Mengabaikan e-mel yang berasal dari perkhidmatan e-mel sekali pakai."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Mengabaikan akaun pengguna yang tidak pernah log masuk."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Mengabaikan akaun pengguna yang tidak pernah mengesahkan alamat e-mel mereka."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Menetapkan URL dari mana senarai domain sekali pakai harus dimuat turun. <b>Item mesti dipisahkan dengan baris baru</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Menetapkan tarikh luput domain sekali pakai dalam hari."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Menetapkan kunci e-mel yang harus mengabaikan semua pengesahan."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Akaun yang lebih tua daripada bilangan hari yang diberikan akan diperiksa untuk ketidakaktifan (terutamanya berguna untuk pilihan \"akaun yang tidak pernah log masuk\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Peraturan ambang ketidakaktifan dalam hari."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Peranan yang tidak log masuk selama bilangan hari yang diberikan akan dianggap tidak aktif.<ul><li>Biarkan medan kosong untuk tidak melakukan sebarang pemeriksaan ke atas peranan yang diberikan.</li><li>Menetapkan medan dengan 0 bermakna peranan yang diberikan tidak akan pernah dianggap tidak aktif.</li><li>Jika seorang pengguna memenuhi beberapa peraturan, yang paling longgar akan digunakan untuk menentukan jika akaun itu tidak aktif.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Akaun pengguna tanpa sebarang peranan yang ditetapkan"
+
+msgid "user.with.submission"
+msgstr "Akaun pengguna dengan sekurang-kurangnya satu penghantaran"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Perkhidmatan e-mel sekali pakai"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Pertukaran e-mel tidak sah"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-mel tidak disahkan"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Pengguna tidak pernah log masuk"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Akaun tidak aktif"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Hanya pentadbir laman boleh mengaktifkan atau menyahaktifkan pemalam ini."

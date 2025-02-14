@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: sid\n"
+"Language-Team: Sidamo <sid@example.com>\n"
+"Last-Translator: Sidamo Team <sid@example.com>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2024-03-15 14:30+0000\n"
+"POT-Creation-Date: 2024-03-15 14:00+0000\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Project-Id-Version: OJS Mail Filter Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Fiiltara Ergaa Emailaa"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Fiiltaraanni kun emailaa gara herregaa fayyadamtootaatti hin ergine, emailaa deebi'uu hir'isuu fi serveri keessan lista gurraacha irraa eegata."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Emailaa cufame dhaqaaqsiisuu"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Sirna waliigalaa"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Herregaa hin hojjetne seera galgala darbee irratti hundaa'uun dhiisuu"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Domeenii MX record qaban hin taane dhiisuu"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Tajaajila emailaa yeroo tokkoof qophaa'etu dhiisuu"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Yeroo hin seenne herregaa dhiisuu"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Herregaa mirkaneessifamoo dhiisuu"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "URL domeenii yeroo tokkoof <b>Haala haaraa adda baafadhu</b>"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Yeroo sirnaa domeenii yeroo tokkoof guyyaa keessatti murteessuu."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Fuula duraanii dhiyaatuu danda'an"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Herregaa guyyaa X caalaa dheeraa qabu mirkaneessuu"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Seera hin hojjetne (guyyaa)"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Dachaa = hin mirkaneessinu</li><li>0 = yeroo hunda hojjetama</li><li>Seera baay'ee = seera laafaa ta'e fayyadama</li></ul>"
+
+msgid "user.role.none"
+msgstr "Herregaa roola hin qabne"
+
+msgid "user.with.submission"
+msgstr "Herregaa kennaa qabu"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Tajaajila yeroo tokkoof"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "MX record hin taane"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Mirkaneessifamoo"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Yeroo hin seenne"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Herregaa hin hojjetne"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Administraatoroonni qofa kan itti fayyadamu"

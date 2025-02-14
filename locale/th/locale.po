@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OJS Mail Filter Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 14:00+0000\n"
+"PO-Revision-Date: 2024-03-15 14:30+0000\n"
+"Last-Translator: Thai Localization Team <th@example.com>\n"
+"Language-Team: Thai <th@example.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "ตัวกรองการส่งอีเมล"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "ปลั๊กอินนี้ช่วยหลีกเลี่ยงการส่งอีเมลไปยังบัญชีผู้ใช้เฉพาะตามกฎที่กำหนด ลดอีเมลตีกลับและป้องกันเซิร์ฟเวอร์ถูกบล็อก"
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "ดาวน์โหลดอีเมลที่ถูกบล็อก"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "การตั้งค่าทั่วไป"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "ข้ามบัญชีที่ไม่ใช้งานตามการล็อกอินล่าสุด"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "ข้ามโดเมนที่ไม่มี MX record ที่ถูกต้อง"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "ข้ามบริการอีเมลชั่วคราว"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "ข้ามบัญชีที่ยังไม่เคยล็อกอิน"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "ข้ามบัญชีที่ยังไม่ยืนยัน"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "URL รายการโดเมนชั่วคราว <b>คั่นด้วยบรรทัดใหม่</b>"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "อายุโดเมน (วัน)"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "คีย์ข้ามการตรวจสอบ"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "ตรวจสอบบัญชีเก่ากว่า X วัน"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "กฎการไม่ใช้งาน (วัน)"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>ว่าง = ไม่ตรวจสอบ</li><li>0 = ไม่เคยไม่ใช้งาน</li><li>หลายกฎ = ใช้กฎที่ยืดหยุ่นที่สุด</li></ul>"
+
+msgid "user.role.none"
+msgstr "บัญชีไม่มีบทบาท"
+
+msgid "user.with.submission"
+msgstr "บัญชีที่มีการส่งงาน"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "บริการอีเมลชั่วคราว"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "MX record ไม่ถูกต้อง"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "ยังไม่ยืนยัน"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "ยังไม่เคยล็อกอิน"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "บัญชีไม่ใช้งาน"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "ผู้ดูแลระบบเท่านั้นที่จัดการได้"

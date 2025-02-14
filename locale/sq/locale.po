@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Filtri i Dërgimit të Email-eve"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Ky plugin parandalon dërgimin e email-eve te llogari specifike, duke reduktuar kthimet dhe mbrojtur serverin nga lista të zeza."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Shkarko email-et e bllokuar"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Cilësimet e Përgjithshme"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Anashkalon llogaritë joaktive bazuar në hyrjen e fundit."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Anashkalon domene pa regjistrim MX valid."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Anashkalon shërbime email-e të përdorura një herë."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Anashkalon llogaritë që nuk janë hyrë kurrë."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Anashkalon llogaritë e paverifikuara."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "URL për domainet e përdorura një herë. <b>Ndani me rresht të ri</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Skadimi i domaineve (ditë)."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Çelësat që anashkalojnë kontrollet."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Kontrollon llogaritë më të vjetra se X ditë."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Rregulla joaktiviteti (ditë)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Bosh = pa kontroll</li><li>0 = gjithmonë aktiv</li><li>Rregulla të shumta = zbatohet më e lehta</li></ul>"
+
+msgid "user.role.none"
+msgstr "Llogari pa rol"
+
+msgid "user.with.submission"
+msgstr "Llogari me paraqitje"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Shërbim një përdorim"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Regjistrim MX i pavlefshëm"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E paverifikuar"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Kurrë hyrë"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Llogari joaktive"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Vetëm administratorët mund ta menaxhojnë"

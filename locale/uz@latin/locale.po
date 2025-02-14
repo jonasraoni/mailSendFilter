@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OJS Mail Filter Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 14:00+0000\n"
+"PO-Revision-Date: 2024-03-15 14:30+0000\n"
+"Last-Translator: Uzbek Team <uz@example.com>\n"
+"Language-Team: Uzbek Latin <uz@example.com>\n"
+"Language: uz@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Elektron Pochta Filtrlash"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Ushbu plagin elektron xatlarni muayyan foydalanuvchi hisoblariga yuborishni oldini oladi, qaytarilgan xatlarni kamaytiradi va serveringizning qora ro'yxatga olinishining oldini oladi."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Bloklangan xatlarni yuklab olish"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Umumiy sozlamalar"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Oxirgi kirish sanasiga ko'ra faol bo'lmagan hisoblarni o'tkazib yuborish"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Yaroqli MX yozuviga ega bo'lmagan domenlarni o'tkazib yuborish"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Bir martalik pochta xizmatlarini o'tkazib yuborish"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Hech qachon kirmagan hisoblarni o'tkazib yuborish"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Tasdiqlanmagan hisoblarni o'tkazib yuborish"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Bir martalik domenlar ro'yxati URL manzili. <b>Elementlarni yangi qator bilan ajrating</b>"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Domenlarning amal qilish muddati (kun)"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Tekshiruvlarni o'tkazib yuboradigan kalitlar"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "X kundan eski hisoblarni tekshirish"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Faol bo'lmaganlik qoidalari (kun)"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Bo'sh = tekshirilmaydi</li><li>0 = hech qachon faol emas</li><li>Ko'p qoidalar = eng yumshoq qo'llaniladi</li></ul>"
+
+msgid "user.role.none"
+msgstr "Rolsiz hisoblar"
+
+msgid "user.with.submission"
+msgstr "Topshiriq bilan hisoblar"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Bir martalik xizmat"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Yaroqsiz MX yozuvi"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Tasdiqlanmagan"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Hech qachon kirmagan"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Faol bo'lmagan hisob"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Faqat administratorlar boshqarishi mumkin"

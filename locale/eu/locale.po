@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/eu/>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Posta Bidaltzeko Iragazki Plugina"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Plugin honek erabiltzaile-kontu jakin batzuetara mezu elektronikoak bidaltzea saihestea ahalbidetzen du konfigurazio eta arau espezifikoetan oinarrituta, itzulitako mezuak murrizteko eta zure posta-zerbitzaria blokeo-zerrendan gehitzea saihesteko erabilgarria."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Blokeatutako mezuak deskargatu"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Ezarpen orokorrak"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Erabiltzaileak azken aldiz saioa hasi zuenetik inaktibo egon diren erabiltzaile-kontuak saltatzen ditu, beheko atalase-arauei jarraituz."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "MX erregistrorik ez duten posta domeinuak saltatzen ditu."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Behin erabilerako posta zerbitzuei dagozkien mezu elektronikoak saltatzen ditu."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Inoiz saioa hasi ez duten erabiltzaile-kontuak saltatzen ditu."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Erabiltzaile-kontuak saltatzen ditu, zeintzuk inoiz ez duten beren posta helbidea balioztatu."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Behin erabilerako domeinuen zerrenda deskargatzeko URL-a konfiguratzen du. <b>Elementuak lerro-jauzi batez bereizita egon behar dute</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Behin erabilerako domeinuen iraungitze-data konfiguratzen du egunetan."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Balioztatze guztiak saltatu behar dituzten posta gakoak konfiguratzen ditu."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Eman den egun kopurua baino zaharragoak diren kontuak inaktibotasunagatik egiaztatuko dira (batez ere \"inoiz saioa hasi ez duten kontuak\" aukerarako erabilgarria)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Inaktibotasun atalasearen arauak egunetan."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Eman den egun kopururako saioa hasi ez duten rolak inaktibotzat hartuko dira.<ul><li>Utzi eremua hutsik emandako rolari buruzko egiaztapenik ez egiteko.</li><li>Eremua 0-rekin ezartzeak esan nahi du emandako rola inoiz ez dela inaktibotzat hartuko.</li><li>Erabiltzaileak arau bat baino gehiagorekin bat badator, erabiltzaile-kontua inaktiboa den erabakitzeko errazagoa den araua erabiliko da.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Rolik esleitu ez zaien erabiltzaile-kontuak"
+
+msgid "user.with.submission"
+msgstr "Gutxienez bidalketa bat duten erabiltzaile-kontuak"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Behin erabilerako posta zerbitzua"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Posta truke baliogabea"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Posta helbidea ez da balioztatu"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Erabiltzaileak inoiz ez du saioa hasi"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Kontu inaktiboa"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Gunearen administratzaileak bakarrik gaitu edo desgaitu dezake plugin hau."

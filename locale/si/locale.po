@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Sinhala <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/si/>\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "ඊමේල් යැවීමේ පෙරහන ප්ලගිනය"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "මෙම ප්ලගිනය විශේෂිත සැකසුම් සහ නීති මත පදනම්ව නිශ්චිත පරිශීලක ගිණුම් වෙත ඊමේල් යැවීම වළක්වයි, ආපසු එන ඊමේල් අඩු කිරීමට සහ ඔබගේ මේල් සර්වරය අවහිර ලැයිස්තුවට එකතු වීම වළක්වා ගැනීමට ප්රයෝජනවත්."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "අවහිර කළ ඊමේල් බාගන්න"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "සාමාන්ය සැකසුම්"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "අවසන් ප්රවිෂ්ට වීමේ කාලය අනුව නිෂ්ක්රිය පරිශීලක ගිණුම් අත්හරින්න."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "වලංගු MX ලියාපදිංචිය නොමැති ඊමේල් වසම් අත්හරින්න."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "ඒකකාලීන ඊමේල් සේවා සමඟ සම්බන්ධ ඊමේල් අත්හරින්න."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "කවදාවත් ප්රවිෂ්ට නොවූ ගිණුම් අත්හරින්න."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "තහවුරු නොකළ ගිණුම් අත්හරින්න."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "ඒකකාලීන වසම් ලැයිස්තුව බාගැනීමට URL සකසන්න. <b>අයිතම නව පේළි වලින් වෙන් කළ යුතුය</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "ඒකකාලීන වසම් කල් ඉකුත් වීම දින වලින් සකසන්න."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "සියලු පරීක්ෂණ අතහරින ඊමේල් යතුරු සකසන්න."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "නිශ්චිත දින ගණනට වඩා පැරණි ගිණුම් නිෂ්ක්රියතාව සඳහා පරීක්ෂණ කරන්න ('කවදාවත් ප්රවිෂ්ට නොවූ' විකල්පය සඳහා විශේෂයෙන් ප්රයෝජනවත්)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "නිෂ්ක්රියතා එළිපත්ත නීති (දින වලින්)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>නිශ්චිත භූමිකාව සඳහා පරීක්ෂණ නොකිරීමට ක්ෂේත්රය හිස් තබන්න</li><li>0 සකස් කිරීමෙන් භූමිකාව කිසිවිටෙක නිෂ්ක්රිය ලෙස නොසැලකේ</li><li>පරිශීලකයා බහු නීති සමඟ ගැලපේ නම්, නිෂ්ක්රියතා තීරණය කිරීමට වඩාත්ම නම්යශීලී නීතිය භාවිතා වේ</li></ul>"
+
+msgid "user.role.none"
+msgstr "කිසිදු භූමිකාවක් නොමැති පරිශීලක ගිණුම්"
+
+msgid "user.with.submission"
+msgstr "අවම වශයෙන් එක් ඉදිරිපත් කිරීමක් සහිත පරිශීලක ගිණුම්"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "ඒකකාලීන සේවාව"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "අවලංගු MX ලියාපදිංචිය"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "ඊමේල් තහවුරු කර නැත"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "පරිශීලකයා කවදාවත් ප්රවිෂ්ට වී නැත"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "නිෂ්ක්රිය ගිණුම"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "සයිට් පරිපාලකයා පමණක් මෙම ප්ලගිනය සක්රිය/අක්රිය කළ හැක"

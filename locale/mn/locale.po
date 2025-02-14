@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Имэйл илгээх шүүлтүүрийн залгаас"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Энэ залгаас нь тодорхой тохиргоо, дүрмүүд дээр үндэслэн зарим хэрэглэгчийн дансанд имэйл илгээхээс зайлсхийх боломжийг олгодог. Буцаж ирсэн имэйлийг багасгах, имэйл серверийг хориглох жагсаалтад орохоос сэргийлэхэд тустай."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Хориглогдсон имэйлүүдийг татаж авах"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Ерөнхий тохиргоо"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Сүүлд нэвтэрсэн цаг үеийн үндсэн дээр идэвхгүй хэрэглэгчийн дансуудыг алгасах."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "MX бүртгэлгүй имэйл домэйнуудыг алгасах."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Зөвхөн нэг удаа хэрэглэх имэйл үйлчилгээний имэйлийг алгасах."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Хэзээ ч нэвтэрээгүй дансуудыг алгасах."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Баталгаажуулаагүй дансуудыг алгасах."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Нэг удаагийн домэйнуудын жагсаалтыг татах URL хаягийг тохируулна. <b>Зүйлс шинэ мөрөөр тусгаарлагдана</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Нэг удаагийн домэйнуудын хүчинтэй хугацааг хоногоор тохируулна."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Бүх шалгалтыг алгасах имэйл түлхүүрүүдийг тохируулна."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Тодорхой хоногоос өмнөх идэвхгүй дансуудыг шалгана ('хэзээ ч нэвтэрээгүй' сонголтод зориулагдсан)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Идэвхгүй байдлын босго дүрмүүд (хоногоор)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Тухайн дүрд шалгалт хийхгүйгээр талбарыг хоосон үлдээнэ үү</li><li>0 утга нь уг дүр хэзээ ч идэвхгүй гэж үзэхгүй</li><li>Хэрэглэгч олон дүртэй таарвал хамгийн зөвшөөрөгдөх дүрээр шийднэ</li></ul>"
+
+msgid "user.role.none"
+msgstr "Ямар ч дүргүй хэрэглэгчийн данс"
+
+msgid "user.with.submission"
+msgstr "Дор хаяж нэг илгээлттэй хэрэглэгчийн данс"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Нэг удаагийн имэйл үйлчилгээ"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "MX бүртгэл буруу"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Баталгаажуулаагүй"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Хэрэглэгч хэзээ ч нэвтэрээгүй"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Идэвхгүй данс"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Зөвхөн сайтын админ энэ залгаасыг идэвхжүүлж/идэвхгүйжүүлнэ"

@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "E-pasta sūtīšanas filtra spraudnis"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Šis spraudnis ļauj izvairīties no e-pasta sūtīšanas noteiktiem lietotāju kontiem, samazinot atgrieztās e-pastus un novēršot jūsu servera iekļaušanu melnajā sarakstā."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Lejupielādēt bloķētos e-pastus"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Vispārīgi iestatījumi"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Izlaiž neaktīvos kontus pēc pēdējās pieslēgšanās."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Izlaist domēnus bez derīga MX ieraksta."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Izlaist vienreizējos e-pasta pakalpojumus."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Izlaist nekad nepieslēgtos kontus."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Izlaist neapstiprinātos kontus."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Vienreizējo domēnu saraksta URL. <b>Atdalīt ar jaunām rindām</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Vienreizējo domēnu derīguma termiņš (dienās)."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Atslēgas, kas apiet visus pārbaudes."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Pārbauda kontus vecākus par X dienām."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Neaktivitātes noteikumi (dienās)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>Tukšs = bez pārbaudes</li><li>0 = nekad neaktīvs</li><li>Vairāki noteikumi = piemēro maigāko</li></ul>"
+
+msgid "user.role.none"
+msgstr "Konti bez lomas"
+
+msgid "user.with.submission"
+msgstr "Konti ar vismaz vienu iesniegumu"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Vienreizējs pakalpojums"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Nederīgs MX ieraksts"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Nepārbaudīts"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Nekad nepieslēdzies"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Neaktīvs konts"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Tikai administratori var pārvaldīt šo spraudni"

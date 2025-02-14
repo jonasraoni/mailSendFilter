@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:10+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Plugin Filtro Invio Email"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Il plugin permette di evitare l'invio di email a determinati account utente in base a impostazioni e regole specifiche, utile per ridurre le email respinte ed evitare che il tuo server di posta venga aggiunto a una lista di blocco."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Scarica email bloccate"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Impostazioni generali"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Ignora gli account utente inattivi in base all'ultimo accesso, secondo le regole di soglia sottostanti."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Ignora i domini email senza un record MX valido."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Ignora le email appartenenti a servizi di posta temporanea."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Ignora gli account utente che non hanno mai effettuato l'accesso."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Ignora gli account utente che non hanno mai validato il loro indirizzo email."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Imposta l'URL da cui scaricare l'elenco dei domini temporanei. <b>Gli elementi devono essere separati da un'interruzione di riga</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Imposta il periodo di validità dei domini temporanei in giorni."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Imposta le chiavi email che devono ignorare tutte le validazioni."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Gli account più vecchi del numero di giorni specificato saranno controllati per inattività (principalmente utile per l'opzione \"account che non hanno mai effettuato l'accesso\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Regole di soglia di inattività in giorni."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"I ruoli che non hanno effettuato l'accesso per il numero di giorni specificato saranno considerati inattivi.<ul><li>Lascia il campo vuoto per non eseguire alcun controllo sul ruolo specificato.</li><li>Impostare il campo a 0 significa "
+"che il ruolo non sarà mai considerato inattivo.</li><li>Se un utente corrisponde a più regole, verrà utilizzata la regola più permissiva per decidere se l'account è inattivo.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Account utente senza ruolo assegnato"
+
+msgid "user.with.submission"
+msgstr "Account utente con almeno una sottomissione"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Servizio email temporaneo"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Server di posta non valido"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Email non validata"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Utente mai connesso"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Account inattivo"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Solo l'amministratore del sito può abilitare o disabilitare questo plugin."

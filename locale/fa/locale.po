@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/fa/>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "افزونه فیلتر ارسال ایمیل"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "این افزونه امکان جلوگیری از ارسال ایمیل به حساب‌های کاربری خاص را بر اساس تنظیمات و قوانین مشخص فراهم می‌کند، که برای کاهش ایمیل‌های برگشتی و جلوگیری از اضافه شدن سرور ایمیل شما به لیست مسدود مفید است."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "دانلود ایمیل‌های مسدود شده"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "تنظیمات عمومی"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "حساب‌های کاربری غیرفعال بر اساس آخرین زمان ورود و قوانین آستانه زیر را نادیده می‌گیرد."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "دامنه‌های ایمیل بدون رکورد MX معتبر را نادیده می‌گیرد."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "ایمیل‌های متعلق به سرویس‌های ایمیل یکبارمصرف را نادیده می‌گیرد."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "حساب‌های کاربری که هرگز وارد نشده‌اند را نادیده می‌گیرد."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "حساب‌های کاربری تاییدنشده را نادیده می‌گیرد."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "آدرس URL برای دریافت لیست دامنه‌های یکبارمصرف را تنظیم کنید. <b>آیتم‌ها باید با خط جدید جدا شوند</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "زمان انقضای دامنه‌های یکبارمصرف را بر اساس روز تنظیم کنید."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "کلیدهای ایمیل که از تمام بررسی‌ها عبور می‌کنند را تنظیم کنید."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "حساب‌های قدیمی‌تر از تعداد روز مشخص شده را برای عدم فعالیت بررسی می‌کند (مخصوصاً برای گزینه 'حساب‌های هرگز وارد شده')."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "قوانین آستانه عدم فعالیت (بر اساس روز)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "<ul><li>فیلد را خالی بگذارید تا بررسی برای نقش مشخص شده انجام نشود</li><li>تنظیم فیلد به 0 به معنای عدم بررسی عدم فعالیت برای آن نقش است</li><li>در صورت تطابق کاربر با چند قانون، سهل‌گیرانه‌ترین قانون برای تعیین عدم فعالیت استفاده می‌شود</li></ul>"
+
+msgid "user.role.none"
+msgstr "حساب‌های کاربری بدون هیچ نقشی"
+
+msgid "user.with.submission"
+msgstr "حساب‌های کاربری با حداقل یک ارسال"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "سرویس ایمیل یکبارمصرف"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "رکورد MX نامعتبر"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "ایمیل تایید نشده"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "کاربر هرگز وارد نشده"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "حساب غیرفعال"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "فقط مدیر سایت می‌تواند این افزونه را فعال یا غیرفعال کند"

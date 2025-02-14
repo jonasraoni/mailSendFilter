@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:09+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/"
+"projects/plugins/mailSendFilter/zh_CN/>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "邮件发送过滤插件"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr ""
+"该插件允许根据特定设置和规则避免向某些用户帐户发送电子邮件，这有助于"
+"减少退回的邮件并防止您的邮件服务器被添加到黑名单中。"
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "下载被阻止的邮件"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "常规设置"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "根据以下阈值规则，基于最后登录时间跳过不活跃的用户帐户。"
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "跳过没有有效MX记录的电子邮件域名。"
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "跳过属于临时邮件服务的电子邮件。"
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "跳过从未登录过的用户帐户。"
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "跳过从未验证其电子邮件地址的用户帐户。"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "设置从中下载临时域名列表的URL。<b>项目必须用换行符分隔</b>。"
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "设置临时域名的有效期（以天为单位）。"
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "设置应跳过所有验证的邮件密钥。"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr ""
+"超过指定天数的帐户将被检查不活跃状态（主要用于\"从未登录的帐户\"选"
+"项）。"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "不活跃阈值规则（以天为单位）。"
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"在指定天数内未登录的角色将被视为不活跃。<ul><li>留空字段表示不对指定"
+"角色进行任何检查。</li><li>将字段设置为0表示该角色永远不会被视为不活"
+"跃。</li><li>如果用户符合多个规则，将使用最宽松的规则来决定帐户是否"
+"不活跃。</li></ul>"
+
+msgid "user.role.none"
+msgstr "未分配角色的用户帐户"
+
+msgid "user.with.submission"
+msgstr "至少有一个投稿的用户帐户"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "临时邮件服务"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "无效的邮件服务器"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "电子邮件未验证"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "用户从未登录"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "不活跃帐户"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "只有网站管理员可以启用或禁用此插件。"

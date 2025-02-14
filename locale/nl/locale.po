@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2025-02-14 17:08+0300\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "E-mail verzendfilter plugin"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Deze plugin maakt het mogelijk om het verzenden van e-mails naar bepaalde gebruikersaccounts te vermijden op basis van specifieke instellingen en regels, nuttig om bounced e-mails te verminderen en te voorkomen dat uw mailserver aan een blokkeerlijst wordt toegevoegd."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Download geblokkeerde e-mails"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Algemene instellingen"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Slaat inactieve gebruikersaccounts over op basis van laatste login volgens onderstaande drempelregels."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Slaat e-maildomeinen zonder geldig MX-record over."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Slaat e-mails over die behoren tot tijdelijke e-maildiensten."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Slaat gebruikersaccounts over die nooit hebben ingelogd."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Slaat gebruikersaccounts over die hun e-mailadres nooit hebben gevalideerd."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Stelt de URL in waarvan de lijst met tijdelijke domeinen moet worden gedownload. <b>Items moeten worden gescheiden door een regeleinde</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Stelt de geldigheidsperiode van tijdelijke domeinen in dagen in."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Stelt de e-mailsleutels in die alle validaties moeten overslaan."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Accounts ouder dan het opgegeven aantal dagen worden gecontroleerd op inactiviteit (vooral nuttig voor de optie \"accounts die nooit hebben ingelogd\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Inactiviteitsdrempelregels in dagen."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr ""
+"Rollen die niet hebben ingelogd voor het opgegeven aantal dagen worden als inactief beschouwd.<ul><li>Laat het veld leeg om geen controles uit te voeren voor de opgegeven rol.</li><li>Het veld op 0 zetten betekent dat de rol nooit als inactief zal worden beschouwd.</"
+"li><li>Als een gebruiker overeenkomt met meerdere regels, wordt de meest soepele regel gebruikt om te bepalen of het account inactief is.</li></ul>"
+
+msgid "user.role.none"
+msgstr "Gebruikersaccounts zonder toegewezen rol"
+
+msgid "user.with.submission"
+msgstr "Gebruikersaccounts met ten minste één inzending"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Tijdelijke e-maildienst"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Ongeldige mailserver"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-mail niet gevalideerd"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Gebruiker heeft nooit ingelogd"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Inactief account"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Alleen de sitebeheerder kan deze plugin in- of uitschakelen."
