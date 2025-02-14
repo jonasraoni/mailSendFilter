@@ -51,7 +51,7 @@ class SettingsForm extends Form
         $this->setData('checkDisposable', (bool) $this->plugin->getSetting($contextId, 'checkDisposable'));
         $this->setData('checkNeverLoggedIn', (bool) $this->plugin->getSetting($contextId, 'checkNeverLoggedIn'));
         $this->setData('checkNotValidated', (bool) $this->plugin->getSetting($contextId, 'checkNotValidated'));
-        $this->setData('passthroughMailKeys', [Locale::getLocale() => json_decode($this->plugin->getSetting($contextId, 'passthroughMailKeys')) ?: []]);
+        $this->setData('passthroughMailKeys', [Locale::getLocale() => json_decode((string) $this->plugin->getSetting($contextId, 'passthroughMailKeys')) ?: []]);
         $this->setData('disposableDomainsUrl', $this->plugin->getSetting($contextId, 'disposableDomainsUrl'));
         $this->setData('disposableDomainsExpiration', (int) $this->plugin->getSetting($contextId, 'disposableDomainsExpiration'));
 
