@@ -61,7 +61,7 @@ class MailFilter
 		$this->checkMxRecord = (bool) $plugin->getSetting($contextId, 'checkMxRecord');
 		$this->checkDisposable = (bool) $plugin->getSetting($contextId, 'checkDisposable');
 		$this->checkNeverLoggedIn = (bool) $plugin->getSetting($contextId, 'checkNeverLoggedIn');
-		$this->checkNotValidated = (bool) $plugin->getSetting($contextId, 'checkNotValidated');
+		$this->checkNotValidated = (bool) $plugin->getSetting($contextId, 'checkNotValidated') && \Config::getVar('email', 'require_validation', false);
 	}
 
 	/**
