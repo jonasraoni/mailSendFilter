@@ -137,15 +137,15 @@ class MailSendFilterPlugin extends GenericPlugin
 			// Filter out the suspicious ones
 			$emails = $filter->filterEmails($emails);
 
-			$recipients = $this->filterAddresses($mail->getRecipients(), $emails);
+			$recipients = $this->filterAddresses($mail->getRecipients() ?? [], $emails);
 			// If there are no recipients, quit sending the email
 			if (!count($recipients)) {
 				return true;
 			}
 
 			$mail->setRecipients($recipients);
-			$mail->setCcs($this->filterAddresses($mail->getCcs(), $emails));
-			$mail->setBccs($this->filterAddresses($mail->getBccs(), $emails));
+			$mail->setCcs($this->filterAddresses($mail->getCcs() ?? [], $emails));
+			$mail->setBccs($this->filterAddresses($mail->getBccs() ?? [], $emails));
 
 			return false;
 		});
