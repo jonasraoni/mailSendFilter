@@ -71,10 +71,10 @@ class MailFilter
 	 * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
 	 * @return array<string,null>
 	 */
-	public function filterEmails(array $emails, array &$filteredEmails = null): array
+	public function filterEmails(array $emails, ?array &$filteredEmails = null): array
 	{
 		return $this->filterInactiveEmails(
-            $this->filterInvalidMailExchanges(
+			$this->filterInvalidMailExchanges(
 				$this->filterDisposableDomains($emails, $filteredEmails),
 				$filteredEmails
 			),
@@ -160,7 +160,6 @@ class MailFilter
 				END AS reason'
 			)
 			->get();
-
 
 		// Remove emails which didn't pass the first filter
 		foreach ($failedEmails as $email) {
@@ -370,10 +369,11 @@ class MailFilter
 	 */
 	private static function dateDiffClause(string $fieldA, string $fieldB): string
 	{
-		switch (get_class(Manager::connection())) {
-			case MySqlConnection::class:
+		$connection = Manager::connection();
+		switch (true) {
+			case $connection instanceof MySqlConnection:
 				return "DATEDIFF({$fieldA}, {$fieldB})";
-			case PostgresConnection::class:
+			case $connection instanceof PostgresConnection:
 				return "DATE({$fieldA}) - DATE({$fieldB})";
 			default:
 				throw new Exception('Unknown database');
