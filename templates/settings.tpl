@@ -1,6 +1,15 @@
+{**
+ * templates/settings.tpl
+ *
+ * Copyright (c) 2024 Simon Fraser University
+ * Copyright (c) 2024 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Display the plugin settings.
+ *}
 <script>
 	$(function () {ldelim}
-		$('#mostViewedSettings').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#mailSendFilter').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 
 	document.querySelectorAll('.checkNumbers').forEach(function (el) {ldelim}
@@ -8,7 +17,7 @@
 	{rdelim})
 </script>
 
-<form class="pkp_form" id="mostViewedSettings" method="POST" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
+<form class="pkp_form" id="mailSendFilter" method="POST" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
 	<p>{translate key="plugins.generic.mailSendFilter.description"}</p>
 	{csrf}
 	{fbvFormArea id="formArea"}
