@@ -136,7 +136,10 @@ class MailFilter
 				$q
 					// Not validated accounts
 					->when($this->checkNotValidated, function (Builder $q) {
-						$q->orWhereNull('u.date_validated');
+						$q->orWhere(function (Builder $q) {
+							$q->whereNull('u.date_validated')
+								->whereRaw('COALESCE(u.disabled, 0) = 1');
+						});
 					})
 					// Accounts that have haver logged in
 					->when($this->checkNeverLoggedIn, function (Builder $q) {
