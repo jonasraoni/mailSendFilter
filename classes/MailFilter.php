@@ -63,11 +63,11 @@ class MailFilter
      * Retrieves which emails are likely to bounce
      *
      * @param array<string,null> $emails A list of emails, the email is the key
-     * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
+     * @param ?array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
      *
      * @return array<string,null>
      */
-    public function filterEmails(array $emails, array &$filteredEmails = null): array
+    public function filterEmails(array $emails, ?array &$filteredEmails = null): array
     {
         return $this->filterInactiveEmails(
             $this->filterInvalidMailExchanges(
@@ -152,7 +152,6 @@ class MailFilter
                 END AS reason'
             )
             ->get();
-
 
         // Remove emails which didn't pass the first filter
         foreach ($failedEmails as $email) {
