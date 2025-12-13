@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2024-11-25 05:51+0000\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: O'zbek (Lotin) <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Xat yuborish filtri plagini"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Ushbu plagin sizga bir nechta sozlamalar va qoidalarga asosan ma'lum foydalanuvchi hisoblariga elektron pochta xabarlarini yuborishdan qochish imkonini beradi, bu qaytarilgan elektron pochta xabarlarini kamaytirish va pochta serveringizni boshqa pochta serverlari tomonidan bloklar ro'yxatiga qo'shilishining oldini olish uchun foydalidir."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Bloklangan elektron pochta xabarlarini yuklab olish"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Umumiy sozlamalar"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Foydalanuvchi hisoblarini oxirgi marta tizimga kirgan vaqtiga asosan, quyidagi chegara qoidalariga ko'ra, faol bo'lmagan hisoblarni o'tkazib yuboradi."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "To'g'ri MX yozuviga ega bo'lmagan elektron pochta domenlarini o'tkazib yuboradi."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Bir martalik elektron pochta xizmatlariga tegishli elektron pochta manzillarini o'tkazib yuboradi."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Hech qachon tizimga kirmagan foydalanuvchi hisoblarini o'tkazib yuboradi."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Elektron pochta manzilini tasdiqlamagan foydalanuvchi hisoblarini o'tkazib yuboradi."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Bir martalik domenlar ro'yxatini yuklab olish uchun URL manzilini sozlaydi. <b>Elementlar qator uzilishi bilan ajratilishi kerak</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Bir martalik domenlarning amal qilish muddatini kunlarda belgilaydi."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Barcha tekshiruvlarni o'tkazib yuborishi kerak bo'lgan elektron pochta kalitlarini sozlaydi."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Berilgan kunlar sonidan eskiroq hisoblar faolmasligi uchun tekshiriladi (asosan \"hech qachon tizimga kirmagan hisoblar\" variantida foydalidir)."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Faolmaslik chegarasi qoidalari kunlarda."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "Berilgan kunlar davomida tizimga kirmagan rollar faolmas deb hisoblanadi."
+"<ul>"
+"<li>Berilgan rol uchun hech qanday tekshiruv o'tkazmaslik uchun maydonni bo'sh qoldiring.</li>"
+"<li>Maydonni 0 ga sozlash berilgan rol hech qachon faolmas deb hisoblanmasligini anglatadi.</li>"
+"<li>Agar foydalanuvchi bir nechta qoidalarga mos kelsa, hisobning faolmasligini hal qilish uchun eng yumshoq qoida qo'llaniladi.</li>"
+"</ul>"
+
+msgid "user.role.none"
+msgstr "Hech qanday rol tayinlanmagan foydalanuvchi hisoblari"
+
+msgid "user.with.submission"
+msgstr "Kamida bitta topshiriq bilan foydalanuvchi hisoblari"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Bir martalik elektron pochta xizmati"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Yaroqsiz elektron pochta almashinuvi"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Elektron pochta tasdiqlanmagan"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Foydalanuvchi hech qachon tizimga kirmagan"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Faolmas hisob"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Faqat sayt ma'muri ushbu plaginni yoqishi yoki o'chirishi mumkin."

@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2024-11-25 05:51+0000\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Deutsch <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/de_DE/>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Mail-Sendefilter-Plugin"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "Dieses Plugin ermöglicht es, E-Mails an bestimmte Benutzerkonten basierend auf Einstellungen und Regeln nicht zu senden, was nützlich ist, um Bounce-Mails zu reduzieren und zu verhindern, dass Ihr Mailserver von anderen Mailservern blockiert wird."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Blockierte E-Mails herunterladen"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Allgemeine Einstellungen"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Überspringt Benutzerkonten, die basierend auf der letzten Anmeldung inaktiv sind, gemäß den Schwellenwerten unten."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Überspringt E-Mail-Domains ohne gültigen MX-Eintrag."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Überspringt E-Mails von Wegwerf-E-Mail-Diensten."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Überspringt Benutzerkonten, die sich nie angemeldet haben."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Überspringt Benutzerkonten, die ihre E-Mail-Adresse nicht bestätigt haben."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Legt die URL fest, von der die Liste der Wegwerf-Domains heruntergeladen werden soll. <b>Die Einträge müssen durch Zeilenumbruch getrennt sein</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Legt das Ablaufdatum der Wegwerf-Domains in Tagen fest."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Legt die E-Mail-Schlüssel fest, die alle Validierungen überspringen sollen."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "Konten älter als die angegebene Anzahl von Tagen werden auf Inaktivität überprüft (besonders nützlich für die Option \"Konten, die sich nie angemeldet haben\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Inaktivitätsschwellenregeln in Tagen."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "Rollen, die sich seit der angegebenen Anzahl von Tagen nicht angemeldet haben, werden als inaktiv betrachtet."
+"<ul>"
+"<li>Das Feld leer lassen, um keine Prüfungen für die jeweilige Rolle durchzuführen.</li>"
+"<li>Das Feld auf 0 setzen bedeutet, dass die jeweilige Rolle niemals als inaktiv betrachtet wird.</li>"
+"<li>Falls ein Benutzer auf mehrere Regeln zutrifft, wird die großzügigste Regel verwendet, um zu entscheiden, ob das Konto inaktiv ist.</li>"
+"</ul>"
+
+msgid "user.role.none"
+msgstr "Benutzerkonten ohne zugewiesene Rolle"
+
+msgid "user.with.submission"
+msgstr "Benutzerkonten mit mindestens einer Einreichung"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Wegwerf-E-Mail-Dienst"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Ungültiger Mail Exchange"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "E-Mail nicht bestätigt"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "Benutzer hat sich nie angemeldet"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Inaktives Konto"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Nur der Site-Administrator kann dieses Plugin aktivieren oder deaktivieren."

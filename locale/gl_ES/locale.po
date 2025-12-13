@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-24T16:10:52+00:00\n"
+"PO-Revision-Date: 2024-11-25 05:51+0000\n"
+"Last-Translator: Jonas Raoni <jonas@raoni.org>\n"
+"Language-Team: Galego <http://translate.pkp.sfu.ca/projects/plugins/mailSendFilter/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.mailSendFilter.name"
+msgstr "Complemento de filtro de envío de correo"
+
+msgid "plugins.generic.mailSendFilter.description"
+msgstr "O complemento permítelle evitar o envío de correos electrónicos a determinadas contas de usuario baseándose nunha serie de configuracións e regras, o que é útil para reducir os correos electrónicos devoltos e evitar que o seu servidor de correo sexa engadido a unha lista de bloqueo por outros servidores de correo."
+
+msgid "plugins.generic.mailSendFilter.downloadEmails"
+msgstr "Descargar correos electrónicos bloqueados"
+
+msgid "plugins.generic.mailSendFilter.general"
+msgstr "Configuración xeral"
+
+msgid "plugins.generic.mailSendFilter.checkInactivity"
+msgstr "Omitir contas de usuario que estiveron inactivas baseándose na última vez que o usuario iniciou sesión, segundo as regras de límite indicadas a continuación."
+
+msgid "plugins.generic.mailSendFilter.checkMxRecord"
+msgstr "Omitir dominios de correo electrónico sen un rexistro MX adecuado."
+
+msgid "plugins.generic.mailSendFilter.checkDisposable"
+msgstr "Omitir correos electrónicos que pertenzan a servizos de correo electrónico desbotables."
+
+msgid "plugins.generic.mailSendFilter.checkNeverLoggedIn"
+msgstr "Omitir contas de usuario que nunca iniciaron sesión."
+
+msgid "plugins.generic.mailSendFilter.checkNotValidated"
+msgstr "Omitir contas de usuario que nunca validaron o seu enderezo de correo electrónico."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
+msgstr "Configura a URL desde a que se debe descargar a lista de dominios desbotables. <b>Os elementos deben estar separados por un salto de liña</b>."
+
+msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
+msgstr "Configura a data de caducidade dos dominios desbotables en días."
+
+msgid "plugins.generic.mailSendFilter.passthroughMailKeys"
+msgstr "Configura as claves de correo electrónico que deben saltar todas as validacións."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
+msgstr "As contas máis antigas que o número de días dado serán comprobadas por inactividade (principalmente útil para a opción \"contas que nunca iniciaron sesión\")."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules"
+msgstr "Regras de límite de inactividade en días."
+
+msgid "plugins.generic.mailSendFilter.inactivity.threshold.rules.help"
+msgstr "Os roles que non iniciaron sesión durante o número de días dado serán considerados inactivos."
+"<ul>"
+"<li>Deixe o campo baleiro para non realizar ningún tipo de comprobacións sobre o rol dado.</li>"
+"<li>Establecer o campo con 0 significa que o rol dado nunca será considerado inactivo.</li>"
+"<li>No caso de que un usuario coincida con varias regras, a máis permisiva será usada para decidir se a conta está inactiva.</li>"
+"</ul>"
+
+msgid "user.role.none"
+msgstr "Contas de usuario sen ningún rol asignado"
+
+msgid "user.with.submission"
+msgstr "Contas de usuario con polo menos un envío"
+
+msgid "plugins.generic.mailSendFilter.reason.disposableService"
+msgstr "Servizo de correo electrónico desbotable"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
+msgstr "Intercambio de correo electrónico inválido"
+
+msgid "plugins.generic.mailSendFilter.reason.notValidated"
+msgstr "Correo electrónico non validado"
+
+msgid "plugins.generic.mailSendFilter.reason.never_logged"
+msgstr "O usuario nunca iniciou sesión"
+
+msgid "plugins.generic.mailSendFilter.reason.inactive"
+msgstr "Conta inactiva"
+
+msgid "plugins.generic.mailSendFilter.limitedActivation"
+msgstr "Só o administrador do sitio pode activar ou desactivar este complemento."
