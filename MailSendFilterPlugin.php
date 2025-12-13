@@ -122,9 +122,7 @@ class MailSendFilterPlugin extends GenericPlugin
     {
         $filter = new MailFilter($this);
         $context = Application::get()->getRequest()->getContext() ?? null;
-        $extractEmail = function (object $row) {
-            return [$row->email => null];
-        };
+        $extractEmail = fn (object $row) => [$row->email => null];
 
         header('content-type: text/plain');
         header('content-disposition: attachment; filename=blocked-emails-' . date('Ymd') . '.csv');
@@ -133,13 +131,13 @@ class MailSendFilterPlugin extends GenericPlugin
         $output->fwrite("\xEF\xBB\xBF");
         $output->fputcsv([__('user.email'), __('grid.user.disableReason')]);
         DB::table('users', 'u')
-            ->when($context, function (Builder $q) {
-                $q->whereExists(function (Builder $q) {
+            ->when($context, fn (Builder $q) =>
+                $q->whereExists(fn (Builder $q) =>
                     $q->from('user_user_groups', 'uug')
                         ->join('user_groups AS ug', 'ug.user_group_id', '=', 'uug.user_group_id')
-                        ->whereColumn('uug.user_id', '=', 'u.user_id');
-                });
-            })
+                        ->whereColumn('uug.user_id', '=', 'u.user_id')
+                )
+            )
             ->select('u.email')
             ->orderBy('u.user_id')
             ->chunk(1000, function (Collection $rows) use ($extractEmail, $filter, $output) {
