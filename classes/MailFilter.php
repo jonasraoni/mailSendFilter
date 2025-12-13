@@ -126,24 +126,22 @@ class MailFilter
         $failedEmails = DB::table('users', 'u')
             ->whereIn(DB::raw('LOWER(u.email)'), array_keys($emails))
             // Ignore users which have been registered few time ago
-            ->when($this->checkInactivity, function (Builder $q) {
-                $q->whereRaw($this->dateDiffClause('CURRENT_TIMESTAMP', 'u.date_registered') . ' >= ?', [$this->inactivityThresholdDays]);
-            })
-            ->where(function (Builder $q) {
+            ->when($this->checkInactivity, fn (Builder $q) =>
+                $q->whereRaw($this->dateDiffClause('CURRENT_TIMESTAMP', 'u.date_registered') . ' >= ?', [$this->inactivityThresholdDays])
+            )
+            ->where(fn (Builder $q) =>
                 $q
                     // Not validated accounts
-                    ->when($this->checkNotValidated, function (Builder $q) {
-                        $q->orWhereNull('u.date_validated');
-                    })
+                    ->when($this->checkNotValidated, fn (Builder $q) =>
+                        $q->orWhere(fn (Builder $q) =>
+                            $q->whereNull('u.date_validated')->whereRaw('COALESCE(u.disabled, 0) = 1')
+                        )
+                    )
                     // Accounts that have haver logged in
-                    ->when($this->checkNeverLoggedIn, function (Builder $q) {
-                        $q->orWhereRaw('DATE(u.date_last_login) = DATE(u.date_registered)');
-                    })
+                    ->when($this->checkNeverLoggedIn, fn (Builder $q) => $q->orWhereRaw('DATE(u.date_last_login) = DATE(u.date_registered)'))
                     // Accounts which have expired
-                    ->when($this->checkInactivity, function (Builder $q) {
-                        $q->orWhereRaw($this->buildRulesQuery());
-                    });
-            })
+                    ->when($this->checkInactivity, fn (Builder $q) => $q->orWhereRaw($this->buildRulesQuery()))
+            )
             ->selectRaw(
                 'LOWER(u.email) AS email,
                 CASE
