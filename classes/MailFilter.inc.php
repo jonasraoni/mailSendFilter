@@ -46,8 +46,8 @@ class MailFilter
 	private $groupedInactivityThresholdDays = null;
 	/** @var ?array<string,null> */
 	private $disposableDomains = null;
-	/** @var array<string,array{'valid':bool,'expires':int}> */
-	private ?array $mxRecords = null;
+	/** @var ?array<string,array{'valid':bool,'expires':int}> */
+	private $mxRecords = null;
 
 	/**
 	 * Constructor
