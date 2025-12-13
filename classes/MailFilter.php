@@ -147,7 +147,7 @@ class MailFilter
             ->selectRaw(
                 'LOWER(u.email) AS email,
                 CASE
-                    WHEN ' . ($this->checkNotValidated ? 'u.date_validated IS NULL' : '0 = 1') . " THEN 'notValidated'" . '
+                    WHEN ' . ($this->checkNotValidated ? 'u.date_validated IS NULL AND COALESCE(u.disabled, 0) = 1' : '0 = 1') . " THEN 'notValidated'" . '
                     WHEN ' . ($this->checkNeverLoggedIn ? 'DATE(u.date_last_login) = DATE(u.date_registered)' : '0 = 1') . " THEN 'never_logged'" . '
                     WHEN ' . ($this->checkInactivity ? $this->buildRulesQuery() : '0 = 1') . " THEN 'inactive'" . '
                     WHEN 0 = 1 THEN null
