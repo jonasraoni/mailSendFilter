@@ -71,10 +71,10 @@ class MailFilter
 	 * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
 	 * @return array<string,null>
 	 */
-	public function filterEmails(array $emails, array &$filteredEmails = null): array
+	public function filterEmails(array $emails, ?array &$filteredEmails = null): array
 	{
 		return $this->filterInactiveEmails(
-            $this->filterInvalidMailExchanges(
+			$this->filterInvalidMailExchanges(
 				$this->filterDisposableDomains($emails, $filteredEmails),
 				$filteredEmails
 			),
@@ -136,11 +136,22 @@ class MailFilter
 				$q
 					// Not validated accounts
 					->when($this->checkNotValidated, function (Builder $q) {
-						$q->orWhereNull('u.date_validated');
+						$q->orWhere(function (Builder $q) {
+							$q->whereNull('u.date_validated')
+								->whereRaw('COALESCE(u.disabled, 0) = 1');
+						});
 					})
 					// Accounts that have haver logged in
 					->when($this->checkNeverLoggedIn, function (Builder $q) {
-						$q->orWhereRaw('DATE(u.date_last_login) = DATE(u.date_registered)');
+						$q->orWhere(function (Builder $q) {
+							$q->whereRaw('DATE(u.date_last_login) = DATE(u.date_registered)')
+								->whereNotExists(function (Builder $q) {
+									$q->selectRaw('0')
+										->from('sessions', 's')
+										->whereColumn('s.user_id', '=', 'u.user_id')
+										->where('s.last_used', '>=', time() - 86400);
+								});
+						});
 					})
 					// Accounts which have expired
 					->when($this->checkInactivity, function (Builder $q) {
@@ -151,13 +162,17 @@ class MailFilter
 				'LOWER(u.email) AS email,
 				CASE
 					WHEN ' . ($this->checkNotValidated ? 'u.date_validated IS NULL AND COALESCE(u.disabled, 0) = 1' : '0 = 1') . " THEN 'notValidated'" . '
-					WHEN ' . ($this->checkNeverLoggedIn ? 'DATE(u.date_last_login) = DATE(u.date_registered)' : '0 = 1') . " THEN 'never_logged'" . '
+					WHEN ' . ($this->checkNeverLoggedIn ? 'DATE(u.date_last_login) = DATE(u.date_registered) AND NOT EXISTS(
+						SELECT 0
+						FROM sessions s
+						WHERE s.user_id = u.user_id
+						AND s.last_used >= ' . (time() - 86400) . '
+					)' : '0 = 1') . " THEN 'never_logged'" . '
 					WHEN ' . ($this->checkInactivity ? $this->buildRulesQuery() : '0 = 1') . " THEN 'inactive'" . '
 					WHEN 0 = 1 THEN null
 				END AS reason'
 			)
 			->get();
-
 
 		// Remove emails which didn't pass the first filter
 		foreach ($failedEmails as $email) {
@@ -367,10 +382,11 @@ class MailFilter
 	 */
 	private static function dateDiffClause(string $fieldA, string $fieldB): string
 	{
-		switch (get_class(Manager::connection())) {
-			case MySqlConnection::class:
+		$connection = Manager::connection();
+		switch (true) {
+			case $connection instanceof MySqlConnection:
 				return "DATEDIFF({$fieldA}, {$fieldB})";
-			case PostgresConnection::class:
+			case $connection instanceof PostgresConnection:
 				return "DATE({$fieldA}) - DATE({$fieldB})";
 			default:
 				throw new Exception('Unknown database');
