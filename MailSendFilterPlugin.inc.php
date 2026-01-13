@@ -30,6 +30,8 @@ use NotificationManager;
 use RedirectAction;
 use SplFileObject;
 
+import('lib.pkp.classes.plugins.GenericPlugin');
+
 class MailSendFilterPlugin extends GenericPlugin
 {
 	// Fake ID for the threshold that deals with users with no roles
@@ -185,6 +187,7 @@ class MailSendFilterPlugin extends GenericPlugin
 	 */
 	private function downloadBlockedEmails(): void
 	{
+		set_time_limit(0);
 		$filter = new MailFilter($this);
 		$context = Application::get()->getRequest()->getContext() ?? null;
 		$extractEmail = function (object $row) {
