@@ -112,11 +112,11 @@ class MailFilter
      * Filters out emails which are likely to bounce due to inactivity
      *
      * @param array<string,null> $emails A list of emails, the email is the key
-     * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
+     * @param ?array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
      *
      * @return array<string,null>
      */
-    private function filterInactiveEmails(array $emails, array &$filteredEmails = null): array
+    private function filterInactiveEmails(array $emails, ?array &$filteredEmails = null): array
     {
         if (!$this->checkInactivity && !$this->checkNotValidated && !$this->checkNeverLoggedIn) {
             return $emails;
@@ -137,14 +137,14 @@ class MailFilter
                         )
                     )
                     // Accounts that have haver logged in
-                    ->when($this->checkNeverLoggedIn, fn (Builder $q) => $q->orWhere(
+                    ->when($this->checkNeverLoggedIn, fn (Builder $q) => $q->orWhere(fn (Builder $q) =>
                         $q->whereRaw('DATE(u.date_last_login) = DATE(u.date_registered)')
                             ->whereNotExists(fn (Builder $q) => $q->selectRaw('0')
                                 ->from('sessions', 's')
                                 ->whereColumn('s.user_id', '=', 'u.user_id')
                                 ->where('s.last_used', '>=', time() - 86400)
                             )
-                    )
+                    ))
                     // Accounts which have expired
                     ->when($this->checkInactivity, fn (Builder $q) => $q->orWhereRaw($this->buildRulesQuery()))
             )
