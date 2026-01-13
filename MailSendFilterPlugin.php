@@ -120,6 +120,7 @@ class MailSendFilterPlugin extends GenericPlugin
      */
     private function downloadBlockedEmails(): void
     {
+        set_time_limit(0);
         $filter = new MailFilter($this);
         $context = Application::get()->getRequest()->getContext() ?? null;
         $extractEmail = fn (object $row) => [$row->email => null];
