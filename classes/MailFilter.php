@@ -142,7 +142,7 @@ class MailFilter
                             ->whereNotExists(fn (Builder $q) => $q->selectRaw('0')
                                 ->from('sessions', 's')
                                 ->whereColumn('s.user_id', '=', 'u.user_id')
-                                ->where('s.last_used', '>=', time() - 86400)
+                                ->where('s.last_activity', '>=', time() - 86400)
                             )
                     ))
                     // Accounts which have expired
@@ -156,7 +156,7 @@ class MailFilter
                         SELECT 0
                         FROM sessions s
                         WHERE s.user_id = u.user_id
-                        AND s.last_used >= ' . (time() - 86400) . '
+                        AND s.last_activity >= ' . (time() - 86400) . '
                     )' : '0 = 1') . " THEN 'never_logged'" . '
                     WHEN ' . ($this->checkInactivity ? $this->buildRulesQuery() : '0 = 1') . " THEN 'inactive'" . '
                     WHEN 0 = 1 THEN null

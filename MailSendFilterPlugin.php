@@ -235,9 +235,9 @@ class MailSendFilterPlugin extends GenericPlugin
      *
      * @copydoc Plugin::getCurrentContextId(()
      */
-    public function getCurrentContextId(): int
+    public function getCurrentContextId(): ?int
     {
-        return 0;
+        return Application::SITE_CONTEXT_ID;
     }
 
     /**
