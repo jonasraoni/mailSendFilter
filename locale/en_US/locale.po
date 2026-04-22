@@ -87,3 +87,7 @@ msgstr "Inactive account"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Only the site administrator can enable or disable this plugin."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "The email with the subject \"{$subject}\" was not delivered to the following addresses:"
+"\n<br>{$emailList}"

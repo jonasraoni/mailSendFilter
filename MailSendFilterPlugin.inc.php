@@ -28,6 +28,7 @@ use Mail;
 use MailTemplate;
 use NotificationManager;
 use RedirectAction;
+use Request;
 use SplFileObject;
 
 import('lib.pkp.classes.plugins.GenericPlugin');
@@ -39,6 +40,10 @@ class MailSendFilterPlugin extends GenericPlugin
 	// Fake ID for the threshold that deals with users who are assigned to at least one submission
 	public const THRESHOLD_ASSIGNED_SUBMISSION = -2;
 	/** @var array<string,string> Description map of custom thresholds */
+	/** @var array<int, array{subject: string, emails: array<string,string>}> List of invalid deliveries, keyed by the sender's user ID, its sub-values are keyed by the invalid email and the value contains the reason */
+	private static array $invalidEmailsByUser = [];
+	/** Controls whether the task to create the notifications has been dispatched */
+	private static bool $isNotificationDispatched = false;
 	public $customThresholds = [
 		self::THRESHOLD_UNASSIGNED_ROLE => 'user.role.none',
 		self::THRESHOLD_ASSIGNED_SUBMISSION => 'user.with.submission'
@@ -53,15 +58,18 @@ class MailSendFilterPlugin extends GenericPlugin
 	 */
 	public function register($category, $path, $mainContextId = null): bool
 	{
-		$success = parent::register($category, $path, $mainContextId);
-		if (!$success || !$this->getEnabled()) {
-			return $success;
+		if (!parent::register($category, $path, $mainContextId)) {
+			return false;
+		}
+
+		if (!$this->getEnabled()) {
+			return true;
 		}
 
 		$this->useAutoLoader();
 		$this->setupMailOverride();
 		$this->passthroughMailKeys = json_decode($this->getSetting($this->getCurrentContextId(), 'passthroughMailKeys')) ?: [];
-		return $success;
+		return true;
 	}
 
 	/**
@@ -137,7 +145,11 @@ class MailSendFilterPlugin extends GenericPlugin
 			}
 
 			// Filter out the suspicious ones
-			$emails = $filter->filterEmails($emails);
+			/** @var array<string,string> $invalidEmails */
+			$invalidEmails = [];
+			$emails = $filter->filterEmails($emails, $invalidEmails);
+			// Stores invalid emails
+			static::storeInvalidEmails($invalidEmails, $mail);
 
 			$recipients = $this->filterAddresses($mail->getRecipients() ?? [], $emails);
 			// If there are no recipients, quit sending the email
@@ -314,5 +326,61 @@ class MailSendFilterPlugin extends GenericPlugin
 	public function getInstallSitePluginSettingsFile(): string
 	{
 		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Stores invalid emails
+	 *
+	 * @param array<string,string> $invalidEmails
+	 */
+	private static function storeInvalidEmails(array $invalidEmails, Mail $view): void
+	{
+		if (!count($invalidEmails)) {
+			return;
+		}
+
+		$request = Application::get()->getRequest();
+		$user = $request->getUser();
+		if (!$user) {
+			return;
+		}
+
+		static::$invalidEmailsByUser[$user->getId()] ??= ['subject' => $view->getSubject(), 'emails' => []];
+		static::$invalidEmailsByUser[$user->getId()]['emails'] += $invalidEmails;
+		static::dispatchInvalidEmailNotifications();
+	}
+
+	/**
+	 * Dispatches a notification to the user who triggered the email delivery containing the invalid emails
+	 */
+	private static function dispatchInvalidEmailNotifications(): void
+	{
+		if (static::$isNotificationDispatched) {
+			return;
+		}
+
+		$path = getcwd();
+		dispatch(function () use ($path) {
+			chdir($path);
+			$notificationManager = app(NotificationManager::class);
+			foreach (static::$invalidEmailsByUser as $userId => $context) {
+				$formattedEmails = [];
+				foreach ($context['emails'] as $email => $reason) {
+					$formattedEmails[] = "{$email} (" . __("plugins.generic.mailSendFilter.reason.{$reason}") . ")";
+				}
+
+				$notificationManager->createNotification(
+					Application::get()->getRequest(),
+					$userId,
+					NOTIFICATION_TYPE_ERROR,
+					null,
+					null,
+					null,
+					NOTIFICATION_LEVEL_TASK,
+					['contents' => __('plugins.generic.mailSendFilter.failedDelivery', ['subject' => $context['subject'], 'emailList' => implode("\n<br>", $formattedEmails)])]
+				);
+			}
+		});
+		static::$isNotificationDispatched = true;
 	}
 }
