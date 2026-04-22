@@ -50,13 +50,16 @@ class MailSendFilterPlugin extends GenericPlugin
      */
     public function register($category, $path, $mainContextId = null): bool
     {
-        $success = parent::register($category, $path, $mainContextId);
-        if (!$success || !$this->getEnabled()) {
-            return $success;
+        if (!parent::register($category, $path, $mainContextId)) {
+            return false;
+        }
+
+        if (!$this->getEnabled()) {
+            return true;
         }
 
         $this->setupMailOverride();
-        return $success;
+        return true;
     }
 
     /**

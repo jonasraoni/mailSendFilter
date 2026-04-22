@@ -14,11 +14,20 @@
 
 namespace APP\plugins\generic\mailSendFilter\classes;
 
+use APP\core\Application;
+use APP\core\Request;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
 use PKP\mail\Mailable;
 use ReflectionClass;
 
 class Mailer extends \PKP\mail\Mailer
 {
+    /** @var array<int, array{subject: string, emails: array<string,string>}> List of invalid deliveries, keyed by the sender's user ID, its sub-values are keyed by the invalid email and the value contains the reason */
+    private static array $invalidEmailsByUser = [];
+    /** Controls whether the task to create the notifications has been dispatched */
+    private static bool $isNotificationDispatched = false;
+
     public function __construct(string $name, \Symfony\Component\Mailer\Transport\TransportInterface $transport, \Illuminate\Contracts\Events\Dispatcher|null $events = null, private MailFilter $mailFilter, private array $passthroughMailKeys)
     {
         parent::__construct(...func_get_args());
@@ -48,7 +57,11 @@ class Mailer extends \PKP\mail\Mailer
         }
 
         // Filter out the suspicious ones
-        $emails = $this->mailFilter->filterEmails($emails);
+        /** @var array<string,string> $invalidEmails */
+        $invalidEmails = [];
+        $emails = $this->mailFilter->filterEmails($emails, $invalidEmails);
+        // Stores invalid emails
+        static::storeInvalidEmails($invalidEmails, $view);
 
         $recipients = $this->filterAddresses($view->to, $emails);
         // If there are no recipients, quit sending the email
@@ -82,5 +95,59 @@ class Mailer extends \PKP\mail\Mailer
         }
 
         return $validEmails;
+    }
+
+    /**
+     * Stores invalid emails
+     *
+     * @param array<string,string> $invalidEmails
+     */
+    private static function storeInvalidEmails(array $invalidEmails, Mailable $view): void
+    {
+        if (!count($invalidEmails)) {
+            return;
+        }
+
+        $request = app(Request::class);
+        $user = $request->getUser();
+        if (!$user) {
+            return;
+        }
+
+        static::$invalidEmailsByUser[$user->getId()] ??= ['subject' => $view->getSubject(), 'emails' => []];
+        static::$invalidEmailsByUser[$user->getId()]['emails'] += $invalidEmails;
+        static::dispatchInvalidEmailNotifications();
+    }
+
+    /**
+     * Dispatches a notification to the user who triggered the email delivery containing the invalid emails
+     */
+    private static function dispatchInvalidEmailNotifications(): void
+    {
+        if (static::$isNotificationDispatched) {
+            return;
+        }
+
+        dispatch(function () {
+            $notificationManager = app(NotificationManager::class);
+            foreach (static::$invalidEmailsByUser as $userId => $context) {
+                $formattedEmails = [];
+                foreach ($context['emails'] as $email => $reason) {
+                    $formattedEmails[] = "{$email} (" . __("plugins.generic.mailSendFilter.reason.{$reason}") . ")";
+                }
+
+                $notificationManager->createNotification(
+                    Application::get()->getRequest(),
+                    $userId,
+                    Notification::NOTIFICATION_TYPE_ERROR,
+                    null,
+                    null,
+                    null,
+                    Notification::NOTIFICATION_LEVEL_TASK,
+                    ['contents' => __('plugins.generic.mailSendFilter.failedDelivery', ['subject' => $context['subject'], 'emailList' => implode("\n<br>", $formattedEmails)])]
+                );
+            }
+        });
+        static::$isNotificationDispatched = true;
     }
 }
