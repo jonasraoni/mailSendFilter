@@ -239,7 +239,7 @@ class MailFilter
      *
      * @return array<string, null>
      */
-    private function filterInvalidMailExchanges(array $emails, array &$filteredEmails = null): array
+    private function filterInvalidMailExchanges(array $emails, ?array &$filteredEmails = null): array
     {
         if (!$this->checkMxRecord) {
             return $emails;
@@ -290,7 +290,7 @@ class MailFilter
      *
      * @return array<string,null>
      */
-    private function filterDisposableDomains(array $emails, array &$filteredEmails = null): array
+    private function filterDisposableDomains(array $emails, ?array &$filteredEmails = null): array
     {
         if (!$this->checkDisposable) {
             return $emails;
