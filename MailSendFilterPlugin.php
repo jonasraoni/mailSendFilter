@@ -27,6 +27,7 @@ use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;
 use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
 use SplFileObject;
 
 class MailSendFilterPlugin extends GenericPlugin
@@ -59,6 +60,21 @@ class MailSendFilterPlugin extends GenericPlugin
         }
 
         $this->setupMailOverride();
+        Hook::add('LoadHandler', [$this, 'callbackLoadHandler']);
+        return true;
+    }
+
+    /**
+     * Route the per-notification failed-emails CSV download to the plugin's page handler
+     */
+    public function callbackLoadHandler($hookName, $args): bool
+    {
+        [$page, $op] = $args;
+        if ($page !== 'mailSendFilter' || $op !== 'downloadFailedEmails') {
+            return false;
+        }
+        define('HANDLER_CLASS', 'MailSendFilterDownloadHandler');
+        $this->import('MailSendFilterDownloadHandler');
         return true;
     }
 
