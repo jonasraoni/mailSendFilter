@@ -18,7 +18,9 @@ use APP\core\Application;
 use APP\core\Request;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
+use PKP\db\DAORegistry;
 use PKP\mail\Mailable;
+use PKP\notification\NotificationSettingsDAO;
 use ReflectionClass;
 
 class Mailer extends \PKP\mail\Mailer
@@ -129,22 +131,50 @@ class Mailer extends \PKP\mail\Mailer
         }
 
         dispatch(function () {
+            $request = app(Request::class);
+            $dispatcher = Application::get()->getDispatcher();
             $notificationManager = app(NotificationManager::class);
+            /** @var NotificationSettingsDAO $notificationSettingsDao */
+            $notificationSettingsDao = DAORegistry::getDAO('NotificationSettingsDAO');
             foreach (static::$invalidEmailsByUser as $userId => $context) {
-                $formattedEmails = [];
-                foreach ($context['emails'] as $email => $reason) {
-                    $formattedEmails[] = "{$email} (" . __("plugins.generic.mailSendFilter.reason.{$reason}") . ")";
-                }
-
-                $notificationManager->createNotification(
-                    Application::get()->getRequest(),
+                $notification = $notificationManager->createNotification(
+                    $request,
                     $userId,
                     Notification::NOTIFICATION_TYPE_ERROR,
                     null,
                     null,
                     null,
                     Notification::NOTIFICATION_LEVEL_TASK,
-                    ['contents' => __('plugins.generic.mailSendFilter.failedDelivery', ['subject' => $context['subject'], 'emailList' => implode("\n<br>", $formattedEmails)])]
+                    ['contents' => '']
+                );
+                if (!$notification) {
+                    continue;
+                }
+
+                $notificationId = $notification->getId();
+                $notificationSettingsDao->updateNotificationSetting(
+                    $notificationId,
+                    'mailSendFilterEmailsJson',
+                    json_encode($context['emails'])
+                );
+                // Force the PageRouter: during API requests the active router is the
+                // APIRouter, whose url() throws when $op is supplied.
+                $downloadUrl = $dispatcher->url(
+                    $request,
+                    Application::ROUTE_PAGE,
+                    null,
+                    'mailSendFilter',
+                    'downloadFailedEmails',
+                    $notificationId
+                );
+                $notificationSettingsDao->updateNotificationSetting(
+                    $notificationId,
+                    'contents',
+                    __('plugins.generic.mailSendFilter.failedDelivery', [
+                        'subject' => $context['subject'],
+                        'count' => count($context['emails']),
+                        'downloadUrl' => $downloadUrl,
+                    ])
                 );
             }
         });
