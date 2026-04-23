@@ -89,5 +89,4 @@ msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Only the site administrator can enable or disable this plugin."
 
 msgid "plugins.generic.mailSendFilter.failedDelivery"
-msgstr "The email with the subject \"{$subject}\" was not delivered to the following addresses:"
-"\n<br>{$emailList}"
+msgstr "The email \"{$subject}\" could not be delivered to {$count} recipient(s). <a href=\"{$downloadUrl}\" target=\"_blank\">Download the list of failed recipients</a>."

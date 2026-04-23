@@ -24,9 +24,11 @@ use Illuminate\Support\Collection;
 use JSONMessage;
 use LinkAction;
 use GenericPlugin;
+use DAORegistry;
 use Mail;
 use MailTemplate;
 use NotificationManager;
+use NotificationSettingsDAO;
 use RedirectAction;
 use Request;
 use SplFileObject;
@@ -69,6 +71,21 @@ class MailSendFilterPlugin extends GenericPlugin
 		$this->useAutoLoader();
 		$this->setupMailOverride();
 		$this->passthroughMailKeys = json_decode($this->getSetting($this->getCurrentContextId(), 'passthroughMailKeys')) ?: [];
+		HookRegistry::register('LoadHandler', [$this, 'callbackLoadHandler']);
+		return true;
+	}
+
+	/**
+	 * Route the per-notification failed-emails CSV download to the plugin's page handler
+	 */
+	public function callbackLoadHandler($hookName, $args): bool
+	{
+		[$page, $op] = $args;
+		if ($page !== 'mailSendFilter' || $op !== 'downloadFailedEmails') {
+			return false;
+		}
+		define('HANDLER_CLASS', 'MailSendFilterDownloadHandler');
+		$this->import('MailSendFilterDownloadHandler');
 		return true;
 	}
 
@@ -360,24 +377,52 @@ class MailSendFilterPlugin extends GenericPlugin
 		}
 
 		$path = getcwd();
-		dispatch(function () use ($path) {
+		register_shutdown_function(function () use ($path) {
 			chdir($path);
+			$request = Application::get()->getRequest();
+			$dispatcher = Application::get()->getDispatcher();
 			$notificationManager = app(NotificationManager::class);
+			/** @var NotificationSettingsDAO $notificationSettingsDao */
+			$notificationSettingsDao = DAORegistry::getDAO('NotificationSettingsDAO');
 			foreach (static::$invalidEmailsByUser as $userId => $context) {
-				$formattedEmails = [];
-				foreach ($context['emails'] as $email => $reason) {
-					$formattedEmails[] = "{$email} (" . __("plugins.generic.mailSendFilter.reason.{$reason}") . ")";
-				}
-
-				$notificationManager->createNotification(
-					Application::get()->getRequest(),
+				$notification = $notificationManager->createNotification(
+					$request,
 					$userId,
 					NOTIFICATION_TYPE_ERROR,
 					null,
 					null,
 					null,
 					NOTIFICATION_LEVEL_TASK,
-					['contents' => __('plugins.generic.mailSendFilter.failedDelivery', ['subject' => $context['subject'], 'emailList' => implode("\n<br>", $formattedEmails)])]
+					['contents' => '']
+				);
+				if (!$notification) {
+					continue;
+				}
+
+				$notificationId = $notification->getId();
+				$notificationSettingsDao->updateNotificationSetting(
+					$notificationId,
+					'mailSendFilterEmailsJson',
+					json_encode($context['emails'])
+				);
+				// Force the PageRouter: during API requests the active router is the
+				// APIRouter, whose url() throws when $op is supplied.
+				$downloadUrl = $dispatcher->url(
+					$request,
+					ROUTE_PAGE,
+					null,
+					'mailSendFilter',
+					'downloadFailedEmails',
+					$notificationId
+				);
+				$notificationSettingsDao->updateNotificationSetting(
+					$notificationId,
+					'contents',
+					__('plugins.generic.mailSendFilter.failedDelivery', [
+						'subject' => $context['subject'],
+						'count' => count($context['emails']),
+						'downloadUrl' => $downloadUrl,
+					])
 				);
 			}
 		});
