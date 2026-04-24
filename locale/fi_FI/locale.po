@@ -81,3 +81,9 @@ msgstr "Epäaktiivinen tili"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Vain sivuston ylläpitäjä voi aktivoida tai deaktivoida tämän lisäosan"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Sähköpostia \"{$subject}\" ei voitu toimittaa {$count} vastaanottajalle. Lataa epäonnistuneiden vastaanottajien luettelo</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Sähköpostia ei voitu toimittaa kaikille vastaanottajille. Tarkista ilmoitusluettelo saadaksesi lisätietoja."

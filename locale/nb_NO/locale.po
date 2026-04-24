@@ -83,3 +83,9 @@ msgstr "Inaktiv konto"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Bare nettstedsadministratoren kan aktivere eller deaktivere dette programtillegget."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">E-posten «{$subject}» kunne ikke leveres til {$count} mottaker(e). Last ned listen over mislykkede mottakere</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "En e-post kunne ikke leveres til alle mottakere. Sjekk varsellisten for å se flere detaljer."

@@ -82,3 +82,9 @@ msgstr "Óvirkur reikningur"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Aðeins stjórnandi vefsvæðis getur virkjað eða gert þessa viðbót óvirka."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Tölvupósturinn „{$subject}“ barst ekki til {$count} viðtakanda. Hlaða niður lista yfir viðtakendur sem ekki tókst að senda til</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Tölvupóstur barst ekki til allra viðtakenda. Skoðaðu tilkynningalistann til að sjá nánari upplýsingar."

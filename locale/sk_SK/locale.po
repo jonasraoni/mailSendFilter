@@ -81,3 +81,9 @@ msgstr "Neaktívny účet"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Iba administrátori môžu spravovať tento plugin"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">E-mail „{$subject}“ nebolo možné doručiť {$count} príjemcovi(om). Stiahnite si zoznam neúspešných príjemcov</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "E-mail nebolo možné doručiť všetkým príjemcom. Ďalšie podrobnosti nájdete v zozname oznámení."

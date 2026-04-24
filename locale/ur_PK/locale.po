@@ -81,3 +81,9 @@ msgstr "غیر فعال اکاؤنٹ"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "صرف منتظمین ہی اسے چالو/غیر چالو کر سکتے ہیں"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">ای میل \"{$subject}\" {$count} وصول کنندگان کو نہیں بھیجی جا سکی۔ ناکام وصول کنندگان کی فہرست ڈاؤن لوڈ کریں</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "ایک ای میل تمام وصول کنندگان کو نہیں بھیجی جا سکی۔ مزید تفصیلات کے لیے اطلاعات کی فہرست دیکھیں۔"
