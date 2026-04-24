@@ -424,6 +424,16 @@ class MailSendFilterPlugin extends GenericPlugin
 						'downloadUrl' => $downloadUrl,
 					])
 				);
+				$notificationManager->createNotification(
+					$request,
+					$userId,
+					NOTIFICATION_TYPE_ERROR,
+					null,
+					null,
+					null,
+					NOTIFICATION_LEVEL_TRIVIAL,
+					['contents' => __('plugins.generic.mailSendFilter.failedDeliveryNotification', ['subject' => $context['subject']])]
+				);
 			}
 		});
 		static::$isNotificationDispatched = true;

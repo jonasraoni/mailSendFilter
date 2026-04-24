@@ -90,3 +90,6 @@ msgstr "Only the site administrator can enable or disable this plugin."
 
 msgid "plugins.generic.mailSendFilter.failedDelivery"
 msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">The email \"{$subject}\" could not be delivered to {$count} recipient(s). Download the list of failed recipients</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "An email could not be delivered to all recipients, check the notification list to see more details."
