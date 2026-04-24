@@ -82,3 +82,9 @@ msgstr "Akun tidak aktif"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Hanya administrator situs yang dapat mengaktifkan atau menonaktifkan plugin ini."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Email \"{$subject}\" tidak dapat dikirim ke {$count} penerima. Unduh daftar penerima yang gagal</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Sebuah email tidak dapat dikirim ke semua penerima, periksa daftar notifikasi untuk melihat detail selengkapnya."

@@ -90,3 +90,9 @@ msgstr "不活跃帐户"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "只有网站管理员可以启用或禁用此插件。"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">邮件「{$subject}」无法发送给 {$count} 位收件人。下载失败收件人列表</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "一封邮件未能发送给所有收件人，请查看通知列表以了解更多详情。"

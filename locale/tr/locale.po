@@ -83,3 +83,9 @@ msgstr "Etkin olmayan hesap"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Bu eklentiyi yalnızca site yöneticisi etkinleştirebilir veya devre dışı bırakabilir."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">\"{$subject}\" e-postası {$count} alıcıya teslim edilemedi. Başarısız alıcıların listesini indirin</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Bir e-posta tüm alıcılara teslim edilemedi. Daha fazla ayrıntı için bildirim listesini kontrol edin."

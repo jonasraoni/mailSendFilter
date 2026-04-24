@@ -81,3 +81,9 @@ msgstr "حساب غیرفعال"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "فقط مدیر سایت می‌تواند این افزونه را فعال یا غیرفعال کند"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">ایمیل «{$subject}» به {$count} گیرنده ارسال نشد. فهرست گیرندگان ناموفق را دانلود کنید</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "یک ایمیل به همه گیرندگان ارسال نشد. برای مشاهده جزئیات بیشتر، فهرست اعلان‌ها را بررسی کنید."

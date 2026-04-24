@@ -81,3 +81,9 @@ msgstr "Неактиван налог"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Само администратор сајта може активирати или деактивирати овај прикључак"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Е-пошту „{$subject}“ није било могуће испоручити на {$count} прималаца. Преузмите списак неуспелих прималаца</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Е-пошту није било могуће испоручити свим примаоцима. За више детаља погледајте списак обавештења."

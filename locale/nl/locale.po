@@ -83,3 +83,9 @@ msgstr "Inactief account"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Alleen de sitebeheerder kan deze plugin in- of uitschakelen."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">De e-mail \"{$subject}\" kon niet worden afgeleverd bij {$count} ontvanger(s). Download de lijst met mislukte ontvangers</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Een e-mail kon niet worden afgeleverd bij alle ontvangers. Bekijk de meldingenlijst voor meer details."
