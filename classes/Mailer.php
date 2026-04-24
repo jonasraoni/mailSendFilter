@@ -176,6 +176,16 @@ class Mailer extends \PKP\mail\Mailer
                         'downloadUrl' => $downloadUrl,
                     ])
                 );
+                $notificationManager->createNotification(
+                    $request,
+                    $userId,
+                    Notification::NOTIFICATION_TYPE_ERROR,
+                    null,
+                    null,
+                    null,
+                    Notification::NOTIFICATION_LEVEL_TRIVIAL,
+                    ['contents' => __('plugins.generic.mailSendFilter.failedDeliveryNotification', ['subject' => $context['subject']])]
+                );
             }
         });
         static::$isNotificationDispatched = true;
