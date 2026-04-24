@@ -81,3 +81,9 @@ msgstr "Compte inactiu"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Només l'administrador del lloc pot activar o desactivar aquest complement"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">El correu «{$subject}» no s'ha pogut lliurar a {$count} destinatari(s). Descarregueu la llista de destinataris fallits</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "No s'ha pogut lliurar un correu a tots els destinataris; consulteu la llista de notificacions per veure'n més detalls."

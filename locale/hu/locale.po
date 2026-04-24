@@ -81,3 +81,9 @@ msgstr "Inaktív fiók"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Csak adminisztrátorok kapcsolhatják ki/be"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">A(z) „{$subject}” e-mailt nem sikerült kézbesíteni {$count} címzettnek. Töltse le a sikertelen címzettek listáját</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Egy e-mailt nem sikerült kézbesíteni az összes címzettnek. További részletekért tekintse meg az értesítések listáját."

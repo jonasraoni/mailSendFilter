@@ -83,3 +83,9 @@ msgstr "حساب غير نشط"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "يمكن لمدير الموقع فقط تمكين أو تعطيل هذه الإضافة."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">تعذَّر تسليم البريد الإلكتروني \"{$subject}\" إلى {$count} مستلم. نزِّل قائمة المستلمين الذين فشل التسليم إليهم</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "تعذَّر تسليم رسالة بريد إلكتروني إلى جميع المستلمين. راجع قائمة الإشعارات لمزيد من التفاصيل."
