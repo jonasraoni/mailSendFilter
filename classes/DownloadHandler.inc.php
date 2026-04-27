@@ -1,24 +1,35 @@
 <?php
 
 /**
- * @file MailSendFilterDownloadHandler.inc.php
+ * @file DownloadHandler.inc.php
  *
  * Copyright (c) 2024 Simon Fraser University
  * Copyright (c) 2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class MailSendFilterDownloadHandler
+ * @class DownloadHandler
  * @brief Serves the per-notification CSV of failed email recipients.
  */
 
+
+namespace APP\plugins\generic\mailSendFilter\classes;
+
+use AppLocale;
+use DAORegistry;
+use Handler;
+use NotificationDAO;
+use PKPSiteAccessPolicy;
+use Request;
+use SplFileObject;
+
 import('classes.handler.Handler');
 
-class MailSendFilterDownloadHandler extends Handler
+class DownloadHandler extends Handler
 {
 	/**
 	 * @copydoc PKPHandler::authorize()
 	 */
-	function authorize($request, &$args, $roleAssignments)
+	public function authorize($request, &$args, $roleAssignments): bool
 	{
 		import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
 		$this->addPolicy(new PKPSiteAccessPolicy($request, ['downloadFailedEmails'], SITE_ACCESS_ALL_ROLES));
@@ -27,11 +38,8 @@ class MailSendFilterDownloadHandler extends Handler
 
 	/**
 	 * Stream a CSV listing the failed recipients of the given notification.
-	 *
-	 * @param array $args URL path arguments; the first entry is the notification id.
-	 * @param PKPRequest $request
 	 */
-	function downloadFailedEmails($args, $request)
+	public function downloadFailedEmails(array $args, Request $request): void
 	{
 		$user = $request->getUser();
 		$notificationId = (int) array_shift($args);
@@ -61,6 +69,7 @@ class MailSendFilterDownloadHandler extends Handler
 		$output = new SplFileObject('php://output', 'wt');
 		// BOM so Excel detects UTF-8
 		$output->fwrite("\xEF\xBB\xBF");
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_GRID);
 		$output->fputcsv([__('user.email'), __('grid.user.disableReason')]);
 		foreach ($emails as $email => $reason) {
 			$output->fputcsv([$email, __("plugins.generic.mailSendFilter.reason.{$reason}")]);

@@ -14,6 +14,7 @@
 namespace APP\plugins\generic\mailSendFilter;
 
 use AjaxModal;
+use APP\plugins\generic\mailSendFilter\classes\DownloadHandler;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
 use Application;
@@ -84,8 +85,7 @@ class MailSendFilterPlugin extends GenericPlugin
 		if ($page !== 'mailSendFilter' || $op !== 'downloadFailedEmails') {
 			return false;
 		}
-		define('HANDLER_CLASS', 'MailSendFilterDownloadHandler');
-		$this->import('MailSendFilterDownloadHandler');
+		define('HANDLER_CLASS', DownloadHandler::class);
 		return true;
 	}
 
