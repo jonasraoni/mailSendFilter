@@ -116,7 +116,7 @@ class Mailer extends \PKP\mail\Mailer
             return;
         }
 
-        static::$invalidEmailsByUser[$user->getId()] ??= ['subject' => $view->getSubject(), 'emails' => []];
+        static::$invalidEmailsByUser[$user->getId()] ??= ['subject' => $view->subject, 'emails' => []];
         static::$invalidEmailsByUser[$user->getId()]['emails'] += $invalidEmails;
         static::dispatchInvalidEmailNotifications();
     }
