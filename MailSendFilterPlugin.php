@@ -16,6 +16,7 @@ namespace APP\plugins\generic\mailSendFilter;
 
 use APP\core\Application;
 use APP\notification\NotificationManager;
+use APP\plugins\generic\mailSendFilter\classes\DownloadHandler;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\MailManager;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
@@ -60,7 +61,7 @@ class MailSendFilterPlugin extends GenericPlugin
         }
 
         $this->setupMailOverride();
-        Hook::add('LoadHandler', [$this, 'callbackLoadHandler']);
+        Hook::add('LoadHandler', $this->callbackLoadHandler(...));
         return true;
     }
 
@@ -73,8 +74,7 @@ class MailSendFilterPlugin extends GenericPlugin
         if ($page !== 'mailSendFilter' || $op !== 'downloadFailedEmails') {
             return false;
         }
-        define('HANDLER_CLASS', 'MailSendFilterDownloadHandler');
-        $this->import('MailSendFilterDownloadHandler');
+        define('HANDLER_CLASS', DownloadHandler::class);
         return true;
     }
 
