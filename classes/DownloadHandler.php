@@ -11,16 +11,16 @@
  * @brief Serves the per-notification CSV of failed email recipients.
  */
 
-
 namespace APP\plugins\generic\mailSendFilter\classes;
 
 use APP\core\Request;
 use APP\handler\Handler;
+use APP\notification\Notification;
 use PKP\db\DAORegistry;
-use PKP\notification\NotificationDAO;
 use PKP\notification\NotificationSettingsDAO;
 use PKP\security\authorization\PKPSiteAccessPolicy;
 use SplFileObject;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DownloadHandler extends Handler
 {
@@ -41,16 +41,12 @@ class DownloadHandler extends Handler
         $user = $request->getUser();
         $notificationId = (int) array_shift($args);
         if (!$user || !$notificationId) {
-            $request->getDispatcher()->handle404();
-            return;
+            throw new NotFoundHttpException();
         }
 
-        /** @var NotificationDAO $notificationDao */
-        $notificationDao = DAORegistry::getDAO('NotificationDAO');
-        $notification = $notificationDao->getById($notificationId, $user->getId());
+        $notification = Notification::find($notificationId)->withUserId($user->getId())->first();
         if (!$notification) {
-            $request->getDispatcher()->handle404();
-            return;
+            throw new NotFoundHttpException();
         }
 
         /** @var NotificationSettingsDAO $notificationSettingsDao */

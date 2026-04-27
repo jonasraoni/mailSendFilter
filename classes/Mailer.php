@@ -138,7 +138,6 @@ class Mailer extends \PKP\mail\Mailer
             $notificationSettingsDao = DAORegistry::getDAO('NotificationSettingsDAO');
             foreach (static::$invalidEmailsByUser as $userId => $context) {
                 $notification = $notificationManager->createNotification(
-                    $request,
                     $userId,
                     Notification::NOTIFICATION_TYPE_ERROR,
                     null,
@@ -165,7 +164,7 @@ class Mailer extends \PKP\mail\Mailer
                     null,
                     'mailSendFilter',
                     'downloadFailedEmails',
-                    $notificationId
+                    [$notificationId]
                 );
                 $notificationSettingsDao->updateNotificationSetting(
                     $notificationId,
@@ -177,7 +176,6 @@ class Mailer extends \PKP\mail\Mailer
                     ])
                 );
                 $notificationManager->createNotification(
-                    $request,
                     $userId,
                     Notification::NOTIFICATION_TYPE_ERROR,
                     null,

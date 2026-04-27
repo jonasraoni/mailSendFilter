@@ -68,14 +68,15 @@ class MailSendFilterPlugin extends GenericPlugin
     /**
      * Route the per-notification failed-emails CSV download to the plugin's page handler
      */
-    public function callbackLoadHandler($hookName, $args): bool
+    public function callbackLoadHandler(string $hookName, array $args): bool
     {
-        [$page, $op] = $args;
+        [$page, $op, , &$handler] = $args;
         if ($page !== 'mailSendFilter' || $op !== 'downloadFailedEmails') {
-            return false;
+            return Hook::CONTINUE;
         }
-        define('HANDLER_CLASS', DownloadHandler::class);
-        return true;
+
+        $handler = new DownloadHandler();
+        return Hook::ABORT;
     }
 
     /**
