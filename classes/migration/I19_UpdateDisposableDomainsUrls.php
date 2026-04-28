@@ -41,7 +41,6 @@ class I19_UpdateDisposableDomainsUrls extends Migration
 
             DB::table('plugin_settings')->updateOrInsert(
                 [
-                    'context_id' => (int) $row->context_id,
                     'plugin_name' => self::PLUGIN_NAME,
                     'setting_name' => self::NEW_SETTING,
                 ],
@@ -52,7 +51,6 @@ class I19_UpdateDisposableDomainsUrls extends Migration
             );
 
             DB::table('plugin_settings')
-                ->where('context_id', (int) $row->context_id)
                 ->where('plugin_name', self::PLUGIN_NAME)
                 ->where('setting_name', self::LEGACY_SETTING)
                 ->delete();
