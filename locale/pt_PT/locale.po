@@ -83,3 +83,9 @@ msgstr "Conta inativa"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Apenas o administrador do site pode ativar ou desativar este plugin."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">O e-mail \"{$subject}\" não pôde ser entregue a {$count} destinatário(s). Transfira a lista de destinatários com falha</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Um e-mail não pôde ser entregue a todos os destinatários. Consulte a lista de notificações para mais detalhes."

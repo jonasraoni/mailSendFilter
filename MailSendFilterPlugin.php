@@ -16,6 +16,7 @@ namespace APP\plugins\generic\mailSendFilter;
 
 use APP\core\Application;
 use APP\notification\NotificationManager;
+use APP\plugins\generic\mailSendFilter\classes\DownloadHandler;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\MailManager;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
@@ -27,6 +28,7 @@ use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;
 use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
 use SplFileObject;
 
 class MailSendFilterPlugin extends GenericPlugin
@@ -50,13 +52,31 @@ class MailSendFilterPlugin extends GenericPlugin
      */
     public function register($category, $path, $mainContextId = null): bool
     {
-        $success = parent::register($category, $path, $mainContextId);
-        if (!$success || !$this->getEnabled()) {
-            return $success;
+        if (!parent::register($category, $path, $mainContextId)) {
+            return false;
+        }
+
+        if (!$this->getEnabled()) {
+            return true;
         }
 
         $this->setupMailOverride();
-        return $success;
+        Hook::add('LoadHandler', $this->callbackLoadHandler(...));
+        return true;
+    }
+
+    /**
+     * Route the per-notification failed-emails CSV download to the plugin's page handler
+     */
+    public function callbackLoadHandler(string $hookName, array $args): bool
+    {
+        [$page, $op, , &$handler] = $args;
+        if ($page !== 'mailSendFilter' || $op !== 'downloadFailedEmails') {
+            return Hook::CONTINUE;
+        }
+
+        $handler = new DownloadHandler();
+        return Hook::ABORT;
     }
 
     /**

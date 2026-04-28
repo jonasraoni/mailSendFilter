@@ -82,3 +82,9 @@ msgstr "Kontu inaktiboa"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Gunearen administratzaileak bakarrik gaitu edo desgaitu dezake plugin hau."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">«{$subject}» mezua ezin izan zaio bidali {$count} hartzaileri. Deskargatu huts egindako hartzaileen zerrenda</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Mezu bat ezin izan zaie bidali hartzaile guztiei. Xehetasun gehiago ikusteko, begiratu jakinarazpenen zerrenda."

@@ -83,3 +83,9 @@ msgstr "Неактивний обліковий запис"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Тільки адміністратор сайту може вмикати або вимикати цей плагін."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Не вдалося доставити електронний лист «{$subject}» {$count} одержувачам. Завантажте список одержувачів, яким доставка не вдалася</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Не вдалося доставити електронний лист усім одержувачам. Докладніше див. у списку сповіщень."
