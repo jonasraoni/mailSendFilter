@@ -81,9 +81,14 @@
 		<name>thresholdUserRoleReviewer</name>
 		<value>360</value>
 	</setting>
-	<setting type="string">
-		<name>disposableDomainsUrl</name>
-		<value>https://raw.githubusercontent.com/disposable-email-domains/disposable-email-domains/refs/heads/main/disposable_email_blocklist.conf</value>
+	<setting type="object">
+		<name>disposableDomainsUrls</name>
+		<value>
+			<array>
+				<element>https://raw.githubusercontent.com/disposable-email-domains/disposable-email-domains/refs/heads/main/disposable_email_blocklist.conf</element>
+				<element>https://raw.githubusercontent.com/alexandrosmagos/dyn-dns-list/refs/heads/master/links.txt</element>
+			</array>
+		</value>
 	</setting>
 	<setting type="string">
 		<name>disposableDomainsExpiration</name>
