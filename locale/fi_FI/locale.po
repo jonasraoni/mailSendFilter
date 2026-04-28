@@ -40,8 +40,8 @@ msgstr "Ohittaa käyttäjätilit, joilla ei ole koskaan kirjauduttu sisään."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ohittaa käyttäjätilit, jotka eivät ole vahvistaneet sähköpostiaan."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Aseta URL-osoite, josta kertakäyttöisten verkkotunnusten lista ladataan. <b>Kohteiden tulee olla erotettuina rivinvaihdoilla</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Määrittää URL-osoitteet, joista kertakäyttöisten verkkotunnusten lista ladataan, yksi URL per rivi. <b>Jokaisen ladatun listan tulee sisältää yksi merkintä per rivi; merkkijonolla <code>/</code> alkavat merkinnät käsitellään PCRE-säännöllisinä lausekkeina (erottimet ja liput mukana).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Aseta kertakäyttöisten verkkotunnusten vanhentumisaika päivinä."

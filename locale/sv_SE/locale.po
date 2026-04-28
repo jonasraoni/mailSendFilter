@@ -40,8 +40,8 @@ msgstr "Hoppar över användarkonton som aldrig har loggat in."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Hoppar över användarkonton som aldrig har validerat sin e-postadress."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Anger URL:en varifrån listan över tillfälliga domäner ska laddas ner. <b>Objekten måste separeras med radbrytning</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Anger URL:er varifrån listan över tillfälliga domäner ska laddas ner, en URL per rad. <b>Varje nedladdad lista måste innehålla en post per rad; poster som börjar med <code>/</code> behandlas som PCRE-reguljära uttryck (inklusive avgränsare och flaggor).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Anger giltighetstiden för tillfälliga domäner i dagar."

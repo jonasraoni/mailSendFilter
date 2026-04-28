@@ -40,8 +40,8 @@ msgstr "Soha be nem jelentkezett fiókok kihagyása."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Nem hitelesített fiókok kihagyása."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Eldobható domainek listájának URL címe. <b>Elemeket új sorral válassza el</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Beállítja az URL-eket, ahonnan az eldobható domainek listáját le kell tölteni, soronként egy URL-lel. <b>Minden letöltött listának soronként egy bejegyzést kell tartalmaznia; a <code>/</code> jellel kezdődő bejegyzések PCRE reguláris kifejezésként értelmeződnek (határolókkal és flagekkel együtt).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Domainek érvényességi ideje (napokban)."

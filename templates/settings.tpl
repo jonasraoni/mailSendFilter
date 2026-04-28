@@ -29,7 +29,7 @@
 			{fbvElement type="checkbox" id="checkNotValidated" checked=$checkNotValidated label="plugins.generic.mailSendFilter.checkNotValidated" translate="true"}
 
 			<p>
-				{fbvElement type="text" id="disposableDomainsUrl" value=$disposableDomainsUrl label="plugins.generic.mailSendFilter.disposableDomainsUrl"}
+				{fbvElement type="textarea" id="disposableDomainsUrls" value=$disposableDomainsUrls label="plugins.generic.mailSendFilter.disposableDomainsUrls"}
 				{fbvElement type="text" id="disposableDomainsExpiration" class="checkNumbers" value=$disposableDomainsExpiration label="plugins.generic.mailSendFilter.disposableDomainsExpiration"}
 				{fbvElement type="keyword" id="passthroughMailKeys" current=$passthroughMailKeys label="plugins.generic.mailSendFilter.passthroughMailKeys"}
 			</p>

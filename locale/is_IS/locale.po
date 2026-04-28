@@ -40,8 +40,8 @@ msgstr "Sleppur notendareikningum sem aldrei hafa skráð sig inn."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Sleppur notendareikningum sem aldrei hafa staðfest netfangið sitt."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Stillir slóðina þar sem listi yfir einnota lén ætti að vera sóttur. <b>Atriðin verða að vera aðskilin með línubilum</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Stillir vefslóðirnar þaðan sem sækja á lista yfir einnota lén, eina slóð í hverri línu. <b>Hver niðurhalaður listi verður að innihalda eina færslu í hverri línu; færslur sem byrja á <code>/</code> eru meðhöndlaðar sem PCRE-reglulegar segðir (með aðgreinum og flöggum).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Stillir gildistíma einnota lénanna í dögum."

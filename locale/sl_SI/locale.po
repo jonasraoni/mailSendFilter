@@ -40,8 +40,8 @@ msgstr "Preskoči uporabniške račune, ki se nikoli niso prijavili."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Preskoči uporabniške račune, ki nikoli niso potrdili svojega e-poštnega naslova."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Nastavi URL, s katerega naj se prenese seznam začasnih domen. <b>Elementi morajo biti ločeni s prelomom vrstice</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Nastavi URL-je, s katerih se prenese seznam začasnih domen, en URL na vrstico. <b>Vsak preneseni seznam mora vsebovati en vnos na vrstico; vnosi, ki se začnejo z <code>/</code>, se obravnavajo kot regularni izrazi PCRE (vključno z ločili in zastavicami).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Nastavi obdobje veljavnosti začasnih domen v dnevih."

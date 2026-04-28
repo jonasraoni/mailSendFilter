@@ -40,8 +40,8 @@ msgstr "Ignore les comptes utilisateurs qui ne se sont jamais connectés."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignore les comptes utilisateurs qui n'ont jamais validé leur adresse e-mail."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Configure l'URL à partir de laquelle la liste des domaines jetables doit être téléchargée. <b>Les éléments doivent être séparés par un saut de ligne.</b>"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Configure les URL à partir desquelles la liste des domaines jetables doit être téléchargée, une URL par ligne. <b>Chaque liste téléchargée doit contenir une entrée par ligne; les entrées commençant par <code>/</code> sont traitées comme des expressions régulières PCRE (délimiteurs et indicateurs inclus).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Configure la date d'expiration des domaines jetables en jours."

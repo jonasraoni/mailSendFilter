@@ -40,8 +40,8 @@ msgstr "هەژمارەکانی بەکارهێنەری کە هەرگیز چوون
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "هەژمارەکانی بەکارهێنەری پشتڕاستنەکراو بلۆک دەکات."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "ناونیشانی URLی لیستی دۆمەینە یەکجارەکەکان دادەنێت. <b>پێویستە ئایتمەکان بە هێڵی نوێ جیا بکرێنەوە</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "ناونیشانییەکانی URL دادەنێت بۆ دابەزاندنی لیستی دۆمەینی کاتی، هەر URL ـێک لە هەر هێڵێک. <b>هەر لیستێکی دابەزێنراو دەبێت لە هەر هێڵێکدا یەک دانە بڕگە هەبێت؛ بڕگەی دەستپێک بە <code>/</code> وەک دەربڕینی ڕێکەوتنی PCRE مامەڵەی لەگەڵ دەکرێت (لەگەڵ دیلیمیتەر و ئاڵاکان).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "ماوەی بەسەرچوونی دۆمەینە یەکجارەکەکان دادەنێت بە ڕۆژ."

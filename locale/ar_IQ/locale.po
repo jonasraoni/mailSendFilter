@@ -40,8 +40,8 @@ msgstr "يتجاهل حسابات المستخدمين الذين لم يسجل�
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "يتجاهل حسابات المستخدمين الذين لم يتحققوا من عنوان بريدهم الإلكتروني."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "يحدد عنوان URL الذي يجب تنزيل قائمة النطاقات المؤقتة منه. <b>يجب فصل العناصر بسطر جديد</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "يحدد عناوين URL التي يجب تنزيل قوائم النطاقات المؤقتة منها، كل عنوان في سطر منفصل. <b>يجب أن يحتوي كل ملف مُنزَّل على عنصر واحد في كل سطر؛ وأي عنصر يبدأ بـ <code>/</code> يُعامَل كتعبير نمطي PCRE (مع المحددات والخيارات).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "يحدد فترة صلاحية النطاقات المؤقتة بالأيام."

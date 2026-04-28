@@ -40,8 +40,8 @@ msgstr "מדלג על חשבונות שמעולם לא התחברו."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "מדלג על חשבונות שלא אומתו."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "מגדיר את כתובת האתר להורדת רשימת דומיינים חד-פעמיים. <b>יש להפריד פריטים בשורה חדשה</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "מגדיר את כתובות ה-URL שמהן יש להוריד את רשימת הדומיינים הזמניים, כתובת אחת בכל שורה. <b>כל רשימה שהורדה חייבת להכיל פריט אחד בכל שורה; ערכים שמתחילים ב-<code>/</code> מטופלים כביטויי רגולריים מסוג PCRE (כולל תוחמים ודגלים).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "מגדיר תוקף לדומיינים חד-פעמיים בימים."

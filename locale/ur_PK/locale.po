@@ -40,8 +40,8 @@ msgstr "کبھی لاگ ان نہ کرنے والے اکاؤنٹس کو چھوڑ
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "غیر تصدیق شدہ اکاؤنٹس کو چھوڑیں"
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "ایک بار استعمال ہونے والے ڈومینز کی فہرست کا یو آر ایل <b>نئی لائن سے علیحدہ کریں</b>"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "عارضی ڈومین فہرستیں ڈاؤن لوڈ کرنے کے لیے URL مقرر کرتا ہے، ہر سطر میں ایک URL۔ <b>ہر ڈاؤن لوڈ شدہ فہرست میں فی سطر ایک اندراج ہونا چاہیے؛ جو اندراجات <code>/</code> سے شروع ہوں انہیں PCRE ریگولر ایکسپریشن سمجھا جاتا ہے (delimiter اور flags سمیت)۔</b>"
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "ڈومینز کی میعاد ختم ہونے کی تاریخ (دنوں میں)"
