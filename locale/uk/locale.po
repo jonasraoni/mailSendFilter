@@ -40,8 +40,8 @@ msgstr "Пропускає облікові записи користувачі�
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Пропускає облікові записи користувачів, які ніколи не підтверджували свою електронну адресу."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Встановлює URL, з якого має бути завантажений список тимчасових доменів. <b>Елементи мають бути розділені перенесенням рядка</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Встановлює URL-адреси, з яких має завантажуватися список тимчасових доменів, по одній URL-адресі на рядок. Кожен завантажений список має містити один елемент у рядку; елементи, що починаються з /, трактуються як регулярні вирази PCRE (включно з розділювачами та прапорцями).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Встановлює термін дії тимчасових доменів у днях."

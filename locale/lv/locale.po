@@ -40,8 +40,8 @@ msgstr "Izlaist nekad nepieslēgtos kontus."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Izlaist neapstiprinātos kontus."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Vienreizējo domēnu saraksta URL. <b>Atdalīt ar jaunām rindām</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Vienreizējo domēnu derīguma termiņš (dienās)."

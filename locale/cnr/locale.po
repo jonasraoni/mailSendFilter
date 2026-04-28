@@ -40,8 +40,8 @@ msgstr "Preskače račune bez prijave."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Preskače nepotvrđene račune."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "URL za listu jednokratnih domena. <b>Odvoji novim redovima</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Postavlja URL-ove sa kojih se preuzima lista jednokratnih domena, po jedan URL u svakom redu. Svaka preuzeta lista mora sadržavati jednu stavku po redu; stavke koje počinju sa / tretiraju se kao PCRE regularni izrazi (uključujući delimitere i oznake).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Rok trajanja domena (dana)."

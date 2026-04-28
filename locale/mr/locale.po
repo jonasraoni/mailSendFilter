@@ -40,8 +40,8 @@ msgstr "कधीही लॉग इन न केलेली खाती व
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "पडताळणी न केलेली खाती वगळा."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "डिस्पोजेबल डोमेनची यादी डाउनलोड करण्यासाठी URL सेट करा. <b>आयटम नवीन ओळींनी विभक्त केले पाहिजेत</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "डिस्पोजेबल डोमेन सूची डाउनलोड करने के लिए URL की सूची सेट करता है, प्रत्येक पंक्ति में एक URL। डाउनलोड की गई प्रत्येक सूची में प्रति पंक्ति एक प्रविष्टि होनी चाहिए; / से शुरू होने वाली प्रविष्टियों को PCRE रेगुलर एक्सप्रेशन (delimiter और flags सहित) माना जाता है। "
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "डिस्पोजेबल डोमेनची कालबाह्यता दिवसांमध्ये सेट करा."

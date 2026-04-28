@@ -40,8 +40,8 @@ msgstr "Ocolește conturile de utilizator care nu s-au autentificat niciodată."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ocolește conturile de utilizator nevalidate."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Setează URL-ul pentru descărcarea listei de domenii descărcabile. <b>Elementele trebuie separate prin linie nouă</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Setează URL-urile de unde trebuie descărcată lista de domenii temporare, câte un URL pe linie. Fiecare listă descărcată trebuie să conțină o intrare pe linie; intrările care încep cu / sunt tratate ca expresii regulate PCRE (inclusiv delimitatori și opțiuni).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Setează expirarea domeniilor descărcabile în zile."

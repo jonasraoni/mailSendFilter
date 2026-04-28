@@ -40,8 +40,8 @@ msgstr "حساب‌های بدون ورود را نادیده بگیر."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "حساب‌های تاییدنشده را نادیده بگیر."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "آدرس لیست دامنه‌های یکبارمصرف. <b>موارد را با خط جدید جدا کنید</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "نشانی‌های URL را برای دریافت فهرست دامنه‌های موقت تنظیم می‌کند، هر URL در یک خط. هر فهرست دانلودشده باید در هر خط یک مورد داشته باشد؛ مواردی که با / شروع می‌شوند به‌صورت عبارت منظم PCRE در نظر گرفته می‌شوند (به‌همراه جداکننده‌ها و پرچم‌ها).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "انقضای دامنه‌ها (روز)."
