@@ -80,3 +80,9 @@ msgstr "不活躍帳戶"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "僅站點管理員可啟用/停用"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">郵件「{$subject}」無法寄送給 {$count} 位收件者。下載失敗收件者清單</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "一封郵件未能寄送給所有收件者，請查看通知列表以取得更多詳情。"

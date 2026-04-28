@@ -83,3 +83,9 @@ msgstr "Неактивная учетная запись"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Только администратор сайта может включать или отключать этот плагин."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Не удалось доставить письмо «{$subject}» {$count} получателю(ям). Загрузите список получателей, которым доставка не удалась</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Не удалось доставить письмо всем получателям. Подробности см. в списке уведомлений."

@@ -120,7 +120,7 @@ class MailFilter
 	 * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
 	 * @return array<string,null>
 	 */
-	private function filterInactiveEmails(array $emails, array &$filteredEmails = null): array
+	private function filterInactiveEmails(array $emails, ?array &$filteredEmails = null): array
 	{
 		if (!$this->checkInactivity && !$this->checkNotValidated && !$this->checkNeverLoggedIn) {
 			return $emails;
@@ -248,7 +248,7 @@ class MailFilter
 	 * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
 	 * @return array<string, null>
 	 */
-	private function filterInvalidMailExchanges(array $emails, array &$filteredEmails = null): array
+	private function filterInvalidMailExchanges(array $emails, ?array &$filteredEmails = null): array
 	{
 		if (!$this->checkMxRecord) {
 			return $emails;
@@ -311,7 +311,7 @@ class MailFilter
 	 * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
 	 * @return array<string,null>
 	 */
-	private function filterDisposableDomains(array $emails, array &$filteredEmails = null): array
+	private function filterDisposableDomains(array $emails, ?array &$filteredEmails = null): array
 	{
 		if (!$this->checkDisposable) {
 			return $emails;

@@ -82,3 +82,9 @@ msgstr "Անգործունակ հաշիվ"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Միայն կայքի ադմինիստրատորը կարող է միացնել կամ անջատել այս փլագինը։"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">«{$subject}» էլ․ նամակը չի հաջողվել առաքել {$count} ստացողի։ Ներբեռնեք ձախողված ստացողների ցանկը</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Էլ․ նամակը չի հաջողվել առաքել բոլոր ստացողներին։ Լրացուցիչ մանրամասների համար ստուգեք ծանուցումների ցանկը։"

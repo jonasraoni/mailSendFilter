@@ -81,3 +81,9 @@ msgstr "Neaktivan račun"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Samo administratori mogu upravljati ovim dodatkom"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">E-pošta „{$subject}“ nije mogla biti isporučena {$count} primatelju(ima). Preuzmite popis neuspjelih primatelja</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "E-pošta nije mogla biti isporučena svim primateljima. Za više pojedinosti pogledajte popis obavijesti."

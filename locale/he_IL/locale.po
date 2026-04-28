@@ -81,3 +81,9 @@ msgstr "חשבון לא פעיל"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "רק מנהל האתר יכול להפעיל או לכבות תוסף זה"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">לא ניתן היה לשלוח את הדוא״ל \"{$subject}\" אל {$count} נמענים. הורדת רשימת הנמענים שנכשלו</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "לא ניתן היה לשלוח דוא״ל לכל הנמענים. בדקו את רשימת ההתראות לפרטים נוספים."

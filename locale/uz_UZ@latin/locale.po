@@ -86,3 +86,9 @@ msgstr "Faolmas hisob"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Faqat sayt ma'muri ushbu plaginni yoqishi yoki o'chirishi mumkin."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">\"{$subject}\" xatini {$count} qabul qiluvchiga yetkazib bo'lmadi. Muvaffaqiyatsiz qabul qiluvchilar ro'yxatini yuklab oling</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Xatni barcha qabul qiluvchilarga yetkazib bo'lmadi. Qo'shimcha tafsilotlar uchun bildirishnomalar ro'yxatini ko'ring."

@@ -81,3 +81,9 @@ msgstr "هەژماری ناچالاک"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "تەنها بەڕێوەبەری ماڵپەڕ دەتوانێت ئەم پلگینە چالاک یان ناچالاک بکات"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">ئیمەیڵی «{$subject}» نەگەیشتە {$count} وەرگر. لیستی وەرگرە سەرنەکەوتووەکان دابەزێنە</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "ئیمەیڵێک نەگەیشتە هەموو وەرگرەکان، بۆ زانیاری زیاتر لیستی ئاگادارکردنەوەکان ببینە."

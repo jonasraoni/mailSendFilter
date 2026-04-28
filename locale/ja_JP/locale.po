@@ -91,3 +91,9 @@ msgstr "非アクティブなアカウント"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "サイト管理者のみがこのプラグインを有効または無効にできます。"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">メール「{$subject}」を {$count} 件の宛先に配信できませんでした。失敗した宛先の一覧をダウンロード</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "メールをすべての宛先に配信できませんでした。詳細については通知一覧をご確認ください。"

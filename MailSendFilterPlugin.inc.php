@@ -14,6 +14,7 @@
 namespace APP\plugins\generic\mailSendFilter;
 
 use AjaxModal;
+use APP\plugins\generic\mailSendFilter\classes\DownloadHandler;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
 use Application;
@@ -24,10 +25,13 @@ use Illuminate\Support\Collection;
 use JSONMessage;
 use LinkAction;
 use GenericPlugin;
+use DAORegistry;
 use Mail;
 use MailTemplate;
 use NotificationManager;
+use NotificationSettingsDAO;
 use RedirectAction;
+use Request;
 use SplFileObject;
 
 import('lib.pkp.classes.plugins.GenericPlugin');
@@ -39,6 +43,10 @@ class MailSendFilterPlugin extends GenericPlugin
 	// Fake ID for the threshold that deals with users who are assigned to at least one submission
 	public const THRESHOLD_ASSIGNED_SUBMISSION = -2;
 	/** @var array<string,string> Description map of custom thresholds */
+	/** @var array<int, array{subject: string, emails: array<string,string>}> List of invalid deliveries, keyed by the sender's user ID, its sub-values are keyed by the invalid email and the value contains the reason */
+	private static array $invalidEmailsByUser = [];
+	/** Controls whether the task to create the notifications has been dispatched */
+	private static bool $isNotificationDispatched = false;
 	public $customThresholds = [
 		self::THRESHOLD_UNASSIGNED_ROLE => 'user.role.none',
 		self::THRESHOLD_ASSIGNED_SUBMISSION => 'user.with.submission'
@@ -53,15 +61,32 @@ class MailSendFilterPlugin extends GenericPlugin
 	 */
 	public function register($category, $path, $mainContextId = null): bool
 	{
-		$success = parent::register($category, $path, $mainContextId);
-		if (!$success || !$this->getEnabled()) {
-			return $success;
+		if (!parent::register($category, $path, $mainContextId)) {
+			return false;
+		}
+
+		if (!$this->getEnabled()) {
+			return true;
 		}
 
 		$this->useAutoLoader();
 		$this->setupMailOverride();
 		$this->passthroughMailKeys = json_decode($this->getSetting($this->getCurrentContextId(), 'passthroughMailKeys')) ?: [];
-		return $success;
+		HookRegistry::register('LoadHandler', [$this, 'callbackLoadHandler']);
+		return true;
+	}
+
+	/**
+	 * Route the per-notification failed-emails CSV download to the plugin's page handler
+	 */
+	public function callbackLoadHandler($hookName, $args): bool
+	{
+		[$page, $op] = $args;
+		if ($page !== 'mailSendFilter' || $op !== 'downloadFailedEmails') {
+			return false;
+		}
+		define('HANDLER_CLASS', DownloadHandler::class);
+		return true;
 	}
 
 	/**
@@ -137,7 +162,11 @@ class MailSendFilterPlugin extends GenericPlugin
 			}
 
 			// Filter out the suspicious ones
-			$emails = $filter->filterEmails($emails);
+			/** @var array<string,string> $invalidEmails */
+			$invalidEmails = [];
+			$emails = $filter->filterEmails($emails, $invalidEmails);
+			// Stores invalid emails
+			static::storeInvalidEmails($invalidEmails, $mail);
 
 			$recipients = $this->filterAddresses($mail->getRecipients() ?? [], $emails);
 			// If there are no recipients, quit sending the email
@@ -314,5 +343,99 @@ class MailSendFilterPlugin extends GenericPlugin
 	public function getInstallSitePluginSettingsFile(): string
 	{
 		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Stores invalid emails
+	 *
+	 * @param array<string,string> $invalidEmails
+	 */
+	private static function storeInvalidEmails(array $invalidEmails, Mail $view): void
+	{
+		if (!count($invalidEmails)) {
+			return;
+		}
+
+		$request = Application::get()->getRequest();
+		$user = $request->getUser();
+		if (!$user) {
+			return;
+		}
+
+		static::$invalidEmailsByUser[$user->getId()] ??= ['subject' => $view->getSubject(), 'emails' => []];
+		static::$invalidEmailsByUser[$user->getId()]['emails'] += $invalidEmails;
+		static::dispatchInvalidEmailNotifications();
+	}
+
+	/**
+	 * Dispatches a notification to the user who triggered the email delivery containing the invalid emails
+	 */
+	private static function dispatchInvalidEmailNotifications(): void
+	{
+		if (static::$isNotificationDispatched) {
+			return;
+		}
+
+		$path = getcwd();
+		register_shutdown_function(function () use ($path) {
+			chdir($path);
+			$request = Application::get()->getRequest();
+			$dispatcher = Application::get()->getDispatcher();
+			$notificationManager = app(NotificationManager::class);
+			/** @var NotificationSettingsDAO $notificationSettingsDao */
+			$notificationSettingsDao = DAORegistry::getDAO('NotificationSettingsDAO');
+			foreach (static::$invalidEmailsByUser as $userId => $context) {
+				$notification = $notificationManager->createNotification(
+					$request,
+					$userId,
+					NOTIFICATION_TYPE_ERROR,
+					null,
+					null,
+					null,
+					NOTIFICATION_LEVEL_TASK,
+					['contents' => '']
+				);
+				if (!$notification) {
+					continue;
+				}
+
+				$notificationId = $notification->getId();
+				$notificationSettingsDao->updateNotificationSetting(
+					$notificationId,
+					'mailSendFilterEmailsJson',
+					json_encode($context['emails'])
+				);
+				// Force the PageRouter: during API requests the active router is the
+				// APIRouter, whose url() throws when $op is supplied.
+				$downloadUrl = $dispatcher->url(
+					$request,
+					ROUTE_PAGE,
+					null,
+					'mailSendFilter',
+					'downloadFailedEmails',
+					$notificationId
+				);
+				$notificationSettingsDao->updateNotificationSetting(
+					$notificationId,
+					'contents',
+					__('plugins.generic.mailSendFilter.failedDelivery', [
+						'subject' => $context['subject'],
+						'count' => count($context['emails']),
+						'downloadUrl' => $downloadUrl,
+					])
+				);
+				$notificationManager->createNotification(
+					$request,
+					$userId,
+					NOTIFICATION_TYPE_ERROR,
+					null,
+					null,
+					null,
+					NOTIFICATION_LEVEL_TRIVIAL,
+					['contents' => __('plugins.generic.mailSendFilter.failedDeliveryNotification', ['subject' => $context['subject']])]
+				);
+			}
+		});
+		static::$isNotificationDispatched = true;
 	}
 }

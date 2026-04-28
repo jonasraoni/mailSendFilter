@@ -81,3 +81,9 @@ msgstr "निष्क्रिय खाता"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "केवल साइट व्यवस्थापक ही इस प्लगइन को सक्रिय/निष्क्रिय कर सकता है"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">ईमेल \"{$subject}\" {$count} प्राप्तकर्ताओं को वितरित नहीं किया जा सका। विफल प्राप्तकर्ताओं की सूची डाउनलोड करें</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "एक ईमेल सभी प्राप्तकर्ताओं को वितरित नहीं किया जा सका, अधिक विवरण देखने के लिए सूचना सूची देखें।"

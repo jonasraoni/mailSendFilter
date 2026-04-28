@@ -83,3 +83,9 @@ msgstr "Nieaktywne konto"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Tylko administrator witryny może włączać lub wyłączać tę wtyczkę."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Nie udało się dostarczyć wiadomości „{$subject}” do {$count} odbiorców. Pobierz listę odbiorców, do których dostarczenie się nie powiodło</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Nie udało się dostarczyć wiadomości do wszystkich odbiorców. Szczegóły znajdziesz na liście powiadomień."

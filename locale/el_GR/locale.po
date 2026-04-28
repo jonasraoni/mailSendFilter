@@ -81,3 +81,9 @@ msgstr "Ανενεργός λογαριασμός"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Μόνο ο διαχειριστής ιστότοπου μπορεί να ενεργοποιήσει/απενεργοποιήσει αυτό το πρόσθετο"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Το email «{$subject}» δεν μπόρεσε να παραδοθεί σε {$count} παραλήπτη(ες). Λήψη της λίστας των αποτυχημένων παραληπτών</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Ένα email δεν μπόρεσε να παραδοθεί σε όλους τους παραλήπτες. Ελέγξτε τη λίστα ειδοποιήσεων για περισσότερες λεπτομέρειες."

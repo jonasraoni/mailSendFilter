@@ -84,3 +84,9 @@ msgstr "Tài khoản không hoạt động"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Chỉ quản trị viên trang web mới có thể kích hoạt hoặc vô hiệu hóa plugin này."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Không thể gửi email \"{$subject}\" đến {$count} người nhận. Tải xuống danh sách người nhận thất bại</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Không thể gửi một email đến tất cả người nhận. Hãy kiểm tra danh sách thông báo để xem thêm chi tiết."

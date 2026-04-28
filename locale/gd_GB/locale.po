@@ -81,3 +81,9 @@ msgstr "Cunntas neo-ghnìomhach"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Chan fhaod ach rianadair na làraich an plugan seo atharrachadh"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Cha b' urrainn dhuinn am post-d \"{$subject}\" a lìbhrigeadh gu {$count} faightear(an). Luchdaich a-nuas liosta nam faightearan a dh'fhàillig</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Cha b' urrainn dhuinn post-d a lìbhrigeadh gu gach faightear. Thoir sùil air liosta nam brathan airson barrachd fiosrachaidh."
