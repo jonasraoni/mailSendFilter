@@ -83,3 +83,9 @@ msgstr "Cuenta inactiva"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Solo el administrador del sitio puede habilitar o deshabilitar este complemento."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">El correo «{$subject}» no se pudo entregar a {$count} destinatario(s). Descargue la lista de destinatarios fallidos</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "No se pudo entregar un correo a todos los destinatarios; consulte la lista de notificaciones para ver más detalles."

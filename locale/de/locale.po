@@ -83,3 +83,9 @@ msgstr "Inaktives Konto"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Nur der Site-Administrator kann dieses Plugin aktivieren oder deaktivieren."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Die E-Mail „{$subject}“ konnte nicht an {$count} Empfänger zugestellt werden. Liste der nicht erreichten Empfänger herunterladen</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Eine E-Mail konnte nicht an alle Empfänger zugestellt werden. Weitere Details finden Sie in der Benachrichtigungsliste."

@@ -83,3 +83,9 @@ msgstr "Neaktiven račun"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Samo skrbnik spletnega mesta lahko omogoči ali onemogoči ta vtičnik."
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">E-pošte „{$subject}“ ni bilo mogoče dostaviti {$count} prejemniku(om). Prenesite seznam neuspešnih prejemnikov</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "E-pošte ni bilo mogoče dostaviti vsem prejemnikom. Za več podrobnosti si oglejte seznam obvestil."

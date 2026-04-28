@@ -81,3 +81,9 @@ msgstr "Неактивна сметка"
 
 msgid "plugins.generic.mailSendFilter.limitedActivation"
 msgstr "Само администраторот на страницата може да го активира или деактивира овој приклучок"
+
+msgid "plugins.generic.mailSendFilter.failedDelivery"
+msgstr "<a href=\"{$downloadUrl}\" target=\"_blank\">Е-поштата „{$subject}“ не можеше да се испорача до {$count} примач(и). Преземете ја листата на неуспешни примачи</a>."
+
+msgid "plugins.generic.mailSendFilter.failedDeliveryNotification"
+msgstr "Една е-пошта не можеше да се испорача до сите примачи. Проверете ја листата со известувања за повеќе детали."
