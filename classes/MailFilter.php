@@ -38,7 +38,7 @@ class MailFilter
     private bool $checkNotValidated;
     /** @var ?array<int,int> */
     private ?array $groupedInactivityThresholdDays = null;
-    /** @var ?array<string,null> */
+    /** @var ?array{exact:array<string,null>,regex:string[]} */
     private ?array $disposableDomains = null;
     /** @var ?array<string,array{'valid':bool,'expires':int}> */
     private ?array $mxRecords = null;
@@ -298,8 +298,8 @@ class MailFilter
 
         $disposableDomains = $this->getDisposableDomains();
         foreach (array_keys($emails) as $recipient) {
-            $domain = substr(strstr($recipient, '@'), 1);
-            if (array_key_exists($domain, $disposableDomains)) {
+            $domain = mb_strtolower(substr(strstr($recipient, '@'), 1));
+            if ($this->isDisposableDomain($domain, $disposableDomains)) {
                 unset($emails[$recipient]);
                 if ($filteredEmails !== null) {
                     $filteredEmails[$recipient] = 'disposableService';
@@ -311,9 +311,30 @@ class MailFilter
     }
 
     /**
-     * Get disposable domains from cache or remote source
+     * Checks whether the given domain matches any disposable entry (exact or regex)
      *
-     * @return array<string,null>
+     * @param array{exact:array<string,null>,regex:string[]} $disposableDomains
+     */
+    private function isDisposableDomain(string $domain, array $disposableDomains): bool
+    {
+        if (array_key_exists($domain, $disposableDomains['exact'])) {
+            return true;
+        }
+        foreach ($disposableDomains['regex'] as $pattern) {
+            if (@preg_match($pattern, $domain)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Get disposable domains from cache or remote sources
+     *
+     * Entries starting with "/" are treated as PCRE regular expressions
+     * (the user must provide the full pattern including delimiters and flags).
+     *
+     * @return array{exact:array<string,null>,regex:string[]}
      */
     private function getDisposableDomains(): array
     {
@@ -323,28 +344,66 @@ class MailFilter
 
         $contextId = $this->plugin->getCurrentContextId();
         $expiration = (int) $this->plugin->getSetting($contextId, 'disposableDomainsExpiration') ?: 30;
-        $disposableDomainsUrl = $this->plugin->getSetting($contextId, 'disposableDomainsUrl');
+        $urls = $this->getDisposableDomainsUrls();
 
-        try {
-            return $this->disposableDomains = Cache::remember(
-                static::CACHE_KEY_DISPOSABLE_DOMAINS . $expiration . $disposableDomainsUrl,
-                now()->addDays($expiration),
-                function () use ($disposableDomainsUrl) {
-                    $data = Application::get()->getHttpClient()->get($disposableDomainsUrl)->getBody()->getContents();
-                    $domains = [];
-                    foreach (preg_split('/\s+/', mb_strtolower($data)) as $domain) {
-                        if ($domain) {
-                            $domains[$domain] = null;
-                        }
-                    }
-
-                    return $domains;
-                }
-            );
-        } catch (Exception $e) {
-            error_log("Failed to retrieve the list of disposable domains.\n" . $e);
-            return $this->disposableDomains = [];
+        $cacheKey = static::CACHE_KEY_DISPOSABLE_DOMAINS . $expiration . json_encode($urls);
+        $cached = Cache::get($cacheKey);
+        if (is_array($cached) && isset($cached['exact'], $cached['regex'])) {
+            return $this->disposableDomains = $cached;
         }
+
+        $exact = [];
+        $regex = [];
+        $client = Application::get()->getHttpClient();
+        foreach ($urls as $url) {
+            try {
+                $data = $client->get($url)->getBody()->getContents();
+            } catch (Exception $e) {
+                error_log("Failed to retrieve the list of disposable domains from {$url}.\n" . $e);
+                continue;
+            }
+            foreach (preg_split('/\r\n|\r|\n/', $data) as $line) {
+                $entry = trim($line);
+                if ($entry === '' || $entry[0] === '#') {
+                    continue;
+                }
+                if ($entry[0] === '/') {
+                    $regex[$entry] = null;
+                    continue;
+                }
+                $exact[mb_strtolower($entry)] = null;
+            }
+        }
+
+        $result = ['exact' => $exact, 'regex' => array_keys($regex)];
+        Cache::put($cacheKey, $result, now()->addDays($expiration));
+        return $this->disposableDomains = $result;
+    }
+
+    /**
+     * Retrieves the configured disposable-domain source URLs
+     *
+     * @return string[]
+     */
+    private function getDisposableDomainsUrls(): array
+    {
+        $contextId = $this->plugin->getCurrentContextId();
+        $value = $this->plugin->getSetting($contextId, 'disposableDomainsUrls');
+        if (is_string($value)) {
+            $decoded = json_decode($value, true);
+            $value = is_array($decoded) ? $decoded : [$value];
+        }
+        if (!is_array($value)) {
+            return [];
+        }
+        $urls = [];
+        foreach ($value as $url) {
+            $url = is_string($url) ? trim($url) : '';
+            if ($url !== '') {
+                $urls[] = $url;
+            }
+        }
+        return array_values(array_unique($urls));
     }
 
     /**
