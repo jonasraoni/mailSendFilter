@@ -40,8 +40,8 @@ msgstr "Չի ուղարկում էլ. նամակներ այն օգտատերեր
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Չի ուղարկում էլ. նամակներ այն օգտատերերի հաշիվներին, որոնք երբեք չեն հաստատել իրենց էլ. փոստի հասցեն։"
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Սահմանում է URL-ը, որտեղից պետք է ներբեռնվի միանգամյա օգտագործման դոմենների ցանկը։ <b>Տարրերը պետք է բաժանված լինեն տողի ընդմիջումով</b>։"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Սահմանում է URL-ները, որտեղից պետք է ներբեռնվի մեկանգամյա օգտագործման դոմենների ցանկը՝ յուրաքանչյուր տողում մեկ URL։ Յուրաքանչյուր ներբեռնված ցանկը պետք է պարունակի մեկ տարր յուրաքանչյուր տողում, իսկ / -ով սկսվող տարրերը համարվում են PCRE կանոնավոր արտահայտություններ (ներառյալ սահմանազատիչներն ու դրոշակները)։."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Սահմանում է միանգամյա օգտագործման դոմենների ժամկետի ավարտը օրերով։"

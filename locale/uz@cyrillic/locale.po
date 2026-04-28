@@ -39,8 +39,8 @@ msgstr "Хеч қачон кирмаган хисобларни ўтказиб �
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Тасдиқланмаган хисобларни ўтказиб юбориш"
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Бир марталик доменлар рўйхати URL манзили. <b>Янги сатр билан ажратинг</b>"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Bir martalik domenlar roʻyxatini yuklab olish uchun URL manzillarini sozlaydi, har satrda bitta URL. Har bir yuklab olingan roʻyxatda har satrda bitta element boʻlishi kerak; / bilan boshlanuvchi elementlar PCRE muntazam ifodalari sifatida qabul qilinadi (ajratgichlar va flaglar bilan birga).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Доменларнинг амал қилиш муддати (кун)"

@@ -40,8 +40,8 @@ msgstr "Saltetas uzantokontojn, kiuj neniam ensalutis."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Saltetas uzantokontojn, kiuj neniam validigis sian retpoŝtan adreson."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Agordu la URL-on de kie la listo de unufojaj domajnoj devus esti elŝutita. <b>La elementoj devas esti apartigitaj per linia paŭzo</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Agordu la eksvalidiĝan daton de la unufojaj domajnoj en tagoj."

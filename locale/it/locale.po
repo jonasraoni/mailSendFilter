@@ -40,8 +40,8 @@ msgstr "Ignora gli account utente che non hanno mai effettuato l'accesso."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignora gli account utente che non hanno mai validato il loro indirizzo email."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Imposta l'URL da cui scaricare l'elenco dei domini temporanei. <b>Gli elementi devono essere separati da un'interruzione di riga</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Imposta gli URL da cui scaricare l'elenco dei domini temporanei, un URL per riga. Ogni elenco scaricato deve contenere una voce per riga; le voci che iniziano con / vengono trattate come espressioni regolari PCRE (inclusi delimitatori e flag).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Imposta il periodo di validità dei domini temporanei in giorni."

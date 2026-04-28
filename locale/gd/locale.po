@@ -40,8 +40,8 @@ msgstr "Seachain cunntasan nach deach a-steach idir."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Seachain cunntasan gun deach an dearbhadh."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Suidhich URL airson liosta àrainnean a ghabhas cur air falbh aon uair. <b>Feumaidh nithean a bhith air an sgaradh le sreathan ùra</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Suidhich na URLan às am bu chòir liosta nan àrainnean cuidhteasach a luchdadh a-nuas, aon URL gach loidhne. Feumaidh gach liosta a chaidh a luchdadh a-nuas aon nì a bhith aice gach loidhne; thathar a' làimhseachadh inntrigidhean a thòisicheas le / mar abairtean riaghailteach PCRE (a' gabhail a-steach delimiters is brataichean).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Suidhich ceann-là nan àrainnean a ghabhas cur air falbh aon uair ann an lathaichean."

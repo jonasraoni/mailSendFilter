@@ -39,8 +39,8 @@ msgstr "跳過從未登入的帳戶"
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "跳過未驗證帳戶"
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "一次性域名列表URL <b>請用新行分隔</b>"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "設定下載一次性網域清單的 URL，每行一個 URL。 每個下載的清單必須每行包含一個項目；以 / 開頭的項目會被視為 PCRE 正規表示式（包含分隔符與旗標）。 "
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "域名有效期(天)"

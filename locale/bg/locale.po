@@ -40,8 +40,8 @@ msgstr "Пропуска потребителски акаунти, които �
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Пропуска потребителски акаунти, които никога не са потвърдили своя имейл адрес."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Задава URL адреса, от който трябва да се изтегли списъкът с еднократни домейни. <b>Елементите трябва да бъдат разделени с нов ред</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Устанавливает URL-адреса, с которых должен загружаться список временных доменов, по одному URL в строке. Каждый загруженный список должен содержать по одной записи в строке; записи, начинающиеся с /, трактуются как регулярные выражения PCRE (включая разделители и флаги).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Задава срока на изтичане на еднократните домейни в дни."
