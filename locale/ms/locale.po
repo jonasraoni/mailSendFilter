@@ -40,8 +40,8 @@ msgstr "Mengabaikan akaun pengguna yang tidak pernah log masuk."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Mengabaikan akaun pengguna yang tidak pernah mengesahkan alamat e-mel mereka."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Menetapkan URL dari mana senarai domain sekali pakai harus dimuat turun. <b>Item mesti dipisahkan dengan baris baru</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Mengatur URL tempat daftar domain sekali pakai harus diunduh, satu URL per baris. Setiap daftar yang diunduh harus berisi satu entri per baris; entri yang diawali dengan / diperlakukan sebagai ekspresi reguler PCRE (termasuk delimiter dan flag).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Menetapkan tarikh luput domain sekali pakai dalam hari."

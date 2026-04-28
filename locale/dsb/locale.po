@@ -40,8 +40,8 @@ msgstr "Pśeskakujo wužywarske konta, kótarež njejsu se nigda pśizjawili."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Pśeskakujo wužywarske konta, kótarež njejsu nigda pśeglědowali swóju e-mailowu adresu."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Nastaja URL, wót źož se lisćina jadnorazowych domjenow ma ześěgnuś. <b>Zapisy muse se pśez smužku źěliś</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Nastavuje URL adresy, ze kterých se má stahovat seznam dočasných domén, jedna URL na řádek. Každý stažený seznam musí obsahovat jednu položku na řádek; položky začínající / se považují za regulární výrazy PCRE (včetně oddělovačů a příznaků).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Nastaja datum pśepadnjenja jadnorazowych domjenow w dnjach."

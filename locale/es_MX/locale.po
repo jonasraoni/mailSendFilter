@@ -40,8 +40,8 @@ msgstr "Ignora las cuentas de usuario que nunca han iniciado sesión."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignora las cuentas de usuario que nunca han validado su dirección de correo electrónico."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Configura la URL desde donde se debe descargar la lista de dominios desechables. <b>Los elementos deben estar separados por un salto de línea.</b>"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Define las URL desde donde se debe descargar la lista de dominios temporales, una URL por línea. Cada lista descargada debe contener un elemento por línea; las entradas que empiezan por / se tratan como expresiones regulares PCRE (incluyendo delimitadores y banderas).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Configura la fecha de expiración de los dominios desechables en días."

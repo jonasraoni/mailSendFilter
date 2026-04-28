@@ -40,8 +40,8 @@ msgstr "Omet els comptes d'usuari que mai han iniciat sessió."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Omet els comptes d'usuari que no han validat el seu correu electrònic."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Configura la URL d'on s'ha de descarregar la llista de dominis desechables. <b>Els elements han d'estar separats per un salt de línia</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Configura els URL des d'on s'ha de descarregar la llista de dominis d'un sol ús, un URL per línia. Cada llista descarregada ha de contenir un element per línia; les entrades que comencen amb / es tracten com a expressions regulars PCRE (amb delimitadors i banderes).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Configura la data de caducitat dels dominis desechables en dies."

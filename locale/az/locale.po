@@ -40,8 +40,8 @@ msgstr "Heç vaxt daxil olmamış istifadəçi hesablarını atlayır."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "E-poçt ünvanlarını heç vaxt təsdiqləməmiş istifadəçi hesablarını atlayır."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Müvəqqəti domenlər siyahısının yüklənəcəyi URL-ni təyin edir. <b>Elementlər sətir sonu ilə ayrılmalıdır</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Geçici alan adları listesinin indirileceği URL'leri ayarlar, her satıra bir URL. İndirilen her liste satır başına bir girdi içermelidir; / ile başlayan girdiler PCRE düzenli ifadeleri olarak değerlendirilir (sınırlayıcılar ve bayraklar dahil).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Müvəqqəti domenlərin etibarlılıq müddətini günlərlə təyin edir."

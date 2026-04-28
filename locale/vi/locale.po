@@ -40,8 +40,8 @@ msgstr "Bỏ qua các tài khoản người dùng chưa bao giờ đăng nhập.
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Bỏ qua các tài khoản người dùng chưa bao giờ xác thực địa chỉ email của họ."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Đặt URL từ đó danh sách tên miền tạm thời sẽ được tải xuống. <b>Các mục phải được phân tách bằng dấu xuống dòng</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Thiết lập các URL để tải danh sách tên miền tạm thời, mỗi dòng một URL. Mỗi danh sách đã tải phải chứa một mục trên mỗi dòng; các mục bắt đầu bằng / được coi là biểu thức chính quy PCRE (bao gồm dấu phân cách và cờ).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Đặt thời hạn hiệu lực của tên miền tạm thời theo ngày."

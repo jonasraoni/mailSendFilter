@@ -40,8 +40,8 @@ msgstr "Slaat gebruikersaccounts over die nooit hebben ingelogd."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Slaat gebruikersaccounts over die hun e-mailadres nooit hebben gevalideerd."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Stelt de URL in waarvan de lijst met tijdelijke domeinen moet worden gedownload. <b>Items moeten worden gescheiden door een regeleinde</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Stelt de URL's in waarvan de lijst met tijdelijke domeinen moet worden gedownload, één URL per regel. Elke gedownloade lijst moet één item per regel bevatten; items die beginnen met / worden behandeld als PCRE-reguliere expressies (inclusief scheidingstekens en flags).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Stelt de geldigheidsperiode van tijdelijke domeinen in dagen in."

@@ -40,8 +40,8 @@ msgstr "هیڅکله ننه نه دی شوي کارن حسابونه له پام
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "تایید شوي نه دي کارن حسابونه له پامه غورځوي."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "د یو وار استعمالیدونکو ډومینونو د لیست د ښکته کولو لپاره URL ټاکئ. <b>توکي باید په نوي کرښو سره جلا شي</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "نشانی‌های URL را برای دریافت فهرست دامنه‌های موقت تنظیم می‌کند، هر URL در یک خط. هر فهرست دانلودشده باید در هر خط یک مورد داشته باشد؛ مواردی که با / شروع می‌شوند به‌صورت عبارت منظم PCRE در نظر گرفته می‌شوند (به‌همراه جداکننده‌ها و پرچم‌ها).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "د یو وار استعمالیدونکو ډومینونو د مهالیه په ورځو کې ټاکئ."
