@@ -40,8 +40,8 @@ msgstr "Preskakuje nikdy neprihlásené účty."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Preskakuje neoverené účty."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "URL pre jednorazové domény. <b>Oddeľte novými riadkami</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Nastavuje URL adresy, z ktorých sa má sťahovať zoznam dočasných domén, jedna URL na riadok. Každý stiahnutý zoznam musí obsahovať jednu položku na riadok; položky začínajúce na / sa považujú za PCRE regulárne výrazy (vrátane oddeľovačov a príznakov).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Expirácia domén (dni)."

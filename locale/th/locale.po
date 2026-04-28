@@ -39,8 +39,8 @@ msgstr "ข้ามบัญชีที่ยังไม่เคยล็อ
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "ข้ามบัญชีที่ยังไม่ยืนยัน"
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "URL รายการโดเมนชั่วคราว <b>คั่นด้วยบรรทัดใหม่</b>"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "อายุโดเมน (วัน)"

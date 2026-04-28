@@ -40,8 +40,8 @@ msgstr "Эч качан кирбеген колдонуучу эсептерин
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Текшерилбеген колдонуучу эсептерин өткөрүп жиберет."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Бир жолу колдонулуучу домендердин тизмесин жүктөө үчүн URL дарекин коюңуз. <b>Элементтер жаңы саптар менен бөлүнүшү керек</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Устанавливает URL-адреса, с которых должен загружаться список временных доменов, по одному URL в строке. Каждый загруженный список должен содержать по одной записи в строке; записи, начинающиеся с /, трактуются как регулярные выражения PCRE (включая разделители и флаги).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Бир жолу колдонулуучу домендердин жарактуулук мөөнөтүн күндөр менен коюңуз."

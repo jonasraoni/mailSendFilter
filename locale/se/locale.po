@@ -40,8 +40,8 @@ msgstr "Sáhttá geahpedit geavaheaddjikontuid mat eai leat loggejuvvon."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Sáhttá geahpedit geavaheaddjikontuid mat eai leat valideren e-boastačujuhusa."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Heive ovtta-geardásaš domeainnaid listtu, mii fertejuvvo čujuhusas. <b>Elementat fertejit leat jorraleamos linjjaid bokte</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Anger URL:er varifrån listan över tillfälliga domäner ska laddas ner, en URL per rad. Varje nedladdad lista måste innehålla en post per rad; poster som börjar med / behandlas som PCRE-reguljära uttryck (inklusive avgränsare och flaggor).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Heive ovtta-geardásaš domeainnaid gildi áiggi beaivviin."

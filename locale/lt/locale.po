@@ -40,8 +40,8 @@ msgstr "Praleidžia niekada neprisijungusias paskyras."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Praleidžia nepatvirtintas paskyras."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Vienkartinių domenų sąrašo URL. <b>Atskirkite naujomis eilutėmis</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Domenų galiojimo laikas (dienomis)."

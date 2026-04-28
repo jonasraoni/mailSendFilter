@@ -40,8 +40,8 @@ msgstr "Прапускае ўліковыя запісы карыстальні�
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Прапускае ўліковыя запісы карыстальнікаў, якія ніколі не пацвердзілі свой адрас электроннай пошты."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Наладжвае URL, з якога павінен спампоўвацца спіс аднаразовых даменаў. <b>Элементы павінны быць падзелены пераносам радка</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Устанавливает URL-адреса, с которых должен загружаться список временных доменов, по одному URL в строке. Каждый загруженный список должен содержать по одной записи в строке; записи, начинающиеся с /, трактуются как регулярные выражения PCRE (включая разделители и флаги).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Наладжвае тэрмін дзеяння аднаразовых даменаў у днях."

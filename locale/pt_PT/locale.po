@@ -40,8 +40,8 @@ msgstr "Ignora contas de utilizador que nunca fizeram login."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignora contas de utilizador que nunca validaram o seu endereço de e-mail."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Define o URL de onde a lista de domínios temporários deve ser descarregada. <b>Os itens devem ser separados por quebra de linha</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Define os URLs de onde a lista de domínios temporários deve ser descarregada, um URL por linha. Cada lista descarregada deve conter uma entrada por linha; entradas iniciadas por / são tratadas como expressões regulares PCRE (incluindo delimitadores e sinalizadores).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Define o prazo de validade dos domínios temporários em dias."

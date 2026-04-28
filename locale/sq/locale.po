@@ -39,8 +39,8 @@ msgstr "Anashkalon llogaritë që nuk janë hyrë kurrë."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Anashkalon llogaritë e paverifikuara."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "URL për domainet e përdorura një herë. <b>Ndani me rresht të ri</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Postavlja URL-ove sa kojih se preuzima lista jednokratnih domena, po jedan URL u svakom redu. Svaka preuzeta lista mora sadržavati jednu stavku po redu; stavke koje počinju sa / tretiraju se kao PCRE regularni izrazi (uključujući delimitere i oznake).."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Skadimi i domaineve (ditë)."

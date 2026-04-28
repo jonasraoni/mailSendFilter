@@ -52,7 +52,7 @@ class SettingsForm extends Form
         $this->setData('checkNeverLoggedIn', (bool) $this->plugin->getSetting($contextId, 'checkNeverLoggedIn'));
         $this->setData('checkNotValidated', (bool) $this->plugin->getSetting($contextId, 'checkNotValidated'));
         $this->setData('passthroughMailKeys', [Locale::getLocale() => json_decode((string) $this->plugin->getSetting($contextId, 'passthroughMailKeys')) ?: []]);
-        $this->setData('disposableDomainsUrl', $this->plugin->getSetting($contextId, 'disposableDomainsUrl'));
+        $this->setData('disposableDomainsUrls', implode("\n", $this->getDisposableDomainsUrls($contextId)));
         $this->setData('disposableDomainsExpiration', (int) $this->plugin->getSetting($contextId, 'disposableDomainsExpiration'));
 
         parent::initData();
@@ -63,7 +63,7 @@ class SettingsForm extends Form
      */
     public function readInputData(): void
     {
-        $vars = ['inactivityThresholdDays', 'checkInactivity', 'checkMxRecord', 'checkDisposable', 'checkNeverLoggedIn', 'checkNotValidated', 'disposableDomainsUrl', 'disposableDomainsExpiration'];
+        $vars = ['inactivityThresholdDays', 'checkInactivity', 'checkMxRecord', 'checkDisposable', 'checkNeverLoggedIn', 'checkNotValidated', 'disposableDomainsUrls', 'disposableDomainsExpiration'];
         foreach ($this->plugin->getRoles() as $roleName) {
             $vars[] = $this->formatRoleName("threshold.{$roleName}");
         }
@@ -119,7 +119,14 @@ class SettingsForm extends Form
         $this->plugin->updateSetting($contextId, 'checkNeverLoggedIn', (bool) $this->getData('checkNeverLoggedIn'), 'bool');
         $this->plugin->updateSetting($contextId, 'checkNotValidated', (bool) $this->getData('checkNotValidated'), 'bool');
         $this->plugin->updateSetting($contextId, 'passthroughMailKeys', json_encode($this->getData('passthroughMailKeys')));
-        $this->plugin->updateSetting($contextId, 'disposableDomainsUrl', $this->getData('disposableDomainsUrl'));
+        $urls = [];
+        foreach (preg_split('/\r\n|\r|\n/', (string) $this->getData('disposableDomainsUrls')) as $line) {
+            $line = trim($line);
+            if ($line !== '') {
+                $urls[] = $line;
+            }
+        }
+        $this->plugin->updateSetting($contextId, 'disposableDomainsUrls', array_values(array_unique($urls)), 'object');
         $this->plugin->updateSetting($contextId, 'disposableDomainsExpiration', (int) $this->getData('disposableDomainsExpiration') ?: 30);
 
         $notificationMgr = new NotificationManager();
@@ -138,5 +145,30 @@ class SettingsForm extends Form
     public static function formatRoleName(string $name): string
     {
         return preg_replace_callback('/\.\w/', fn (array $matches): string => strtoupper(substr($matches[0], 1)), $name);
+    }
+
+    /**
+     * Retrieves the disposable-domain source URLs, tolerating legacy string values
+     *
+     * @return string[]
+     */
+    private function getDisposableDomainsUrls(int $contextId): array
+    {
+        $value = $this->plugin->getSetting($contextId, 'disposableDomainsUrls');
+        if (is_string($value)) {
+            $decoded = json_decode($value, true);
+            $value = is_array($decoded) ? $decoded : [$value];
+        }
+        if (!is_array($value)) {
+            return [];
+        }
+        $urls = [];
+        foreach ($value as $url) {
+            $url = is_string($url) ? trim($url) : '';
+            if ($url !== '') {
+                $urls[] = $url;
+            }
+        }
+        return array_values(array_unique($urls));
     }
 }
