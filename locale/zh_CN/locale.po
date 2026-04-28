@@ -43,8 +43,8 @@ msgstr "跳过从未登录过的用户帐户。"
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "跳过从未验证其电子邮件地址的用户帐户。"
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "设置从中下载临时域名列表的URL。<b>项目必须用换行符分隔</b>。"
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "设置用于下载临时域名列表的 URL，每行一个 URL。<b>每个下载的列表必须每行包含一个条目；以 <code>/</code> 开头的条目将被视为 PCRE 正则表达式（包含分隔符和标志）。</b>"
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "设置临时域名的有效期（以天为单位）。"

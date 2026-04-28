@@ -40,8 +40,8 @@ msgstr "Inoiz saioa hasi ez duten erabiltzaile-kontuak saltatzen ditu."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Erabiltzaile-kontuak saltatzen ditu, zeintzuk inoiz ez duten beren posta helbidea balioztatu."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Behin erabilerako domeinuen zerrenda deskargatzeko URL-a konfiguratzen du. <b>Elementuak lerro-jauzi batez bereizita egon behar dute</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Erabilera bakarreko domeinuen zerrenda deskargatzeko URLak ezartzen ditu, URL bat lerro bakoitzean. <b>Deskargatutako zerrenda bakoitzak elementu bat izan behar du lerro bakoitzean; <code>/</code> karakterearekin hasten diren sarrerak PCRE adierazpen erregular gisa tratatzen dira (mugatzaile eta banderekin).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Behin erabilerako domeinuen iraungitze-data konfiguratzen du egunetan."

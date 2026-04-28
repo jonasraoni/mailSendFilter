@@ -40,8 +40,8 @@ msgstr "Melewati akun pengguna yang belum pernah masuk."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Melewati akun pengguna yang belum memvalidasi alamat email mereka."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Mengatur URL dari mana daftar domain sekali pakai harus diunduh. <b>Item harus dipisahkan oleh jeda baris</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Mengatur URL tempat daftar domain sekali pakai harus diunduh, satu URL per baris. <b>Setiap daftar yang diunduh harus berisi satu entri per baris; entri yang diawali dengan <code>/</code> diperlakukan sebagai ekspresi reguler PCRE (termasuk delimiter dan flag).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Mengatur tanggal kedaluwarsa domain sekali pakai dalam hari."

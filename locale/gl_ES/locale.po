@@ -40,8 +40,8 @@ msgstr "Omitir contas de usuario que nunca iniciaron sesión."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Omitir contas de usuario que nunca validaron o seu enderezo de correo electrónico."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Configura a URL desde a que se debe descargar a lista de dominios desbotables. <b>Os elementos deben estar separados por un salto de liña</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Configura os URL desde os que se debe descargar a lista de dominios desbotables, un URL por liña. <b>Cada lista descargada debe conter un elemento por liña; as entradas que comezan por <code>/</code> trátanse como expresións regulares PCRE (incluíndo delimitadores e bandeiras).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Configura a data de caducidade dos dominios desbotables en días."

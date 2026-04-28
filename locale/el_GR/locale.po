@@ -40,8 +40,8 @@ msgstr "Παραλείπει λογαριασμούς που δεν έχουν �
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Παραλείπει μη επαληθευμένους λογαριασμούς χρηστών."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Ορίζει URL λήψης λίστας domains μίας χρήσης. <b>Τα στοιχεία πρέπει να διαχωρίζονται με νέες γραμμές</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Ορίζει τα URL από τα οποία θα γίνεται λήψη της λίστας προσωρινών domains, ένα URL ανά γραμμή. <b>Κάθε ληφθείσα λίστα πρέπει να περιέχει μία καταχώριση ανά γραμμή· καταχωρίσεις που ξεκινούν με <code>/</code> αντιμετωπίζονται ως κανονικές εκφράσεις PCRE (με οριοθέτες και flags).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Ορίζει λήξη domains μίας χρήσης σε ημέρες."

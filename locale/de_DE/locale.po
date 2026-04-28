@@ -40,8 +40,8 @@ msgstr "Überspringt Benutzerkonten, die sich nie angemeldet haben."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Überspringt Benutzerkonten, die ihre E-Mail-Adresse nicht bestätigt haben."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Legt die URL fest, von der die Liste der Wegwerf-Domains heruntergeladen werden soll. <b>Die Einträge müssen durch Zeilenumbruch getrennt sein</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Legt die URLs fest, von denen die Liste der Wegwerf-Domains heruntergeladen werden soll, eine URL pro Zeile. <b>Jede heruntergeladene Liste muss einen Eintrag pro Zeile enthalten; Einträge, die mit <code>/</code> beginnen, werden als PCRE-reguläre Ausdrücke behandelt (inklusive Trennern und Flags).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Legt das Ablaufdatum der Wegwerf-Domains in Tagen fest."

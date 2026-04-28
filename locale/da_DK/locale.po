@@ -40,8 +40,8 @@ msgstr "Springer brugerkonti over, der aldrig har logget ind."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Springer brugerkonti over, der aldrig har valideret deres e-mailadresse."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Angiver URL'en, hvorfra listen over midlertidige domæner skal downloades. <b>Elementerne skal være adskilt af linjeskift</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "Angiver URL'er, hvorfra listen over midlertidige domæner skal hentes, én URL pr. linje. <b>Hver hentet liste skal indeholde ét element pr. linje; elementer der starter med <code>/</code> behandles som PCRE-regulære udtryk (inkl. afgrænsere og flag).</b>."
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Angiver gyldighedsperioden for midlertidige domæner i dage."
