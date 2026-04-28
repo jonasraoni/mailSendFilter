@@ -41,8 +41,8 @@ msgstr "Skips user accounts which have never logged in."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Skips user accounts which have never validated their email address."
 
-msgid "plugins.generic.mailSendFilter.disposableDomainsUrl"
-msgstr "Setups the URL from where the list of disposable domains should be downloaded from. <b>The items must be separated by a line break</b>."
+msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
+msgstr "List of URLs from where the disposable domains should be downloaded, one per line. <b>Each downloaded list must contain one entry per line; entries starting with <code>/</code> are treated as PCRE regular expressions (delimiters and flags included).</b>"
 
 msgid "plugins.generic.mailSendFilter.disposableDomainsExpiration"
 msgstr "Setups the expiration date of the disposable domains in days."

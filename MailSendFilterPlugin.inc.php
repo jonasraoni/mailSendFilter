@@ -16,6 +16,7 @@ namespace APP\plugins\generic\mailSendFilter;
 use AjaxModal;
 use APP\plugins\generic\mailSendFilter\classes\DownloadHandler;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
+use APP\plugins\generic\mailSendFilter\classes\migration\I19_UpdateDisposableDomainsUrls;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
 use Application;
 use HookRegistry;
@@ -94,6 +95,11 @@ class MailSendFilterPlugin extends GenericPlugin
 	 */
 	private function useAutoLoader(): void
 	{
+		static $autoloaderRegistered = false;
+		if ($autoloaderRegistered) {
+			return;
+		}
+		$autoloaderRegistered = true;
 		spl_autoload_register(function ($className) {
 			// Removes the base namespace from the class name
 			$path = explode(__NAMESPACE__ . '\\', $className, 2);
@@ -343,6 +349,18 @@ class MailSendFilterPlugin extends GenericPlugin
 	public function getInstallSitePluginSettingsFile(): string
 	{
 		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * @copydoc Plugin::getInstallMigration()
+	 *
+	 * Loaded via Plugin::import() because this method is invoked during
+	 * Plugin::register() before the plugin's namespaced autoloader is active.
+	 */
+	public function getInstallMigration()
+	{
+		$this->useAutoLoader();
+		return new I19_UpdateDisposableDomainsUrls();
 	}
 
 	/**
