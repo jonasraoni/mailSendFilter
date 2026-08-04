@@ -152,7 +152,7 @@ class SettingsForm extends Form
      *
      * @return string[]
      */
-    private function getDisposableDomainsUrls(int $contextId): array
+    private function getDisposableDomainsUrls(?int $contextId): array
     {
         $value = $this->plugin->getSetting($contextId, 'disposableDomainsUrls');
         if (is_string($value)) {
