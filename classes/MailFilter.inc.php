@@ -37,6 +37,8 @@ class MailFilter
 	/** @var bool */
 	private $checkMxRecord;
 	/** @var bool */
+	private $checkInvalidEmail;
+	/** @var bool */
 	private $checkDisposable;
 	/** @var bool */
 	private $checkNeverLoggedIn;
@@ -59,6 +61,8 @@ class MailFilter
 		$this->inactivityThresholdDays = (int) abs((int) $plugin->getSetting($contextId, 'inactivityThresholdDays'));
 		$this->checkInactivity = (bool) $plugin->getSetting($contextId, 'checkInactivity');
 		$this->checkMxRecord = (bool) $plugin->getSetting($contextId, 'checkMxRecord');
+		$checkInvalidEmail = $plugin->getSetting($contextId, 'checkInvalidEmail');
+		$this->checkInvalidEmail = $checkInvalidEmail === null ? true : (bool) $checkInvalidEmail;
 		$this->checkDisposable = (bool) $plugin->getSetting($contextId, 'checkDisposable');
 		$this->checkNeverLoggedIn = (bool) $plugin->getSetting($contextId, 'checkNeverLoggedIn');
 		$this->checkNotValidated = (bool) $plugin->getSetting($contextId, 'checkNotValidated') && \Config::getVar('email', 'require_validation', false);
@@ -75,7 +79,10 @@ class MailFilter
 	{
 		return $this->filterInactiveEmails(
 			$this->filterInvalidMailExchanges(
-				$this->filterDisposableDomains($emails, $filteredEmails),
+				$this->filterDisposableDomains(
+					$this->filterInvalidEmails($emails, $filteredEmails),
+					$filteredEmails
+				),
 				$filteredEmails
 			),
 			$filteredEmails
@@ -239,6 +246,33 @@ class MailFilter
 			$roleRulesQuery[] = "WHEN {$conditions} THEN {$result}";
 		}
 		return count($roleRulesQuery) ? 'CASE ' . implode("\n", $roleRulesQuery) . ' END = 1' : '0 = 1';
+	}
+
+	/**
+	 * Filters out emails which fail OJS email validation
+	 *
+	 * @param array<string,null> $emails A list of emails, the email is the key
+	 * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
+	 * @return array<string,null>
+	 */
+	private function filterInvalidEmails(array $emails, ?array &$filteredEmails = null): array
+	{
+		if (!$this->checkInvalidEmail) {
+			return $emails;
+		}
+
+		import('lib.pkp.classes.validation.ValidatorEmail');
+		$validator = new \ValidatorEmail();
+		foreach (array_keys($emails) as $recipient) {
+			if (!$validator->isValid($recipient)) {
+				unset($emails[$recipient]);
+				if ($filteredEmails !== null) {
+					$filteredEmails[$recipient] = 'invalidEmail';
+				}
+			}
+		}
+
+		return $emails;
 	}
 
 	/**

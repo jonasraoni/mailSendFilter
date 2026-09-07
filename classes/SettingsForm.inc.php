@@ -54,6 +54,8 @@ class SettingsForm extends Form
 		$this->setData('inactivityThresholdDays', (int) $this->plugin->getSetting($contextId, 'inactivityThresholdDays'));
 		$this->setData('checkInactivity', (bool) $this->plugin->getSetting($contextId, 'checkInactivity'));
 		$this->setData('checkMxRecord', (bool) $this->plugin->getSetting($contextId, 'checkMxRecord'));
+		$checkInvalidEmail = $this->plugin->getSetting($contextId, 'checkInvalidEmail');
+		$this->setData('checkInvalidEmail', $checkInvalidEmail === null ? true : (bool) $checkInvalidEmail);
 		$this->setData('checkDisposable', (bool) $this->plugin->getSetting($contextId, 'checkDisposable'));
 		$this->setData('checkNeverLoggedIn', (bool) $this->plugin->getSetting($contextId, 'checkNeverLoggedIn'));
 		$this->setData('checkNotValidated', (bool) $this->plugin->getSetting($contextId, 'checkNotValidated'));
@@ -69,7 +71,7 @@ class SettingsForm extends Form
 	 */
 	public function readInputData()
 	{
-		$vars = ['inactivityThresholdDays', 'checkInactivity', 'checkMxRecord', 'checkDisposable', 'checkNeverLoggedIn', 'checkNotValidated', 'disposableDomainsUrls', 'disposableDomainsExpiration'];
+		$vars = ['inactivityThresholdDays', 'checkInactivity', 'checkMxRecord', 'checkInvalidEmail', 'checkDisposable', 'checkNeverLoggedIn', 'checkNotValidated', 'disposableDomainsUrls', 'disposableDomainsExpiration'];
 		foreach ($this->plugin->getRoles() as $roleName) {
 			$vars[] = $this->formatRoleName("threshold.{$roleName}");
 		}
@@ -119,6 +121,7 @@ class SettingsForm extends Form
 		$this->plugin->updateSetting($contextId, 'inactivityThresholdDays', (int) $this->getData('inactivityThresholdDays'));
 		$this->plugin->updateSetting($contextId, 'checkInactivity', (bool) $this->getData('checkInactivity'), 'bool');
 		$this->plugin->updateSetting($contextId, 'checkMxRecord', (bool) $this->getData('checkMxRecord'), 'bool');
+		$this->plugin->updateSetting($contextId, 'checkInvalidEmail', (bool) $this->getData('checkInvalidEmail'), 'bool');
 		$this->plugin->updateSetting($contextId, 'checkDisposable', (bool) $this->getData('checkDisposable'), 'bool');
 		$this->plugin->updateSetting($contextId, 'checkNeverLoggedIn', (bool) $this->getData('checkNeverLoggedIn'), 'bool');
 		$this->plugin->updateSetting($contextId, 'checkNotValidated', (bool) $this->getData('checkNotValidated'), 'bool');
