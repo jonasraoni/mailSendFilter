@@ -40,6 +40,9 @@ msgstr "Omet els comptes d'usuari que mai han iniciat sessió."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Omet els comptes d'usuari que no han validat el seu correu electrònic."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Omet les adreces de correu electrònic que no són vàlides."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Configura els URL des d'on s'ha de descarregar la llista de dominis d'un sol ús, un URL per línia. <b>Cada llista descarregada ha de contenir un element per línia; les entrades que comencen amb <code>/</code> es tracten com a expressions regulars PCRE (amb delimitadors i banderes).</b>."
 
@@ -69,6 +72,9 @@ msgstr "Servei de correu desechable"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Intercanvi de correu electrònic invàlid"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Adreça de correu electrònic no vàlida"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Correu electrònic no validat"

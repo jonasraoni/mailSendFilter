@@ -40,6 +40,9 @@ msgstr "Παραλείπει λογαριασμούς που δεν έχουν �
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Παραλείπει μη επαληθευμένους λογαριασμούς χρηστών."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Παραλείπει διευθύνσεις ηλεκτρονικού ταχυδρομείου που δεν είναι έγκυρες."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Ορίζει τα URL από τα οποία θα γίνεται λήψη της λίστας προσωρινών domains, ένα URL ανά γραμμή. <b>Κάθε ληφθείσα λίστα πρέπει να περιέχει μία καταχώριση ανά γραμμή· καταχωρίσεις που ξεκινούν με <code>/</code> αντιμετωπίζονται ως κανονικές εκφράσεις PCRE (με οριοθέτες και flags).</b>."
 
@@ -69,6 +72,9 @@ msgstr "Υπηρεσία email μίας χρήσης"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Μη έγκυρη εγγραφή MX"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Μη έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Μη επαληθευμένο email"

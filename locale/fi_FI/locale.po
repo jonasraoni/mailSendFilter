@@ -40,6 +40,9 @@ msgstr "Ohittaa käyttäjätilit, joilla ei ole koskaan kirjauduttu sisään."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ohittaa käyttäjätilit, jotka eivät ole vahvistaneet sähköpostiaan."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Ohittaa sähköpostiosoitteet, jotka eivät ole kelvollisia."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Määrittää URL-osoitteet, joista kertakäyttöisten verkkotunnusten lista ladataan, yksi URL per rivi. <b>Jokaisen ladatun listan tulee sisältää yksi merkintä per rivi; merkkijonolla <code>/</code> alkavat merkinnät käsitellään PCRE-säännöllisinä lausekkeina (erottimet ja liput mukana).</b>."
 
@@ -69,6 +72,9 @@ msgstr "Kertakäyttöinen sähköpostipalvelu"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Virheellinen sähköpostivaihto"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Virheellinen sähköpostiosoite"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Sähköpostia ei vahvistettu"

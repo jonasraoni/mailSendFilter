@@ -40,6 +40,9 @@ msgstr "Прескокнува кориснички сметки што нико
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Прескокнува непотврдени кориснички сметки."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Ги прескокнува е-поштенските адреси што не се валидни."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Ги поставува URL-адресите од кои треба да се презема листата на еднократни домени, по еден URL во секој ред. <b>Секоја преземена листа мора да содржи по една ставка во ред; ставките што почнуваат со <code>/</code> се третираат како PCRE регуларни изрази (со разделувачи и ознаки).</b>."
 
@@ -69,6 +72,9 @@ msgstr "Еднократна е-поштена услуга"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Невалиден MX запис"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Невалидна е-поштенска адреса"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Е-поштата не е потврдена"

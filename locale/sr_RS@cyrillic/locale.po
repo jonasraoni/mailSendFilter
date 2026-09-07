@@ -40,6 +40,9 @@ msgstr "Прескаче налоге који се никада нису при
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Прескаче непотврђене корисничке налоге."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Прескаче адресе е-поште које нису важеће."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Поставља URL-ове са којих се преузима листа једнократних домена, по један URL у сваком реду. <b>Свака преузета листа мора да садржи једну ставку по реду; ставке које почињу са <code>/</code> третирају се као PCRE регуларни изрази (укључујући граничнике и ознаке).</b>."
 
@@ -69,6 +72,9 @@ msgstr "Једноразна е-поштена услуга"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Неисправан MX запис"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Неважећа адреса е-поште"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Е-пошта није потврђена"

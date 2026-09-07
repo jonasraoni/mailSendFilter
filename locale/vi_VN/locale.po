@@ -40,6 +40,9 @@ msgstr "Bỏ qua các tài khoản người dùng chưa bao giờ đăng nhập.
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Bỏ qua các tài khoản người dùng chưa bao giờ xác thực địa chỉ email của họ."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Bỏ qua các địa chỉ email không hợp lệ."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Thiết lập các URL để tải danh sách tên miền tạm thời, mỗi dòng một URL. <b>Mỗi danh sách đã tải phải chứa một mục trên mỗi dòng; các mục bắt đầu bằng <code>/</code> được coi là biểu thức chính quy PCRE (bao gồm dấu phân cách và cờ).</b>."
 
@@ -72,6 +75,9 @@ msgstr "Dịch vụ email tạm thời"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Máy chủ email không hợp lệ"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Địa chỉ email không hợp lệ"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Email chưa được xác thực"

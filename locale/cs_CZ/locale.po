@@ -40,6 +40,9 @@ msgstr "Přeskakuje uživatelské účty, které se nikdy nepřihlásily."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Přeskakuje uživatelské účty, které nikdy neověřily svou e-mailovou adresu."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Přeskočí e-mailové adresy, které nejsou platné."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Nastavuje URL adresy, ze kterých se má stahovat seznam dočasných domén, jedna URL na řádek. <b>Každý stažený seznam musí obsahovat jednu položku na řádek; položky začínající <code>/</code> se považují za regulární výrazy PCRE (včetně oddělovačů a příznaků).</b>."
 
@@ -71,6 +74,9 @@ msgstr "Dočasná e-mailová služba"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Neplatný e-mailový server"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Neplatná e-mailová adresa"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-mail není ověřen"

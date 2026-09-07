@@ -40,6 +40,9 @@ msgstr "Preskoči uporabniške račune, ki se nikoli niso prijavili."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Preskoči uporabniške račune, ki nikoli niso potrdili svojega e-poštnega naslova."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Preskoči e-poštne naslove, ki niso veljavni."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Nastavi URL-je, s katerih se prenese seznam začasnih domen, en URL na vrstico. <b>Vsak preneseni seznam mora vsebovati en vnos na vrstico; vnosi, ki se začnejo z <code>/</code>, se obravnavajo kot regularni izrazi PCRE (vključno z ločili in zastavicami).</b>."
 
@@ -71,6 +74,9 @@ msgstr "Začasna e-poštna storitev"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Neveljaven poštni strežnik"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Neveljaven e-poštni naslov"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-pošta ni potrjena"

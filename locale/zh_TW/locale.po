@@ -39,6 +39,9 @@ msgstr "跳過從未登入的帳戶"
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "跳過未驗證帳戶"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "略過無效的電子郵件地址。"
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "設定下載一次性網域清單的 URL，每行一個 URL。<b>每個下載的清單必須每行包含一個項目；以 <code>/</code> 開頭的項目會被視為 PCRE 正規表示式（包含分隔符與旗標）。</b>"
 
@@ -68,6 +71,9 @@ msgstr "一次性服務"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "無效MX記錄"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "無效的電子郵件地址"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "未驗證"

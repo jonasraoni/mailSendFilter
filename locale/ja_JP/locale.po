@@ -43,6 +43,9 @@ msgstr "一度もログインしていないユーザーアカウントをスキ
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "メールアドレスを検証していないユーザーアカウントをスキップします。"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "無効なメールアドレスをスキップします。"
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "使い捨てドメインのリストを取得する URL を、1 行に 1 つずつ設定します。<b>ダウンロードする各リストは 1 行に 1 エントリである必要があります。<code>/</code> で始まるエントリは、区切り文字とフラグを含む PCRE 正規表現として扱われます。</b>"
 "使い捨てドメインのリストをダウンロードするURLを設定します。<b>項目は改行で区切る必要があります</b>。"
@@ -79,6 +82,9 @@ msgstr "使い捨てメールサービス"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "無効なメールサーバー"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "無効なメールアドレス"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "メールが検証されていません"

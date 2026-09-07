@@ -40,6 +40,9 @@ msgstr "Springer brugerkonti over, der aldrig har logget ind."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Springer brugerkonti over, der aldrig har valideret deres e-mailadresse."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Springer e-mailadresser over, der ikke er gyldige."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Angiver URL'er, hvorfra listen over midlertidige domæner skal hentes, én URL pr. linje. <b>Hver hentet liste skal indeholde ét element pr. linje; elementer der starter med <code>/</code> behandles som PCRE-regulære udtryk (inkl. afgrænsere og flag).</b>."
 
@@ -71,6 +74,9 @@ msgstr "Midlertidig e-mailtjeneste"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Ugyldig mailserver"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Ugyldig e-mailadresse"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-mail ikke valideret"
