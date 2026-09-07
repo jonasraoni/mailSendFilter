@@ -23,6 +23,7 @@ use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use PKP\config\Config;
+use PKP\validation\ValidatorFactory;
 
 class MailFilter
 {
@@ -34,6 +35,7 @@ class MailFilter
     private int $inactivityThresholdDays;
     private bool $checkInactivity;
     private bool $checkMxRecord;
+    private bool $checkInvalidEmail;
     private bool $checkDisposable;
     private bool $checkNeverLoggedIn;
     private bool $checkNotValidated;
@@ -54,6 +56,8 @@ class MailFilter
         $this->inactivityThresholdDays = (int) abs((int) $plugin->getSetting($contextId, 'inactivityThresholdDays'));
         $this->checkInactivity = (bool) $plugin->getSetting($contextId, 'checkInactivity');
         $this->checkMxRecord = (bool) $plugin->getSetting($contextId, 'checkMxRecord');
+        $checkInvalidEmail = $plugin->getSetting($contextId, 'checkInvalidEmail');
+        $this->checkInvalidEmail = $checkInvalidEmail === null ? true : (bool) $checkInvalidEmail;
         $this->checkDisposable = (bool) $plugin->getSetting($contextId, 'checkDisposable');
         $this->checkNeverLoggedIn = (bool) $plugin->getSetting($contextId, 'checkNeverLoggedIn');
         $this->checkNotValidated = (bool) $plugin->getSetting($contextId, 'checkNotValidated') && Config::getVar('email', 'require_validation', false);
@@ -71,7 +75,10 @@ class MailFilter
     {
         return $this->filterInactiveEmails(
             $this->filterInvalidMailExchanges(
-                $this->filterDisposableDomains($emails, $filteredEmails),
+                $this->filterDisposableDomains(
+                    $this->filterInvalidEmails($emails, $filteredEmails),
+                    $filteredEmails
+                ),
                 $filteredEmails
             ),
             $filteredEmails
@@ -230,6 +237,36 @@ class MailFilter
             $roleRulesQuery[] = "WHEN {$conditions} THEN {$result}";
         }
         return count($roleRulesQuery) ? 'CASE ' . implode("\n", $roleRulesQuery) . ' END = 1' : '0 = 1';
+    }
+
+    /**
+     * Filters out emails which fail OJS email validation
+     *
+     * @param array<string,null> $emails A list of emails, the email is the key
+     * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
+     *
+     * @return array<string,null>
+     */
+    private function filterInvalidEmails(array $emails, ?array &$filteredEmails = null): array
+    {
+        if (!$this->checkInvalidEmail) {
+            return $emails;
+        }
+
+        foreach (array_keys($emails) as $recipient) {
+            $validator = ValidatorFactory::make(
+                ['value' => $recipient],
+                ['value' => ['required', 'email_or_localhost']]
+            );
+            if ($validator->fails()) {
+                unset($emails[$recipient]);
+                if ($filteredEmails !== null) {
+                    $filteredEmails[$recipient] = 'invalidEmail';
+                }
+            }
+        }
+
+        return $emails;
     }
 
     /**

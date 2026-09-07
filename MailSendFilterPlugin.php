@@ -20,7 +20,7 @@ use APP\plugins\generic\mailSendFilter\classes\DownloadHandler;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
 use APP\plugins\generic\mailSendFilter\classes\MailManager;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
-use APP\plugins\generic\mailSendFilter\classes\migration\I19_UpdateDisposableDomainsUrls;
+use APP\plugins\generic\mailSendFilter\classes\migration\Migration;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -273,6 +273,6 @@ class MailSendFilterPlugin extends GenericPlugin
      */
     public function getInstallMigration()
     {
-        return new I19_UpdateDisposableDomainsUrls();
+        return new Migration();
     }
 }
