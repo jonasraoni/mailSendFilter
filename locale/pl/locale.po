@@ -40,6 +40,9 @@ msgstr "Pomija konta użytkowników, którzy nigdy się nie zalogowali."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Pomija konta użytkowników, którzy nigdy nie zweryfikowali swojego adresu e-mail."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Pomija nieprawidłowe adresy e-mail."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Ustawia adresy URL, z których ma być pobierana lista domen tymczasowych, po jednym URL w wierszu. Każda pobrana lista musi zawierać jeden wpis na wiersz; wpisy zaczynające się od / są traktowane jako wyrażenia regularne PCRE (łącznie z separatorami i flagami).."
 
@@ -71,6 +74,9 @@ msgstr "Tymczasowa usługa pocztowa"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Nieprawidłowy serwer pocztowy"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Nieprawidłowy adres e-mail"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-mail nie zweryfikowany"

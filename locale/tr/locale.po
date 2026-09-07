@@ -40,6 +40,9 @@ msgstr "Hiç giriş yapmamış kullanıcı hesaplarını atlar."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "E-posta adreslerini hiç doğrulamamış kullanıcı hesaplarını atlar."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Geçerli olmayan e-posta adreslerini atlar."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Geçici alan adları listesinin indirileceği URL'leri ayarlar, her satıra bir URL. İndirilen her liste satır başına bir girdi içermelidir; / ile başlayan girdiler PCRE düzenli ifadeleri olarak değerlendirilir (sınırlayıcılar ve bayraklar dahil).."
 
@@ -71,6 +74,9 @@ msgstr "Geçici e-posta hizmeti"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Geçersiz posta sunucusu"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Geçersiz e-posta adresi"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-posta doğrulanmadı"

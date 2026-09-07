@@ -40,6 +40,9 @@ msgstr "Přeskakuje konta, kotrež njejsu so přizjewili."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Přeskakuje njepruwowane konta."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Přeskoči njedźěłace e-mejlowe adresy."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Nastavuje URL adresy, ze kterých se má stahovat seznam dočasných domén, jedna URL na řádek. Každý stažený seznam musí obsahovat jednu položku na řádek; položky začínající / se považují za regulární výrazy PCRE (včetně oddělovačů a příznaků).."
 
@@ -69,6 +72,9 @@ msgstr "Jednorazowa słužba"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Njepłaćiwy MX zapis"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Njedźěłaca e-mejlowa adresa"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Njepruwowany"

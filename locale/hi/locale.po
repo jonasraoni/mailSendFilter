@@ -40,6 +40,9 @@ msgstr "कभी लॉग इन नहीं किए गए खातों
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "असत्यापित खातों को छोड़ें।"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "अमान्य ईमेल पतों को छोड़ देता है।"
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "डिस्पोजेबल डोमेन सूची डाउनलोड करने के लिए URL की सूची सेट करता है, प्रत्येक पंक्ति में एक URL। डाउनलोड की गई प्रत्येक सूची में प्रति पंक्ति एक प्रविष्टि होनी चाहिए; / से शुरू होने वाली प्रविष्टियों को PCRE रेगुलर एक्सप्रेशन (delimiter और flags सहित) माना जाता है। "
 
@@ -69,6 +72,9 @@ msgstr "डिस्पोजेबल सेवा"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "अमान्य MX रिकॉर्ड"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "अमान्य ईमेल पता"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "ईमेल सत्यापित नहीं"
