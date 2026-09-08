@@ -40,6 +40,9 @@ msgstr "Չի ուղարկում էլ. նամակներ այն օգտատերեր
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Չի ուղարկում էլ. նամակներ այն օգտատերերի հաշիվներին, որոնք երբեք չեն հաստատել իրենց էլ. փոստի հասցեն։"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Բաց է թողնում էլփոստի հասցեները, որոնք վավեր չեն։"
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Սահմանում է URL-ները, որտեղից պետք է ներբեռնվի մեկանգամյա օգտագործման դոմենների ցանկը՝ յուրաքանչյուր տողում մեկ URL։ Յուրաքանչյուր ներբեռնված ցանկը պետք է պարունակի մեկ տարր յուրաքանչյուր տողում, իսկ / -ով սկսվող տարրերը համարվում են PCRE կանոնավոր արտահայտություններ (ներառյալ սահմանազատիչներն ու դրոշակները)։."
 
@@ -70,6 +73,9 @@ msgstr "Միանգամյա օգտագործման էլ. փոստի ծառայո�
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Անվավեր էլ. փոստի փոխանակում"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Անվավեր էլփոստի հասցե"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Էլ. փոստը հաստատված չէ"

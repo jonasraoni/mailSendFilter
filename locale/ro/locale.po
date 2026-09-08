@@ -40,6 +40,9 @@ msgstr "Ocolește conturile de utilizator care nu s-au autentificat niciodată."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ocolește conturile de utilizator nevalidate."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Omite adresele de e-mail care nu sunt valide."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Setează URL-urile de unde trebuie descărcată lista de domenii temporare, câte un URL pe linie. Fiecare listă descărcată trebuie să conțină o intrare pe linie; intrările care încep cu / sunt tratate ca expresii regulate PCRE (inclusiv delimitatori și opțiuni).."
 
@@ -69,6 +72,9 @@ msgstr "Serviciu de e-mail descărcabil"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Schimb de e-mail invalid"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Adresă de e-mail nevalidă"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-mail nevalidat"

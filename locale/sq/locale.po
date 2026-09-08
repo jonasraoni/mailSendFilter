@@ -39,6 +39,9 @@ msgstr "Anashkalon llogaritë që nuk janë hyrë kurrë."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Anashkalon llogaritë e paverifikuara."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Anashkalon adresat e-mail që nuk janë të vlefshme."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Postavlja URL-ove sa kojih se preuzima lista jednokratnih domena, po jedan URL u svakom redu. Svaka preuzeta lista mora sadržavati jednu stavku po redu; stavke koje počinju sa / tretiraju se kao PCRE regularni izrazi (uključujući delimitere i oznake).."
 
@@ -68,6 +71,9 @@ msgstr "Shërbim një përdorim"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Regjistrim MX i pavlefshëm"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Adresë e-mail e pavlefshme"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E paverifikuar"

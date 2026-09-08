@@ -40,6 +40,9 @@ msgstr "Прапускае ўліковыя запісы карыстальні�
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Прапускае ўліковыя запісы карыстальнікаў, якія ніколі не пацвердзілі свой адрас электроннай пошты."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Прапускае несапраўдныя адрасы электроннай пошты."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Устанавливает URL-адреса, с которых должен загружаться список временных доменов, по одному URL в строке. Каждый загруженный список должен содержать по одной записи в строке; записи, начинающиеся с /, трактуются как регулярные выражения PCRE (включая разделители и флаги).."
 
@@ -70,6 +73,9 @@ msgstr "Аднаразовая паштовая служба"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Няправільны абмен электроннай поштай"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Несапраўдны адрас электроннай пошты"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Электронная пошта не пацверджана"

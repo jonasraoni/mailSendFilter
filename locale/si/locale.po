@@ -40,6 +40,9 @@ msgstr "කවදාවත් ප්රවිෂ්ට නොවූ ගිණු
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "තහවුරු නොකළ ගිණුම් අත්හරින්න."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "වලංගු නොවන විද්‍යුත් තැපැල් ලිපින මඟ හරියි."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
@@ -69,6 +72,9 @@ msgstr "ඒකකාලීන සේවාව"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "අවලංගු MX ලියාපදිංචිය"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "වලංගු නොවන විද්‍යුත් තැපැල් ලිපිනය"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "ඊමේල් තහවුරු කර නැත"

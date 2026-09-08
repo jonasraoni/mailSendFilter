@@ -39,6 +39,9 @@ msgstr "Хеч қачон кирмаган хисобларни ўтказиб �
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Тасдиқланмаган хисобларни ўтказиб юбориш"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Яроқсиз электрон почта манзилларини ўтказиб юборади."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Bir martalik domenlar roʻyxatini yuklab olish uchun URL manzillarini sozlaydi, har satrda bitta URL. Har bir yuklab olingan roʻyxatda har satrda bitta element boʻlishi kerak; / bilan boshlanuvchi elementlar PCRE muntazam ifodalari sifatida qabul qilinadi (ajratgichlar va flaglar bilan birga).."
 
@@ -68,6 +71,9 @@ msgstr "Бир марталик хизмат"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Нотўғри MX ёзуви"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Яроқсиз электрон почта манзили"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Тасдиқланмаган"

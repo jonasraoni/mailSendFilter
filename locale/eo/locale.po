@@ -40,6 +40,9 @@ msgstr "Saltetas uzantokontojn, kiuj neniam ensalutis."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Saltetas uzantokontojn, kiuj neniam validigis sian retpoŝtan adreson."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Preterlasas retpoŝtadresojn, kiuj ne estas validaj."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
@@ -70,6 +73,9 @@ msgstr "Unufoja retpoŝta servo"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Nevalida retpoŝta interŝanĝo"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Nevalida retpoŝtadreso"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Retpoŝto ne validigita"

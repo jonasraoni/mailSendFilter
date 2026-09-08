@@ -40,6 +40,9 @@ msgstr "Пропуска потребителски акаунти, които �
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Пропуска потребителски акаунти, които никога не са потвърдили своя имейл адрес."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Пропуска невалидни имейл адреси."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Устанавливает URL-адреса, с которых должен загружаться список временных доменов, по одному URL в строке. Каждый загруженный список должен содержать по одной записи в строке; записи, начинающиеся с /, трактуются как регулярные выражения PCRE (включая разделители и флаги).."
 
@@ -70,6 +73,9 @@ msgstr "Еднократна имейл услуга"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Невалиден имейл обмен"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Невалиден имейл адрес"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Имейлът не е потвърден"

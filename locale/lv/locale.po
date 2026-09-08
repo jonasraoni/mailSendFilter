@@ -40,6 +40,9 @@ msgstr "Izlaist nekad nepieslēgtos kontus."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Izlaist neapstiprinātos kontus."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Izlaiž nederīgas e-pasta adreses."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
@@ -69,6 +72,9 @@ msgstr "Vienreizējs pakalpojums"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Nederīgs MX ieraksts"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Nederīga e-pasta adrese"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Nepārbaudīts"

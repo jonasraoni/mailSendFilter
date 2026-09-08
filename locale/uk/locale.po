@@ -40,6 +40,9 @@ msgstr "Пропускає облікові записи користувачі�
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Пропускає облікові записи користувачів, які ніколи не підтверджували свою електронну адресу."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Пропускає недійсні адреси електронної пошти."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Встановлює URL-адреси, з яких має завантажуватися список тимчасових доменів, по одній URL-адресі на рядок. Кожен завантажений список має містити один елемент у рядку; елементи, що починаються з /, трактуються як регулярні вирази PCRE (включно з розділювачами та прапорцями).."
 
@@ -71,6 +74,9 @@ msgstr "Тимчасова поштова служба"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Недійсний поштовий сервер"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Недійсна адреса електронної пошти"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Електронна пошта не підтверджена"

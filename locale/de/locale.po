@@ -40,6 +40,9 @@ msgstr "Ignoriert Benutzerkonten, die sich nie angemeldet haben."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignoriert Benutzerkonten, die ihre E-Mail-Adresse nie validiert haben."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Überspringt ungültige E-Mail-Adressen."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Legt die URLs fest, von denen die Liste der Wegwerf-Domains heruntergeladen werden soll, eine URL pro Zeile. Jede heruntergeladene Liste muss einen Eintrag pro Zeile enthalten; Einträge, die mit / beginnen, werden als PCRE-reguläre Ausdrücke behandelt (inklusive Trennern und Flags).."
 
@@ -71,6 +74,9 @@ msgstr "Wegwerf-E-Mail-Dienst"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Ungültiger E-Mail-Server"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Ungültige E-Mail-Adresse"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-Mail nicht validiert"
