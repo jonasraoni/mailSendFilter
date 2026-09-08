@@ -40,6 +40,9 @@ msgstr "Pśeskakujo wužywarske konta, kótarež njejsu se nigda pśizjawili."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Pśeskakujo wužywarske konta, kótarež njejsu nigda pśeglědowali swóju e-mailowu adresu."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Pśeskokujo njepłaśiwe e-mailowe adrese."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Nastavuje URL adresy, ze kterých se má stahovat seznam dočasných domén, jedna URL na řádek. Každý stažený seznam musí obsahovat jednu položku na řádek; položky začínající / se považují za regulární výrazy PCRE (včetně oddělovačů a příznaků).."
 
@@ -70,6 +73,9 @@ msgstr "Jadnorazowa e-mailowa słužba"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Njepłaśiwy e-mailowy wuměna"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Njepłaśiwa e-mailowa adresa"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-mail njejo pśeglědowany"

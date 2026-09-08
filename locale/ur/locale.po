@@ -40,6 +40,9 @@ msgstr "کبھی لاگ ان نہ کرنے والے اکاؤنٹس کو چھوڑ
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "غیر تصدیق شدہ اکاؤنٹس کو چھوڑیں"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "غیر درست ای میل پتوں کو نظرانداز کرتا ہے۔"
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "عارضی ڈومین فہرستیں ڈاؤن لوڈ کرنے کے لیے URL مقرر کرتا ہے، ہر سطر میں ایک URL۔ ہر ڈاؤن لوڈ شدہ فہرست میں فی سطر ایک اندراج ہونا چاہیے؛ جو اندراجات / سے شروع ہوں انہیں PCRE ریگولر ایکسپریشن سمجھا جاتا ہے (delimiter اور flags سمیت)۔ "
 
@@ -69,6 +72,9 @@ msgstr "ایک بار استعمال ہونے والی سروس"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "غلط MX ریکارڈ"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "غیر درست ای میل پتہ"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "تصدیق شدہ نہیں"

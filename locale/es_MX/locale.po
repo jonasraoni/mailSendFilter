@@ -40,6 +40,9 @@ msgstr "Ignora las cuentas de usuario que nunca han iniciado sesión."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignora las cuentas de usuario que nunca han validado su dirección de correo electrónico."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Omite las direcciones de correo electrónico que no son válidas."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Define las URL desde donde se debe descargar la lista de dominios temporales, una URL por línea. Cada lista descargada debe contener un elemento por línea; las entradas que empiezan por / se tratan como expresiones regulares PCRE (incluyendo delimitadores y banderas).."
 
@@ -70,6 +73,9 @@ msgstr "Servicio de correo electrónico desechable"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Intercambio de correo electrónico no válido"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Dirección de correo electrónico no válida"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Correo electrónico no validado"

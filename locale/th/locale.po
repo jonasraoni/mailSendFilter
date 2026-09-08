@@ -39,6 +39,9 @@ msgstr "ข้ามบัญชีที่ยังไม่เคยล็อ
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "ข้ามบัญชีที่ยังไม่ยืนยัน"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "ข้ามที่อยู่อีเมลที่ไม่ถูกต้อง"
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
@@ -68,6 +71,9 @@ msgstr "บริการอีเมลชั่วคราว"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "MX record ไม่ถูกต้อง"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "ที่อยู่อีเมลไม่ถูกต้อง"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "ยังไม่ยืนยัน"

@@ -40,6 +40,9 @@ msgstr "Ignore les comptes utilisateurs qui ne se sont jamais connectés."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignore les comptes utilisateurs qui n'ont jamais validé leur adresse e-mail."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Ignore les adresses e-mail qui ne sont pas valides."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Configure les URL à partir desquelles la liste des domaines jetables doit être téléchargée, une URL par ligne. Chaque liste téléchargée doit contenir une entrée par ligne; les entrées commençant par / sont traitées comme des expressions régulières PCRE (délimiteurs et indicateurs inclus).."
 
@@ -70,6 +73,9 @@ msgstr "Service d'e-mail jetable"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Échange d'e-mail invalide"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Adresse e-mail non valide"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-mail non validé"

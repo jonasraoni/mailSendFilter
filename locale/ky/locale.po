@@ -40,6 +40,9 @@ msgstr "Эч качан кирбеген колдонуучу эсептерин
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Текшерилбеген колдонуучу эсептерин өткөрүп жиберет."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Жараксыз электрондук почта даректерин өткөрүп жиберет."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Устанавливает URL-адреса, с которых должен загружаться список временных доменов, по одному URL в строке. Каждый загруженный список должен содержать по одной записи в строке; записи, начинающиеся с /, трактуются как регулярные выражения PCRE (включая разделители и флаги).."
 
@@ -69,6 +72,9 @@ msgstr "Бир жолу колдонулуучу кызмат"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Жараксыз MX жазуусу"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Жараксыз электрондук почта дареги"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Текшерилбеген"

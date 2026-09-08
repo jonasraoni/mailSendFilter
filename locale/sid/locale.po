@@ -39,6 +39,9 @@ msgstr "Yeroo hin seenne herregaa dhiisuu"
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Herregaa mirkaneessifamoo dhiisuu"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Valid nna email address-nna skip-dha."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
@@ -68,6 +71,9 @@ msgstr "Tajaajila yeroo tokkoof"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "MX record hin taane"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Valid nna email address"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Mirkaneessifamoo"

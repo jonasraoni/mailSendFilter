@@ -40,6 +40,9 @@ msgstr "Soha be nem jelentkezett fiókok kihagyása."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Nem hitelesített fiókok kihagyása."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Kihagyja az érvénytelen e-mail-címeket."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Beállítja az URL-eket, ahonnan az eldobható domainek listáját le kell tölteni, soronként egy URL-lel. Minden letöltött listának soronként egy bejegyzést kell tartalmaznia; a / jellel kezdődő bejegyzések PCRE reguláris kifejezésként értelmeződnek (határolókkal és flagekkel együtt).."
 
@@ -69,6 +72,9 @@ msgstr "Eldobható szolgáltatás"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Érvénytelen MX rekord"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Érvénytelen e-mail-cím"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Nem hitelesített"

@@ -40,6 +40,9 @@ msgstr "Inoiz saioa hasi ez duten erabiltzaile-kontuak saltatzen ditu."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Erabiltzaile-kontuak saltatzen ditu, zeintzuk inoiz ez duten beren posta helbidea balioztatu."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Baliozkoak ez diren helbide elektronikoak saltatzen ditu."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Erabilera bakarreko domeinuen zerrenda deskargatzeko URLak ezartzen ditu, URL bat lerro bakoitzean. Deskargatutako zerrenda bakoitzak elementu bat izan behar du lerro bakoitzean; / karakterearekin hasten diren sarrerak PCRE adierazpen erregular gisa tratatzen dira (mugatzaile eta banderekin).."
 
@@ -70,6 +73,9 @@ msgstr "Behin erabilerako posta zerbitzua"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Posta truke baliogabea"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Helbide elektroniko baliogabea"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Posta helbidea ez da balioztatu"

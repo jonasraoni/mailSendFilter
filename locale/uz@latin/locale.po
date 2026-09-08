@@ -39,6 +39,9 @@ msgstr "Hech qachon kirmagan hisoblarni o'tkazib yuborish"
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Tasdiqlanmagan hisoblarni o'tkazib yuborish"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Yaroqsiz elektron pochta manzillarini o‘tkazib yuboradi."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Bir martalik domenlar roʻyxatini yuklab olish uchun URL manzillarini sozlaydi, har satrda bitta URL. Har bir yuklab olingan roʻyxatda har satrda bitta element boʻlishi kerak; / bilan boshlanuvchi elementlar PCRE muntazam ifodalari sifatida qabul qilinadi (ajratgichlar va flaglar bilan birga).."
 
@@ -68,6 +71,9 @@ msgstr "Bir martalik xizmat"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Yaroqsiz MX yozuvi"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Yaroqsiz elektron pochta manzili"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Tasdiqlanmagan"

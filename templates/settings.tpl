@@ -24,6 +24,7 @@
 		{fbvFormSection title="plugins.generic.mailSendFilter.general" list="true"}
 			{fbvElement type="checkbox" id="checkInactivity" checked=$checkInactivity label="plugins.generic.mailSendFilter.checkInactivity" translate="true"}
 			{fbvElement type="checkbox" id="checkMxRecord" checked=$checkMxRecord label="plugins.generic.mailSendFilter.checkMxRecord" translate="true"}
+			{fbvElement type="checkbox" id="checkInvalidEmail" checked=$checkInvalidEmail label="plugins.generic.mailSendFilter.checkInvalidEmail" translate="true"}
 			{fbvElement type="checkbox" id="checkDisposable" checked=$checkDisposable label="plugins.generic.mailSendFilter.checkDisposable" translate="true"}
 			{fbvElement type="checkbox" id="checkNeverLoggedIn" checked=$checkNeverLoggedIn label="plugins.generic.mailSendFilter.checkNeverLoggedIn" translate="true"}
 			{fbvElement type="checkbox" id="checkNotValidated" checked=$checkNotValidated label="plugins.generic.mailSendFilter.checkNotValidated" translate="true"}
