@@ -55,8 +55,7 @@ class MailFilter
         $this->inactivityThresholdDays = (int) abs((int) $plugin->getSetting($contextId, 'inactivityThresholdDays'));
         $this->checkInactivity = (bool) $plugin->getSetting($contextId, 'checkInactivity');
         $this->checkMxRecord = (bool) $plugin->getSetting($contextId, 'checkMxRecord');
-        $checkInvalidEmail = $plugin->getSetting($contextId, 'checkInvalidEmail');
-        $this->checkInvalidEmail = $checkInvalidEmail === null ? true : (bool) $checkInvalidEmail;
+        $this->checkInvalidEmail = (bool) $plugin->getSetting($contextId, 'checkInvalidEmail');
         $this->checkDisposable = (bool) $plugin->getSetting($contextId, 'checkDisposable');
         $this->checkNeverLoggedIn = (bool) $plugin->getSetting($contextId, 'checkNeverLoggedIn');
         $this->checkNotValidated = (bool) $plugin->getSetting($contextId, 'checkNotValidated');
@@ -284,7 +283,7 @@ class MailFilter
 
         // Remove emails which have no MX setup at their domain
         foreach (array_keys($emails) as $recipient) {
-            $domain = explode('@', $recipient)[1];
+            $domain = explode('@', $recipient)[1] ?? '';
             if (!$this->hasMxRecord($domain)) {
                 unset($emails[$recipient]);
                 if ($filteredEmails !== null) {
