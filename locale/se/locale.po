@@ -40,6 +40,9 @@ msgstr "Sáhttá geahpedit geavaheaddjikontuid mat eai leat loggejuvvon."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Sáhttá geahpedit geavaheaddjikontuid mat eai leat valideren e-boastačujuhusa."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Njuike e-poastačujuhusaid mat eai leat dohkálaččat."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Anger URL:er varifrån listan över tillfälliga domäner ska laddas ner, en URL per rad. Varje nedladdad lista måste innehålla en post per rad; poster som börjar med / behandlas som PCRE-reguljära uttryck (inklusive avgränsare och flaggor).."
 
@@ -51,3 +54,7 @@ msgstr "Heive e-boastačujuhusaid, mat fertejit geahpedit buot validerenproseass
 
 msgid "plugins.generic.mailSendFilter.inactivity.threshold.days"
 msgstr "Kontot mat leat boarrásat go dán beaivviid málle, dárbbašit aktiivvamusvuođa dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbbašlaš dárbba"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Dohkákeahtes e-poastačujuhus"
+

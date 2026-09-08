@@ -40,6 +40,9 @@ msgstr "Hoppar över användarkonton som aldrig har loggat in."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Hoppar över användarkonton som aldrig har validerat sin e-postadress."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Hoppar över e-postadresser som inte är giltiga."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Anger URL:er varifrån listan över tillfälliga domäner ska laddas ner, en URL per rad. Varje nedladdad lista måste innehålla en post per rad; poster som börjar med / behandlas som PCRE-reguljära uttryck (inklusive avgränsare och flaggor).."
 
@@ -71,6 +74,9 @@ msgstr "Tillfällig e-posttjänst"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Ogiltig e-postserver"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Ogiltig e-postadress"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-post ej validerad"

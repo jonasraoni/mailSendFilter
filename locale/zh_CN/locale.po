@@ -43,6 +43,9 @@ msgstr "跳过从未登录过的用户帐户。"
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "跳过从未验证其电子邮件地址的用户帐户。"
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "跳过无效的电子邮件地址。"
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "设置用于下载临时域名列表的 URL，每行一个 URL。 每个下载的列表必须每行包含一个条目；以 / 开头的条目将被视为 PCRE 正则表达式（包含分隔符和标志）。 "
 
@@ -78,6 +81,9 @@ msgstr "临时邮件服务"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "无效的邮件服务器"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "无效的电子邮件地址"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "电子邮件未验证"

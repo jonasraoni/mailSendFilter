@@ -40,6 +40,9 @@ msgstr "حساب‌های بدون ورود را نادیده بگیر."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "حساب‌های تاییدنشده را نادیده بگیر."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "نشانی‌های رایانامه نامعتبر را نادیده می‌گیرد."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "نشانی‌های URL را برای دریافت فهرست دامنه‌های موقت تنظیم می‌کند، هر URL در یک خط. هر فهرست دانلودشده باید در هر خط یک مورد داشته باشد؛ مواردی که با / شروع می‌شوند به‌صورت عبارت منظم PCRE در نظر گرفته می‌شوند (به‌همراه جداکننده‌ها و پرچم‌ها).."
 
@@ -69,6 +72,9 @@ msgstr "سرویس یکبارمصرف"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "رکورد MX نامعتبر"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "نشانی رایانامه نامعتبر"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "تایید نشده"

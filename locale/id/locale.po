@@ -40,6 +40,9 @@ msgstr "Melewati akun pengguna yang belum pernah masuk."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Melewati akun pengguna yang belum memvalidasi alamat email mereka."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Melewati alamat email yang tidak valid."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Mengatur URL tempat daftar domain sekali pakai harus diunduh, satu URL per baris. Setiap daftar yang diunduh harus berisi satu entri per baris; entri yang diawali dengan / diperlakukan sebagai ekspresi reguler PCRE (termasuk delimiter dan flag).."
 
@@ -70,6 +73,9 @@ msgstr "Layanan email sekali pakai"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Pertukaran email tidak valid"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Alamat email tidak valid"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Email belum divalidasi"

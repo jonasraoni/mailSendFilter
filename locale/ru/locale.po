@@ -40,6 +40,9 @@ msgstr "Пропускает учетные записи пользовател�
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Пропускает учетные записи пользователей, которые никогда не подтверждали свой адрес электронной почты."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Пропускает недействительные адреса электронной почты."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Устанавливает URL-адреса, с которых должен загружаться список временных доменов, по одному URL в строке. Каждый загруженный список должен содержать по одной записи в строке; записи, начинающиеся с /, трактуются как регулярные выражения PCRE (включая разделители и флаги).."
 
@@ -71,6 +74,9 @@ msgstr "Временная почтовая служба"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Недействительный почтовый сервер"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Недействительный адрес электронной почты"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Электронная почта не подтверждена"

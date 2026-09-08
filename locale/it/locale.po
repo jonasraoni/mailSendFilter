@@ -40,6 +40,9 @@ msgstr "Ignora gli account utente che non hanno mai effettuato l'accesso."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Ignora gli account utente che non hanno mai validato il loro indirizzo email."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Ignora gli indirizzi e-mail che non sono validi."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Imposta gli URL da cui scaricare l'elenco dei domini temporanei, un URL per riga. Ogni elenco scaricato deve contenere una voce per riga; le voci che iniziano con / vengono trattate come espressioni regolari PCRE (inclusi delimitatori e flag).."
 
@@ -71,6 +74,9 @@ msgstr "Servizio email temporaneo"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Server di posta non valido"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Indirizzo e-mail non valido"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Email non validata"

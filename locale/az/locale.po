@@ -40,6 +40,9 @@ msgstr "Heç vaxt daxil olmamış istifadəçi hesablarını atlayır."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "E-poçt ünvanlarını heç vaxt təsdiqləməmiş istifadəçi hesablarını atlayır."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Etibarsız e-poçt ünvanlarını buraxır."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Geçici alan adları listesinin indirileceği URL'leri ayarlar, her satıra bir URL. İndirilen her liste satır başına bir girdi içermelidir; / ile başlayan girdiler PCRE düzenli ifadeleri olarak değerlendirilir (sınırlayıcılar ve bayraklar dahil).."
 
@@ -71,6 +74,9 @@ msgstr "Müvəqqəti e-poçt xidməti"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Etibarsız e-poçt serveri"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Etibarsız e-poçt ünvanı"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-poçt təsdiqlənməyib"

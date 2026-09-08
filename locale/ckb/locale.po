@@ -40,6 +40,9 @@ msgstr "هەژمارەکانی بەکارهێنەری کە هەرگیز چوون
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "هەژمارەکانی بەکارهێنەری پشتڕاستنەکراو بلۆک دەکات."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "ناونیشانەکانی ئیمەیلی نادروست تێدەپەڕێنێت."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "ناونیشانییەکانی URL دادەنێت بۆ دابەزاندنی لیستی دۆمەینی کاتی، هەر URL ـێک لە هەر هێڵێک. هەر لیستێکی دابەزێنراو دەبێت لە هەر هێڵێکدا یەک دانە بڕگە هەبێت؛ بڕگەی دەستپێک بە / وەک دەربڕینی ڕێکەوتنی PCRE مامەڵەی لەگەڵ دەکرێت (لەگەڵ دیلیمیتەر و ئاڵاکان).."
 
@@ -69,6 +72,9 @@ msgstr "خزمەتگوزاری ئیمەیلی یەکجارە"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "تۆماری MX نادروست"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "ناونیشانی ئیمەیلی نادروست"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "ئیمەیل پشتڕاستنەکراوە"

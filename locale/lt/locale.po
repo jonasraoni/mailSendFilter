@@ -40,6 +40,9 @@ msgstr "Praleidžia niekada neprisijungusias paskyras."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Praleidžia nepatvirtintas paskyras."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Praleidžia neteisingus el. pašto adresus."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "List of URLs from where the disposable domains should be downloaded, one per line. Each downloaded list must contain one entry per line; entries starting with / are treated as PCRE regular expressions (delimiters and flags included)."
 
@@ -69,6 +72,9 @@ msgstr "Vienkartinis servisas"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Neteisingas MX įrašas"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Neteisingas el. pašto adresas"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Nepatvirtinta"
