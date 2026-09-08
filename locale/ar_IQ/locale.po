@@ -40,6 +40,9 @@ msgstr "يتجاهل حسابات المستخدمين الذين لم يسجل�
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "يتجاهل حسابات المستخدمين الذين لم يتحققوا من عنوان بريدهم الإلكتروني."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "يتخطى عناوين البريد الإلكتروني غير الصالحة."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "يحدد عناوين URL التي يجب تنزيل قوائم النطاقات المؤقتة منها، كل عنوان في سطر منفصل. <b>يجب أن يحتوي كل ملف مُنزَّل على عنصر واحد في كل سطر؛ وأي عنصر يبدأ بـ <code>/</code> يُعامَل كتعبير نمطي PCRE (مع المحددات والخيارات).</b>."
 
@@ -71,6 +74,9 @@ msgstr "خدمة بريد إلكتروني مؤقتة"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "خادم بريد إلكتروني غير صالح"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "عنوان بريد إلكتروني غير صالح"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "البريد الإلكتروني غير مؤكد"

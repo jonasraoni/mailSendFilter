@@ -16,7 +16,7 @@ namespace APP\plugins\generic\mailSendFilter;
 use AjaxModal;
 use APP\plugins\generic\mailSendFilter\classes\DownloadHandler;
 use APP\plugins\generic\mailSendFilter\classes\MailFilter;
-use APP\plugins\generic\mailSendFilter\classes\migration\I19_UpdateDisposableDomainsUrls;
+use APP\plugins\generic\mailSendFilter\classes\migration\Migration;
 use APP\plugins\generic\mailSendFilter\classes\SettingsForm;
 use Application;
 use HookRegistry;
@@ -360,7 +360,7 @@ class MailSendFilterPlugin extends GenericPlugin
 	public function getInstallMigration()
 	{
 		$this->useAutoLoader();
-		return new I19_UpdateDisposableDomainsUrls();
+		return new Migration();
 	}
 
 	/**

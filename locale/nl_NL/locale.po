@@ -40,6 +40,9 @@ msgstr "Slaat gebruikersaccounts over die nooit hebben ingelogd."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Slaat gebruikersaccounts over die hun e-mailadres nooit hebben gevalideerd."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Slaat e-mailadressen over die niet geldig zijn."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Stelt de URL's in waarvan de lijst met tijdelijke domeinen moet worden gedownload, één URL per regel. <b>Elke gedownloade lijst moet één item per regel bevatten; items die beginnen met <code>/</code> worden behandeld als PCRE-reguliere expressies (inclusief scheidingstekens en flags).</b>."
 
@@ -71,6 +74,9 @@ msgstr "Tijdelijke e-maildienst"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Ongeldige mailserver"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Ongeldig e-mailadres"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-mail niet gevalideerd"

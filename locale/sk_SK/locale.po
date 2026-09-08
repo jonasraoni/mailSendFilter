@@ -40,6 +40,9 @@ msgstr "Preskakuje nikdy neprihlásené účty."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Preskakuje neoverené účty."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Preskočí e-mailové adresy, ktoré nie sú platné."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Nastavuje URL adresy, z ktorých sa má sťahovať zoznam dočasných domén, jedna URL na riadok. <b>Každý stiahnutý zoznam musí obsahovať jednu položku na riadok; položky začínajúce na <code>/</code> sa považujú za PCRE regulárne výrazy (vrátane oddeľovačov a príznakov).</b>."
 
@@ -69,6 +72,9 @@ msgstr "Jednorazová služba"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Neplatný MX"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Neplatná e-mailová adresa"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Neoverené"

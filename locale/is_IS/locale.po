@@ -40,6 +40,9 @@ msgstr "Sleppur notendareikningum sem aldrei hafa skráð sig inn."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Sleppur notendareikningum sem aldrei hafa staðfest netfangið sitt."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Sleppir tölvupóstföngum sem eru ekki gild."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Stillir vefslóðirnar þaðan sem sækja á lista yfir einnota lén, eina slóð í hverri línu. <b>Hver niðurhalaður listi verður að innihalda eina færslu í hverri línu; færslur sem byrja á <code>/</code> eru meðhöndlaðar sem PCRE-reglulegar segðir (með aðgreinum og flöggum).</b>."
 
@@ -70,6 +73,9 @@ msgstr "Einnota tölvupóstþjónusta"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Ógild tölvupóstskipti"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Ógilt tölvupóstfang"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Netfang ekki staðfest"

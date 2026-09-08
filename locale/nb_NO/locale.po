@@ -40,6 +40,9 @@ msgstr "Hopper over brukerkontoer som aldri har logget inn."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Hopper over brukerkontoer som aldri har validert sin e-postadresse."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Hopper over e-postadresser som ikke er gyldige."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Angir URL-ene som listen over midlertidige domener skal lastes ned fra, én URL per linje. <b>Hver nedlastet liste må inneholde én oppføring per linje; oppføringer som starter med <code>/</code> behandles som PCRE-regulære uttrykk (inkludert skilletegn og flagg).</b>."
 
@@ -71,6 +74,9 @@ msgstr "Midlertidig e-posttjeneste"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Ugyldig e-postserver"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Ugyldig e-postadresse"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "E-post ikke validert"

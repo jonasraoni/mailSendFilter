@@ -40,6 +40,9 @@ msgstr "Omitir contas de usuario que nunca iniciaron sesión."
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Omitir contas de usuario que nunca validaron o seu enderezo de correo electrónico."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Omite os enderezos de correo electrónico que non son válidos."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Configura os URL desde os que se debe descargar a lista de dominios desbotables, un URL por liña. <b>Cada lista descargada debe conter un elemento por liña; as entradas que comezan por <code>/</code> trátanse como expresións regulares PCRE (incluíndo delimitadores e bandeiras).</b>."
 
@@ -74,6 +77,9 @@ msgstr "Servizo de correo electrónico desbotable"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Intercambio de correo electrónico inválido"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Enderezo de correo electrónico non válido"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Correo electrónico non validado"

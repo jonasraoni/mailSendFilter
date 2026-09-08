@@ -37,6 +37,8 @@ class MailFilter
 	/** @var bool */
 	private $checkMxRecord;
 	/** @var bool */
+	private $checkInvalidEmail;
+	/** @var bool */
 	private $checkDisposable;
 	/** @var bool */
 	private $checkNeverLoggedIn;
@@ -59,6 +61,7 @@ class MailFilter
 		$this->inactivityThresholdDays = (int) abs((int) $plugin->getSetting($contextId, 'inactivityThresholdDays'));
 		$this->checkInactivity = (bool) $plugin->getSetting($contextId, 'checkInactivity');
 		$this->checkMxRecord = (bool) $plugin->getSetting($contextId, 'checkMxRecord');
+		$this->checkInvalidEmail = (bool) $plugin->getSetting($contextId, 'checkInvalidEmail');
 		$this->checkDisposable = (bool) $plugin->getSetting($contextId, 'checkDisposable');
 		$this->checkNeverLoggedIn = (bool) $plugin->getSetting($contextId, 'checkNeverLoggedIn');
 		$this->checkNotValidated = (bool) $plugin->getSetting($contextId, 'checkNotValidated') && \Config::getVar('email', 'require_validation', false);
@@ -75,7 +78,10 @@ class MailFilter
 	{
 		return $this->filterInactiveEmails(
 			$this->filterInvalidMailExchanges(
-				$this->filterDisposableDomains($emails, $filteredEmails),
+				$this->filterDisposableDomains(
+					$this->filterInvalidEmails($emails, $filteredEmails),
+					$filteredEmails
+				),
 				$filteredEmails
 			),
 			$filteredEmails
@@ -242,6 +248,33 @@ class MailFilter
 	}
 
 	/**
+	 * Filters out emails which fail OJS email validation
+	 *
+	 * @param array<string,null> $emails A list of emails, the email is the key
+	 * @param array<string,string> $filteredEmails If passed, will store the filtered emails (key) and the reason (value)
+	 * @return array<string,null>
+	 */
+	private function filterInvalidEmails(array $emails, ?array &$filteredEmails = null): array
+	{
+		if (!$this->checkInvalidEmail) {
+			return $emails;
+		}
+
+		import('lib.pkp.classes.validation.ValidatorEmail');
+		$validator = new \ValidatorEmail();
+		foreach (array_keys($emails) as $recipient) {
+			if (!$validator->isValid($recipient)) {
+				unset($emails[$recipient]);
+				if ($filteredEmails !== null) {
+					$filteredEmails[$recipient] = 'invalidEmail';
+				}
+			}
+		}
+
+		return $emails;
+	}
+
+	/**
 	 * Filters out emails which are likely to bounce due to invalid/non-existent mail exchange
 	 *
 	 * @param array<string,null> $emails A list of emails, the email is the key
@@ -256,7 +289,7 @@ class MailFilter
 
 		// Remove emails which have no MX setup at their domain
 		foreach (array_keys($emails) as $recipient) {
-			$domain = explode('@', $recipient)[1];
+			$domain = explode('@', $recipient)[1] ?? '';
 			if (!$this->hasMxRecord($domain)) {
 				unset($emails[$recipient]);
 				if ($filteredEmails !== null) {

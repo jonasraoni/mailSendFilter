@@ -40,6 +40,9 @@ msgstr "Hech qachon tizimga kirmagan foydalanuvchi hisoblarini o'tkazib yuboradi
 msgid "plugins.generic.mailSendFilter.checkNotValidated"
 msgstr "Elektron pochta manzilini tasdiqlamagan foydalanuvchi hisoblarini o'tkazib yuboradi."
 
+msgid "plugins.generic.mailSendFilter.checkInvalidEmail"
+msgstr "Yaroqsiz elektron pochta manzillarini o‘tkazib yuboradi."
+
 msgid "plugins.generic.mailSendFilter.disposableDomainsUrls"
 msgstr "Bir martalik domenlar roʻyxatini yuklab olish uchun URL manzillarini sozlaydi, har satrda bitta URL. <b>Har bir yuklab olingan roʻyxatda har satrda bitta element boʻlishi kerak; <code>/</code> bilan boshlanuvchi elementlar PCRE muntazam ifodalari sifatida qabul qilinadi (ajratgichlar va flaglar bilan birga).</b>."
 
@@ -74,6 +77,9 @@ msgstr "Bir martalik elektron pochta xizmati"
 
 msgid "plugins.generic.mailSendFilter.reason.invalidMailExchange"
 msgstr "Yaroqsiz elektron pochta almashinuvi"
+
+msgid "plugins.generic.mailSendFilter.reason.invalidEmail"
+msgstr "Yaroqsiz elektron pochta manzili"
 
 msgid "plugins.generic.mailSendFilter.reason.notValidated"
 msgstr "Elektron pochta tasdiqlanmagan"
